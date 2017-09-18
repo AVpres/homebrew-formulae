@@ -1,2 +1,3 @@
-# homebrew-formulae
+# AVpres’ Homebrew Formulae
+
 Homebrew / Linuxbrew formulae
