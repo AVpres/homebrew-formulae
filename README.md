@@ -1,9 +1,9 @@
-# AVpres’ Homebrew/Linuxbrew Formulae
+# Homebrew/Linuxbrew Formulae for AV Preservation
 
 ## Table of Contents
 
-- openLTSF
-- openLTO
+- **openLTO** – Bash scripts to manage LTO cartridges with LTFS
+- **openLTFS** – An open and neutral LTFS, without the proprietary extensions from the different vendors
 
 ---
 
@@ -13,4 +13,4 @@
 
 ---
 
-Copyright 2017 by Reto Kromer and released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
+Copyright © 2017 by Reto Kromer and released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
