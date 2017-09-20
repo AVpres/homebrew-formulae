@@ -3,14 +3,10 @@
 ## Table of Contents
 
 - **openLTO** – Bash scripts to manage LTO cartridges with LTFS
-- **openLTFS** – An open and neutral LTFS, without the proprietary extensions from the different vendors
+- **openLTFS** – An open and neutral LTFS implementation, without the proprietary extensions from the different vendors
 
 ---
 
-## Caveat
+Copyright © 2017 by Reto Kromer
 
-**This work is in progress and has *not* been released yet!**
-
----
-
-Copyright © 2017 by Reto Kromer and released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
+All formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
