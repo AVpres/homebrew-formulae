@@ -1,5 +1,5 @@
 class Openltfs < Formula
-  desc "An open and neutral LTFS, without the vendors' extensions"
+  desc "Open and neutral LTFS, without the vendors' extensions"
   homepage "https://avpres.net/openLTFS/"
   url "https://github.com/AVpres/openLTFS/archive/2017-09-20.tar.gz"
   version "2017-09-20"
