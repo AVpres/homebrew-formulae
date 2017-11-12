@@ -1,5 +1,5 @@
 class Openycocg < Formula
-  desc "An experimental video codec, built on the YCoCg colour space, designed for restoration purposes"
+  desc "Video codec, built on YCoCg colour space, for restoration purposes"
   homepage "https://avpres.net/openYCoCg/"
   url "https://github.com/AVpres/openYCoCg/archive/2017-10-21.tar.gz"
   version "2017-10-21"
