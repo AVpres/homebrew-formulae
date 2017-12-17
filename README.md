@@ -10,6 +10,8 @@ The formulae have been tested succesfully on Linux (Linuxbrew), on Windows using
 
 ---
 
+## Copyright, Licence and Disclaimer
+
 Copyright © 2017–2018 by Reto Kromer
 
 All formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
