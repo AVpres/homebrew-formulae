@@ -1,4 +1,6 @@
-# Homebrew/Linuxbrew Formulae for AV Preservation
+# Brew Formulae for AV Preservation
+
+The formulae have been tested succesfully on Linux (Linuxbrew), on Windows using the Subsystem for Linux (Linuxbrew) and on macOS (Homebrew).
 
 ## Table of Contents
 
