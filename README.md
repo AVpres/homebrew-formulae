@@ -14,6 +14,6 @@ The formulae have been tested succesfully on Linux (Linuxbrew), on Windows using
 
 Copyright © 2017–2018 by Reto Kromer
 
-All formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
+These formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
 
-The formulae are provided «as is» without warranty or support of any kind.
+These formulae are provided «as is» without warranty or support of any kind.

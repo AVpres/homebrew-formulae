@@ -1,9 +1,8 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/openLTO/"
-  url "https://github.com/AVpres/openLTO/archive/2017-12-12.tar.gz"
-  version "2017-12-12"
-  sha256 "3603702e7e5640c8a3149801de62ac4c5aa586c16c76217106b0163a62905adc"
+  url "https://github.com/AVpres/openLTO/archive/2017-12-19.tar.gz"
+  sha256 "79602a832b503b6c0ea0ced0d5e55f0a87af5dcd7fb2c316e07c07808c6ceec3"
 
   bottle :unneeded
 
@@ -13,5 +12,9 @@ class Openlto < Formula
   def install
     bin.install "openlto"
     man1.install "openlto.1"
+  end
+
+  test do
+    system "#{bin}/openlto", "-h"
   end
 end
