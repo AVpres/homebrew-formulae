@@ -1,9 +1,9 @@
 class Openycocg < Formula
   desc "Video codec, built on YCoCg colour space, for restoration purposes"
   homepage "https://avpres.net/openYCoCg/"
-  url "https://github.com/AVpres/openYCoCg/archive/2017-12-21.tar.gz"
-  version "2017-12-21"
-  sha256 "3c02a05fc3ba302301e28e85e0737cf82b54ad58b971219c3ba72ded3f2548da"
+  url "https://github.com/AVpres/openYCoCg/archive/2017-12-26.tar.gz"
+  version "2017-12-26"
+  sha256 "f2e91d3368a7d0b90e4111e89ae76ea9d087617665de51eb556e99bbb87edac0"
 
   bottle :unneeded
 
