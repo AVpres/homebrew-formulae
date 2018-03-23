@@ -1,9 +1,9 @@
 class Openltfs < Formula
-  desc "Open and neutral LTFS, without the vendors' extensions"
+  desc "Open and neutral LTFS, without any vendors' extension"
   homepage "https://avpres.net/openLTFS/"
-  url "https://github.com/AVpres/openLTFS/archive/2018-02-03.tar.gz"
-  version "2018-02-03"
-  sha256 "5438541f524397c400bbf2f8d9a8bf9a8883d7164d7eb550839c79e96207be99"
+  url "https://github.com/AVpres/openLTFS/archive/2018-03-24.tar.gz"
+  version "2018-03-24"
+  sha256 "ed6273db8dbc0f4f6c7f4bd4d8e8bf9ba3ae512fa8b1ec8a16b154978bd4e178"
 
   bottle :unneeded
 
