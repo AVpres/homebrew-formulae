@@ -2,6 +2,10 @@
 
 The formulae have been tested succesfully on Linux (Linuxbrew), on the Windows Subsystem for Linux (Linuxbrew) and on macOS (Homebrew).
 
+## Caveat
+
+**This work is still in progress. Our clients are currently testing an alpha. The source code will become freely available, as soon as a public beta will be released.**
+
 ## Table of Contents
 
 - **openLTO** – Bash scripts to manage LTO cartridges with LTFS
