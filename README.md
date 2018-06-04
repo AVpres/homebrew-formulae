@@ -4,7 +4,7 @@ The formulae have been tested succesfully on Linux (Linuxbrew), on the Windows S
 
 ## Caveat
 
-**This work is still in progress. Our clients are currently testing an alpha. The source code will become freely available, as soon as a public beta will be released.**
+**This work is still in progress. Our clients are currently testing alpha releases. The source code will become freely available, as soon as a public beta will be released. Yet not here, if Microsoft takes over GitHub.**
 
 ## Table of Contents
 
