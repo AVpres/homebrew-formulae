@@ -1,9 +1,9 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/openLTO/"
-  url "https://github.com/AVpres/openLTO/archive/2018-05-20.tar.gz"
-  version "2018-05-20"
-  sha256 "ce28f293e8d4f6ad19facf2442bb4585c7b998435da39b91aaa89646ca0e8dc7"
+  url "https://avpres.net/openLTO/releases/2018-06-09.tar.gz"
+  version "2018-06-09"
+  sha256 "c307797df913bbce4f6b8581e07af92b5ae51f68f652ccd16380ea48bed5e90b"
 
   bottle :unneeded
 
