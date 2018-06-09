@@ -1,14 +1,12 @@
 # Brew Formulae for AV Preservation
 
-The formulae have been tested succesfully on Linux (Linuxbrew), on the Windows Subsystem for Linux (Linuxbrew) and on macOS (Homebrew).
+These formulae have been tested successfully on Linux (Linuxbrew), on the Windows Subsystem for Linux (Linuxbrew) and on macOS (Homebrew).
 
 ## Table of Contents
 
 - **openLTO** – Bash scripts to manage LTO cartridges with LTFS
 - **openLTFS** – An open and neutral LTFS implementation, without the proprietary extensions from the different vendors
 - **openYCoCg** – An experimental video codec, built on the Y′C<sub>O</sub>C<sub>G</sub> colour space, designed for restoration purposes
-
----
 
 ## Copyright, Licence and Disclaimer
 
