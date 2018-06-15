@@ -1,7 +1,5 @@
 # Brew Formulae for AV Preservation
 
-These formulae have been tested successfully on Linux (Linuxbrew), on the Windows Subsystem for Linux (Linuxbrew) and on macOS (Homebrew).
-
 ## Table of Contents
 
 - **openLTO** – Bash scripts to manage LTO cartridges with LTFS

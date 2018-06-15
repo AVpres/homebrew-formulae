@@ -1,9 +1,9 @@
 class Openycocg < Formula
-  desc "Video codec, built on YCoCg colour space, for restoration purposes"
+  desc "CLI for libycocg library to encode, decode and analyse YCoCg video"
   homepage "https://avpres.net/openYCoCg/"
-  url "https://avpres.net/openYCoCg/releases/2018-06-10.tar.gz"
-  version "2018-06-10"
-  sha256 "4b9ee9dad8fea7167d71d1530d22c58bd43fc5fab5f613bf23e1168e2b90360d"
+  url "https://avpres.net/openYCoCg/releases/2018-06-16.tar.gz"
+  version "2018-06-16"
+  sha256 "9b22cb74e96ca04eb7f2ff0042ff804fd032699a1d2766afea948a4d0b33d7e3"
 
   bottle :unneeded
 
