@@ -1,12 +1,13 @@
-class Vrecord < Formula
-  desc "Capturing a video signal and turning it into a digital file"
+class VrecordX < Formula
+  desc "Vrecord flavour running on Linux (incl. Windows Subsystem) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
-  version "2018-06-11"
-  sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
+  version "2018-06-11_x"
+  sha256 "641ea4c31a98f24036b07bd0d67addbb346362be8b5073c74bb19310746a90ba"
 
   bottle :unneeded
 
+  option "with-doc", "Install the documentation"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
 
   depends_on "cowsay"
@@ -21,9 +22,12 @@ class Vrecord < Formula
 
   depends_on "xmlstarlet" => :recommended
 
+  conflicts_with "amiaopensource/amiaos/vrecord",
+    :because => "both install approximately the same resources"
+
   patch do
-    url "https://avpres.net/patch/vrecord_2018-06-11.diff"
-    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    url "https://avpres.net/patch/vrecord_2018-06-11_x_2018-06-22.diff"
+    sha256 "641ea4c31a98f24036b07bd0d67addbb346362be8b5073c74bb19310746a90ba"
   end
 
   def install
