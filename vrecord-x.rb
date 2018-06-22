@@ -3,7 +3,7 @@ class VrecordX < Formula
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
   version "2018-06-11_x"
-  sha256 "641ea4c31a98f24036b07bd0d67addbb346362be8b5073c74bb19310746a90ba"
+  sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
 
   bottle :unneeded
 
