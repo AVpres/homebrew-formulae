@@ -4,10 +4,11 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
   version "2018-06-11_x"
   sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
+  revision 1
 
   bottle :unneeded
 
-  option "with-doc", "Install the documentation"
+  option "with-doc", "Install the documentation" #### TO-DO
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
 
   depends_on "cowsay"
@@ -26,8 +27,8 @@ class VrecordX < Formula
     :because => "both install approximately the same resources"
 
   patch do
-    url "https://avpres.net/patch/vrecord_2018-06-11_x_2018-06-22.diff"
-    sha256 "641ea4c31a98f24036b07bd0d67addbb346362be8b5073c74bb19310746a90ba"
+    url "https://avpres.net/patch/vrecord_2018-06-11_x_2018-06-29.diff"
+    sha256 "19ff96dea613a6c9939621831bad36565c9cbedd30a4691a845274a97c34b634"
   end
 
   def install
