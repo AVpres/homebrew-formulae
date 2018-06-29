@@ -2,9 +2,12 @@
 
 ## Table of Contents
 
-- **openLTFS** – Command-line interface to the libltfs C library
+It’s currently necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl/) before running the following formulae.
+
+- **openLTFS** – command-line interface to the libltfs C library
 - **openLTO** – Bash scripts to manage LTO cartridges with LTFS
-- **openYCoCg** – Command-line interface to encode, decode and analyse YCoCg video
+- **openYCoCg** – command-line interface to encode, decode and analyse YCoCg video
+- **vrecord-x** – [vrecord](https://github.com/amiaopensource/vrecord) flavour running on Linux (incl. Windows Subsystem) and macOS
 
 ## Copyright, Licence and Disclaimer
 
