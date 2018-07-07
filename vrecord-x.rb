@@ -1,10 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux (incl. Windows Subsystem) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
-  version "2018-06-11_x"
-  sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-03.tar.gz"
+  version "2018-07-03_x"
+  sha256 "934cdeae9153e59d493968f114b898603ff8075558dde8388ecddd9f5c4fb24b"
 
   bottle :unneeded
 
@@ -27,8 +26,8 @@ class VrecordX < Formula
     :because => "both install approximately the same resources"
 
   patch do
-    url "https://avpres.net/patch/vrecord_2018-06-11_x_2018-06-29.diff"
-    sha256 "19ff96dea613a6c9939621831bad36565c9cbedd30a4691a845274a97c34b634"
+    url "https://avpres.net/patch/vrecord_2018-07-03_x_2018-07-07.diff"
+    sha256 "46b7f9db354dd68f74059ca5173ff42120e69991452cea19d23ec2ed6fc57199"
   end
 
   def install
@@ -37,7 +36,6 @@ class VrecordX < Formula
     bin.install "vrecord_policy_ffv1.xml"
     bin.install "vrecord_policy_uncompressed.xml"
     bin.install "vtest" if build.with? "vtest"
-    prefix.install "vrecord_logo.png"
     man1.install "vrecord.1"
     man1.install "vtest.1" if build.with? "vtest"
   end
