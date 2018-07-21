@@ -2,12 +2,12 @@
 
 ## Table of Contents
 
-It’s currently necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl/) before running the following formulae.
+During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries will be installed:
 
-- **openLTFS** – command-line interface to the libltfs C library
-- **openLTO** – Bash scripts to manage LTO cartridges with LTFS
-- **openYCoCg** – command-line interface to encode, decode and analyse YCoCg video
-- **vrecord-x** – [vrecord](https://github.com/amiaopensource/vrecord) flavour running on Linux (incl. Windows Subsystem) and macOS
+- the **openLTFS** package includes the _ltfs_ C library and the _openltfs_ Bash command-line tool;
+- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
+- the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
+- the **vrecord-x** package is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (incl. Windows Subsystem) and macOS, essentially without the graphical user interface, because Pashua is not platform independent.
 
 ## Copyright, Licence and Disclaimer
 
