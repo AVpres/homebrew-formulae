@@ -1,10 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux (incl. Windows Subsystem) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-03.tar.gz"
-  version "2018-07-03_x"
-  sha256 "934cdeae9153e59d493968f114b898603ff8075558dde8388ecddd9f5c4fb24b"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-31.tar.gz"
+  version "2018-08-04_x"
+  sha256 "685b01a833eb028e070171c26cd212412a8f26b034bb0c556da50fad87e318a3"
 
   bottle :unneeded
 
@@ -26,8 +25,8 @@ class VrecordX < Formula
     :because => "both install approximately the same resources"
 
   patch do
-    url "https://avpres.net/patch/vrecord_2018-07-03_x_2018-07-21.diff"
-    sha256 "6182f5836b2562eb6f20450879682345f6cb8a339c71efeee2251c2af3c3411f"
+    url "https://avpres.net/patch/vrecord_2018-07-31_x_2018-08-04.diff"
+    sha256 "6a30ea709b406b67692e25e947845faf8f417fb08792abed54a8ab6112b8f843"
   end
 
   def install
@@ -38,6 +37,14 @@ class VrecordX < Formula
     bin.install "vtest" if build.with? "vtest"
     man1.install "vrecord.1"
     man1.install "vtest.1" if build.with? "vtest"
+  end
+
+  def post_install
+    if `brew ls -1 gnuplot 2>/dev/null | head -n1`.empty?
+      puts "Warning: gnuplot is not installed. You can install it by running:"
+      puts "  brew install gnuplot --without-lua"
+      puts "It gives extra quality control images along with your QCTools report."
+    end
   end
 
   test do
