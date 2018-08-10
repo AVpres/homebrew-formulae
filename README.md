@@ -16,7 +16,7 @@ We have programmed for a client an one-task Bash script which could be useful to
 
 ## Experimental Formulae
 
-Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS **cpio** will replace the existing installation.)
+Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the old version provided by Apple.)
 
 - **cpio** – Copy files to and from archives, with optional:
   - **mt** – Control magnetic tape drive operation
@@ -24,7 +24,7 @@ Please do not install the following formulae unless you know exactly what you ar
 
 During the development of **vrecord-x**, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
 
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, including the Windows Subsystem, and on macOS. The main modifications made are:
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS. The main modifications made are:
   - the GUI is removed, because _Pashua_ is not platform independent, and only the CLI is currently used;
   - the HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding;
   - ProRes 422 HQ is used, because the quality is higher than the default ProRes 422 standard.
