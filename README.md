@@ -16,13 +16,13 @@ We have programmed for a client an one-task Bash script which could be useful to
 
 ## Experimental Formulae
 
-Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the old version provided by Apple.)
+Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the older version provided by Apple.)
 
 - **cpio** – Copy files to and from archives, with optional:
   - **mt** – Control magnetic tape drive operation
 - **hla** – High Level Assembler (HLABE back end, LD linker)
 
-During the development of **vrecord-x**, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
+During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
 
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS. The main modifications made are:
   - the GUI is removed, because _Pashua_ is not platform independent, and only the CLI is currently used;
