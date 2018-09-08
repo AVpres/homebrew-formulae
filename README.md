@@ -6,13 +6,15 @@ During the software development, it’s necessary to be connected to our [extran
 
 - the **openLTFS** package includes the _ltfs_ C library and the _openltfs_ Bash command-line tool;
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
+- the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multi-spectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multi-spectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
 ### Possibly coming soon
 
-We have programmed for a client an one-task Bash script which could be useful to a wider community. We are hesitating between release this as a stand-alone application, or include it as an additional command into the **openLTO** package. Hmm…
+We have programmed for a client two one-task Bash scripts which could be useful to a wider community. We are hesitating between release these as one stand-alone application, or include it as additional commands into the **openLTO** package. Hmm… [any thoughts](https://reto.ch/cgi-bin/feedback.pl)?
 
 - **dcp2lto** - Backup a DCP onto an LTO cartridge adding an MD5 manifest
+- **lto2dcp** - Retrieve a DCP from an LTO cartridge and verify the MD5 values
 
 ## Experimental Formulae
 
