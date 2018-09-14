@@ -1,9 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux (incl. as a Windows' app) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-08-12.tar.gz"
-  version "2018-08-25_x"
-  sha256 "1c7eb50adcfdb84c847fc4f8f888fb82efa7a9bea69b7d3efe9ec83f31fd83c0"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-09-12.tar.gz"
+  version "2018-09-15_x"
+  sha256 "dd0af6e9448c97993859045b4ebd1abad6bbf89a404511b6df9022664a2509e5"
 
   bottle :unneeded
 
@@ -24,19 +24,22 @@ class VrecordX < Formula
   conflicts_with "amiaopensource/amiaos/vrecord",
     :because => "both install approximately the same resources"
 
-  patch do
-    url "https://avpres.net/patch/vrecord_2018-08-12_x_2018-08-25.diff"
-    sha256 "9de0423b78b9974e9d56de44075875231cbc5a1727055bd79ec278b2c9627634"
-  end
-
   def install
-    bin.install "vrecord"
-    bin.install "qcview.lua"
-    bin.install "vrecord_policy_ffv1.xml"
-    bin.install "vrecord_policy_uncompressed.xml"
-    bin.install "vtest" if build.with? "vtest"
-    man1.install "vrecord.1"
-    man1.install "vtest.1" if build.with? "vtest"
+    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`.empty?
+      patch do
+        url "https://avpres.net/patch/vrecord_2018-09-12_x_2018-09-15.diff"
+        sha256 "1cf146c73a018b498bee34cb3ebbf632de3ef4cd6517205841a08bf230d6daa8"
+      end
+      bin.install "vrecord"
+      bin.install "qcview.lua"
+      bin.install "vrecord_policy_ffv1.xml"
+      bin.install "vrecord_policy_uncompressed.xml"
+      bin.install "vtest" if build.with? "vtest"
+      man1.install "vrecord.1"
+      man1.install "vtest.1" if build.with? "vtest"
+    else
+      odie "Cannot patch the original 'vrecord'. Please login."
+    end
   end
 
   def post_install
