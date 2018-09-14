@@ -4,7 +4,7 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2018-09-12.tar.gz"
   version "2018-09-15_x"
   sha256 "dd0af6e9448c97993859045b4ebd1abad6bbf89a404511b6df9022664a2509e5"
-  revision 1
+  revision 2
 
   bottle :unneeded
 
@@ -26,7 +26,7 @@ class VrecordX < Formula
     :because => "both install approximately the same resources"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
+    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null` == "login"
       odie "Cannot patch the original 'vrecord'. Please login."
     else
       patch do

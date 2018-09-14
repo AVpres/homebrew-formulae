@@ -4,7 +4,7 @@ class Openlto < Formula
   url "https://avpres.net/openLTO/releases/2018-09-15.tar.gz"
   version "2018-09-15"
   sha256 "cf96de01ef2ffe9c631e24fc19c197b579272e523b3ef6e581a06f4f9b3bce5e"
-  revision 1
+  revision 2
 
   bottle :unneeded
 
@@ -12,7 +12,7 @@ class Openlto < Formula
     :because => "both install some scripts having the same name"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
+    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null` == "login"
       opoo "The Terminal functions cannot be installed. Please login."
     else
       patch do
