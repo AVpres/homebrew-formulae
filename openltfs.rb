@@ -4,12 +4,12 @@ class Openltfs < Formula
   url "https://avpres.net/openLTFS/releases/2018-09-15.tar.gz"
   version "2018-09-15"
   sha256 "06291b662aa84439bc216cf24166ef3691885ab729c85d3f809a0a0495ee85d8"
-  revision 2
+  revision 3
 
   bottle :unneeded
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null` == "login"
+    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
       opoo "The 'libltfs' library cannot be installed. Please login."
     else
       patch do
