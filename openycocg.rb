@@ -1,9 +1,9 @@
 class Openycocg < Formula
   desc "CLI for 'libycocg' to encode, decode, play and analyse YCoCg video"
   homepage "https://avpres.net/openYCoCg/"
-  url "https://avpres.net/openYCoCg/releases/2018-09-22.tar.gz"
-  version "2018-09-22"
-  sha256 "28f31ebc0b9099280030ae91c94bb0d4f3004ca8d16e61ca2b2209b3f40fa2a2"
+  url "https://avpres.net/openYCoCg/releases/2018-10-06.tar.gz"
+  version "2018-10-06"
+  sha256 "f7921d2b889725852589e922b1e761ffa63931921e59586412689325b2319b02"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Openycocg < Formula
       opoo "The 'libycocg' library cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/openycocg_2018-09-22.diff"
-        sha256 "f379398cc5977cdb3f1dcb542c7c95665df220f1a4fe09b1404ce1a3ad036200"
+        url "https://avpres.net/patch/openycocg_2018-10-06.diff"
+        sha256 "3ebd70b2081e2105405ac130739575426e6cd361328d713bd44058a31b85347e"
       end
       bin.install "libycocg"
     end

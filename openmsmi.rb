@@ -1,9 +1,9 @@
 class Openmsmi < Formula
   desc "CLI for 'libmsmi' to handle multispectral moving images"
   homepage "https://avpres.net/openMSMI/"
-  url "https://avpres.net/openMSMI/releases/2018-09-22.tar.gz"
-  version "2018-09-22"
-  sha256 "94056107b6d5912f572176ea7e9574ed2f3a0ff7ed9b2a455fc0c14319c58f66"
+  url "https://avpres.net/openMSMI/releases/2018-10-06.tar.gz"
+  version "2018-10-06"
+  sha256 "30b7c7098d39e3be9c7c0454f85b4ec32bc8cdac43a92a76ee7062168db5153c"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Openmsmi < Formula
       opoo "The 'libmsmi' library cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/openmsmi_2018-09-22.diff"
-        sha256 "b80af9c889b036261a225a4467bd620bc9f1b209b67ed5c4e71db89d13572cde"
+        url "https://avpres.net/patch/openmsmi_2018-10-06.diff"
+        sha256 "dd0ab0e9ad8b56124319d65ae7d986d089ebab46107fb548d3fa10a72abbf3c5"
       end
       bin.install "libmsmi"
     end
