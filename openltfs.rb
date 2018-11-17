@@ -1,9 +1,9 @@
 class Openltfs < Formula
   desc "CLI for 'libltfs' library to handle LTFS openly and neutrally"
   homepage "https://avpres.net/openLTFS/"
-  url "https://avpres.net/openLTFS/releases/2018-10-06.tar.gz"
-  version "2018-10-06"
-  sha256 "3aca00446d0210fe118aec91122ed1e5c42a38ecfa1c095f6b8f894b53f86fff"
+  url "https://avpres.net/openLTFS/releases/2018-11-17.tar.gz"
+  version "2018-11-17"
+  sha256 "3cecbad9e70697cbeed5f59882131bad586251acb7fe9f4c9e5333a153ca5f5c"
 
   bottle :unneeded
 

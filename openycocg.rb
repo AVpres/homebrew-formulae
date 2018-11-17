@@ -1,9 +1,9 @@
 class Openycocg < Formula
   desc "CLI for 'libycocg' to encode, decode, play and analyse YCoCg video"
   homepage "https://avpres.net/openYCoCg/"
-  url "https://avpres.net/openYCoCg/releases/2018-10-06.tar.gz"
-  version "2018-10-06"
-  sha256 "f7921d2b889725852589e922b1e761ffa63931921e59586412689325b2319b02"
+  url "https://avpres.net/openYCoCg/releases/2018-11-17.tar.gz"
+  version "2018-11-17"
+  sha256 "df876a532735c660bb77783a8a84d9d0845f49160a5a22e15680ab2658168bf9"
 
   bottle :unneeded
 

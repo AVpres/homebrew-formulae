@@ -1,9 +1,9 @@
 class Openmsmi < Formula
   desc "CLI for 'libmsmi' to handle multispectral moving images"
   homepage "https://avpres.net/openMSMI/"
-  url "https://avpres.net/openMSMI/releases/2018-10-13.tar.gz"
-  version "2018-10-13"
-  sha256 "b162e214f788d0bca888e9dff35517a8c377c55ddfcab14422f180d3fd0074b1"
+  url "https://avpres.net/openMSMI/releases/2018-11-17.tar.gz"
+  version "2018-11-17"
+  sha256 "d7a533a9de3e05d06e9317351923c3a18d2e0543ca6bf533fd8399f61dff1a0f"
 
   bottle :unneeded
 
