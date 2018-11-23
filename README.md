@@ -24,6 +24,9 @@ During the development, it’s necessary to be connected to our [extranet](https
   - the HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding;
   - ProRes 422 HQ is used, because the quality is higher than the default ProRes 422 standard.
 
+The following formula is provided as long as the AMIA Open Source’s GitHub repository does not make available the current release of QFTools, but only an old one:
+  - **qctools-x**
+
 ## Copyright, Licence and Disclaimer
 
 Copyright © 2017–2018 by Reto Kromer
