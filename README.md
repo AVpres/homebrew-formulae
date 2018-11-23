@@ -9,6 +9,9 @@ During the software development, it’s necessary to be connected to our [extran
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
+The following formula is provided as long as the AMIA Open Source’s GitHub repository does not make available the current release of QCTools, but only an old one:
+  - **qctools-x**
+
 ## Experimental Formulae
 
 Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the older version provided by Apple.)
@@ -23,9 +26,6 @@ During the development, it’s necessary to be connected to our [extranet](https
   - the GUI is removed, because _Pashua_ is not platform independent, and only the CLI is currently used;
   - the HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding;
   - ProRes 422 HQ is used, because the quality is higher than the default ProRes 422 standard.
-
-The following formula is provided as long as the AMIA Open Source’s GitHub repository does not make available the current release of QFTools, but only an old one:
-  - **qctools-x**
 
 ## Copyright, Licence and Disclaimer
 
