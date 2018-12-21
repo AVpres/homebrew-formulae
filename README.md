@@ -6,6 +6,7 @@ During the software development, it’s necessary to be connected to our [extran
 
 - the **openLTFS** package includes the _ltfs_ C library and the _openltfs_ Bash command-line tool;
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
+- the **openMovIm** package contains the _libmovim_ C library, implementing the  _MovIm_ video codec for generic moving images, and the _openmovim_ Bash command-line interface to _livmovim_, allowing to encode, decode, play and analyse virtually any moving images;
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
@@ -26,7 +27,7 @@ As the official formula is getting closer and closer to our alternate one, most 
 
 ## Copyright, Licence and Disclaimer
 
-Copyright © 2017–2018 by Reto Kromer
+Copyright © 2017–2019 by Reto Kromer
 
 These formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
 
