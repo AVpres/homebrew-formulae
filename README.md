@@ -10,6 +10,8 @@ During the software development, it’s necessary to be connected to our [extran
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
+Please note that most probably the development of **openYCoCg** and **openMSMI** will be stopped soon, because **openMovIm** is actually their generalisation.
+
 ## Experimental Formulae
 
 Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the older version provided by Apple.)

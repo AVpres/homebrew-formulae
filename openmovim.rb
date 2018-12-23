@@ -1,9 +1,9 @@
 class Openmovim < Formula
   desc "CLI for 'libmovim' to encode, decode, play and analyse moving images"
   homepage "https://avpres.net/openMovIm/"
-  url "https://avpres.net/openMovIm/releases/2018-12-23.tar.gz"
-  version "2018-12-23"
-  sha256 "2b7450902a233da53f10dbc80036d79541e3103661924f44dc427c4133de8a6e"
+  url "https://avpres.net/openMovIm/releases/2018-12-24.tar.gz"
+  version "2018-12-24"
+  sha256 "a2b98da16ccba474a7280ada786b56da2b8f24892949d44d8ae2a9d1df8c5d11"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Openmovim < Formula
       opoo "The 'libmovim' library cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/openmovim_2018-12-23.diff"
-        sha256 "5d064f20fd02ff63dcaddac6ba0acc84ea31f46ed202ff7f025023d3e14ca115"
+        url "https://avpres.net/patch/openmovim_2018-12-24.diff"
+        sha256 "61574906abe50dc41bc3b589da9bad97293f728d9120ab704552e8305bd907b9"
       end
       bin.install "libmovim"
     end
