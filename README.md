@@ -6,13 +6,9 @@ During the software development, it’s necessary to be connected to our [extran
 
 - the **openLTFS** package includes the _ltfs_ C library and the _openltfs_ Bash command-line tool;
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
-- the **openMovIm** package contains the _libmovim_ C library, implementing the  _MovIm_ video codec for generic moving images, and the _openmovim_ Bash command-line interface to _livmovim_, allowing to encode, decode, play and analyse virtually any moving images;
-- the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
-- the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
+- the **openMovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and the _openmovim_ Bash command-line interface to _livmovim_, allowing to encode, decode, play and analyse virtually any moving images.
 
-Please note that most probably the development of **openYCoCg** and **openMSMI** will be stopped soon, because **openMovIm** is actually their generalisation.
-
-## Experimental Formulae
+### Experimental Formulae
 
 Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the older version provided by Apple.)
 
@@ -25,7 +21,14 @@ During the development, it’s necessary to be connected to our [extranet](https
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including as a Windows’ app) and on macOS. The main modification made is:
   - the HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding.
 
-As the official formula is getting closer and closer to our alternate one, most probably it will disappear soon here. 
+As the official formula is getting closer and closer to our alternate one, most probably it will disappear soon here.
+
+### Abandoned Formulae
+
+The development of **openYCoCg** and **openMSMI** has been stopped and have been and superseded by **openMovIm** on 2019–01–12:
+
+- the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
+- the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
 ## Copyright, Licence and Disclaimer
 
