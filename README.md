@@ -33,6 +33,8 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
+These two formulae will be cancelled mid March 2019 from this GitHub repository.
+
 ## Copyright, Licence and Disclaimer
 
 Copyright © 2017–2019 by Reto Kromer
