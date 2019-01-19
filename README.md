@@ -18,10 +18,13 @@ Please do not install the following formulae unless you know exactly what you ar
 
 During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
 
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including as a Windows’ app) and on macOS. The main modification made is:
-  - the HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding.
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including as a Windows’ app) and on macOS.
 
-As the official formula is getting closer and closer to our alternate one, most probably it will disappear soon here.
+The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining modifications are:
+  - HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding;
+  - FLAC encoding is added, because it’s a robust format for archiving.
+
+Therefore most probably our alternate formula can disappear again very soon.
 
 ### Abandoned Formulae
 

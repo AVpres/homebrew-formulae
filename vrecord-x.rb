@@ -1,20 +1,20 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux (incl. as a Windows' app) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-12-13.tar.gz"
-  version "2018-12-13_x"
-  sha256 "479ef8bea1e7b2dadcea9ac929496457223df0844c4251a1d99f2bdf2e218f12"
+  url "https://github.com/amiaopensource/vrecord/archive/v2019-01-19.tar.gz"
+  version "2019-01-19_x"
+  sha256 "4defe59a2f547c6975240b2b1c43951f1fe9807cc5cf5320e956c7ede56cf7fd"
 
   bottle :unneeded
 
   option "with-doc", "Install the documentation" #### TO-DO
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
 
-  depends_on "cowsay"
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
-  depends_on "freetype"
   depends_on "amiaopensource/amiaos/gtkdialog"
+  depends_on "cowsay"
+  depends_on "freetype"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
@@ -30,8 +30,8 @@ class VrecordX < Formula
       odie "Cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2018-12-13_x_2018-12-15.diff"
-        sha256 "fb1fa6389eeed13a444a4b5b497fed0f26489fd6007127e87d3633be39802345"
+        url "https://avpres.net/patch/vrecord_2019-01-19_x_2019-01-19.diff"
+        sha256 "ec8715a1579bdcff36e6d7281d2dbfded1daa99aa39a729b8efddcd7679498f0"
       end
       bin.install "vrecord"
       bin.install "qcview.lua"
