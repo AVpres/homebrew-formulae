@@ -1,9 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux (incl. as a Windows' app) and macOS"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2019-01-19.tar.gz"
-  version "2019-01-19_x"
-  sha256 "4defe59a2f547c6975240b2b1c43951f1fe9807cc5cf5320e956c7ede56cf7fd"
+  url "https://github.com/amiaopensource/vrecord/archive/v2019-01-25.tar.gz"
+  version "2019-01-25"
+  sha256 "fd13fe98013e9568b17008ba9132e31f8c16b18a72149d9a4771eb0c9f6fe0d0"
 
   bottle :unneeded
 
@@ -30,13 +30,19 @@ class VrecordX < Formula
       odie "Cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-01-19_x_2019-01-19.diff"
-        sha256 "ec8715a1579bdcff36e6d7281d2dbfded1daa99aa39a729b8efddcd7679498f0"
+        url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-01-26.diff"
+        sha256 "305e746a22035bb1acf984031c1dade249fd5849c48b6dfbd45a3c3838a89660"
       end
       bin.install "vrecord"
-      bin.install "qcview.lua"
-      bin.install "vrecord_policy_ffv1.xml"
-      bin.install "vrecord_policy_uncompressed.xml"
+      prefix.install "Resources/qcview.lua"
+      prefix.install "Resources/vrecord_policy_ffv1.xml"
+      prefix.install "Resources/vrecord_policy_uncompressed.xml"
+      prefix.install "Resources/vrecord logo.png"
+      prefix.install "Resources/vrecord logo playback.png"
+      prefix.install "Resources/vrecord logo audio.png"
+      prefix.install "Resources/vrecord logo edit.png"
+      prefix.install "Resources/vrecord logo help.png"
+      prefix.install "Resources/vrecord logo documentation.png"
       bin.install "vtest" if build.with? "vtest"
       man1.install "vrecord.1"
       man1.install "vtest.1" if build.with? "vtest"
