@@ -61,12 +61,13 @@ class FfmpegX < Formula
       --enable-librtmp
       --enable-libspeex
       --enable-videotoolbox
-      --enable-librubberband
-      --enable-libtesseract
-      --enable-libopenjpeg
-      --disable-decoder=jpeg2000
-      --extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
     ]
+
+    args << "--enable-librubberband"
+    args << "--enable-libtesseract"
+    args << "--enable-libopenjpeg"
+    args << "--disable-decoder=jpeg2000"
+    args << "--extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
 
     system "./configure", *args
     system "make", "install"
