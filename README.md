@@ -1,6 +1,20 @@
-# Brew Formulae for AV Preservation
+# Brew Formulae for Audio-Visual Preservation
 
-## Table of Contents
+## An FFmpeg Flavour for Archivists
+
+Since the Brew maintainers have decided to drop all options from their formulae, we provide an alternate FFmpeg formula allowing again to install some additional options which are useful for the audio-visual archivists’ work. By default are enabled:
+
+- the **OpenJPEG** encoding and decoding;
+- the **Rubberband** audio filter, which allows time-stretching and pitch-shifting;
+- the **Tesseract** filter for optical character recognition, e.g. for extracting intertitles or subtitles.
+
+To install it, run in the Terminal the command:
+
+```
+brew install avpres/formulae/ffmpeg
+```
+
+## Formulae
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries will be installed.
 
