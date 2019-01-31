@@ -6,15 +6,23 @@ Since the Brew maintainers have decided to drop all options from their formulae,
 
 - the **OpenJPEG** encoding and decoding;
 - the **Rubberband** audio filter, which allows time-stretching and pitch-shifting;
-- the **Tesseract** filter for optical character recognition, e.g. for extracting intertitles or subtitles.
+- the **Tesseract** filter for optical character recognition, e.g. for intertitle or subtitle extraction.
 
-To install it, run in the Terminal the command:
+To install this flavour of FFmpeg run in the Terminal the command:
 
 ```
 brew install avpres/formulae/ffmpeg
 ```
 
-## Formulae
+If the standard FFmpeg is already installed via Homebrew/Linuxbrew, then you need to run:
+
+```
+brew uninstall --ignore-dependencies ffmpeg
+```
+
+before the new installation.
+
+## Maintained Formulae
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries will be installed.
 
@@ -40,7 +48,7 @@ The official formula by AMIA Open Source is getting closer and closer to our alt
 
 Therefore most probably our alternate formula can disappear again very soon.
 
-### Abandoned Formulae
+## Abandoned Formulae
 
 The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–12 these libraries have been superseded by _libmovim_:
 

@@ -3,6 +3,7 @@ class Ffmpeg < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.1.tar.xz"
   sha256 "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
+  head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
@@ -43,6 +44,12 @@ class Ffmpeg < Formula
   depends_on "xvid"
   depends_on "xz"
 
+  unless OS.mac?
+    depends_on "zlib"
+    depends_on "bzip2"
+    depends_on "linuxbrew/xorg/libxv"
+  end
+
   depends_on "chromaprint" => :optional
   depends_on "fdk-aac" => :optional
   depends_on "fontconfig" => :optional
@@ -76,7 +83,7 @@ class Ffmpeg < Formula
     :because => "both install the same resources"
 
   def install
-    opoo "Installing an FFmpeg flavour for audio-visual archivists."
+    opoo "Installing an alternate FFmpeg flavour for audio-visual archivists."
     args = %W[
       --prefix=#{prefix}
       --enable-shared
@@ -133,7 +140,7 @@ class Ffmpeg < Formula
     args << "--enable-openssl" if build.with? "openssl"
     args << "--enable-videotoolbox" if MacOS.version >= :mountain_lion
 
-    # force OpenJPEG
+    # Force the use of OpenJPEG
     args << "--enable-libopenjpeg"
     args << "--disable-decoder=jpeg2000"
     args << "--extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
@@ -151,7 +158,7 @@ class Ffmpeg < Formula
   end
 
   test do
-    # Create an example mp4 file
+    # Create an example MP4 file
     mp4out = testpath/"video.mp4"
     system bin/"ffmpeg", "-filter_complex", "testsrc=rate=1:duration=1", mp4out
     assert_predicate mp4out, :exist?
