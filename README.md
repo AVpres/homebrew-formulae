@@ -12,6 +12,8 @@ brew install ffmpeg
 brew tap avpres/formulae
 ```
 
+Yet an again parametrable FFmpeg formula will be available soon… somewhere.
+
 ## Maintained Formulae
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries will be installed.
@@ -22,10 +24,8 @@ During the software development, it’s necessary to be connected to our [extran
 
 ### Experimental Formulae
 
-Please do not install the following formulae unless you know exactly what you are doing. (For example: on macOS the current **cpio** will replace the older version provided by Apple.)
+Please do not install the following formula unless you know exactly what you are doing:
 
-- **cpio** – Copy files to and from archives, with optional:
-  - **mt** – Control magnetic tape drive operation
 - **hla** – High Level Assembler (HLABE back end, LD linker)
 
 During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
