@@ -1,21 +1,23 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-02-09.tar.gz"
-  version "2019-02-09"
-  sha256 "2c36cd2175d77481dbd6cdcc06b3464a2fcf832528a353a064992bfedb1adec5"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-02-10.tar.gz"
+  version "2019-02-10"
+  sha256 "c82b8c19935480746af0e395ac2137601b306e95fdaf619eb588f9ef31e9dae0"
 
   bottle :unneeded
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-      opoo "The 'libspoiledapples' library cannot be installed. Please login."
+      opoo "The libraries cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples_2019-02-09.diff"
-        sha256 "4ee2bff833301c3293471901e11b520e82cdefee445502c4f332e9aeef499459"
+        url "https://avpres.net/patch/spoiledapples_2019-02-10.diff"
+        sha256 "dfb0c30753dc76c5678095f3fb7d4a34540f80552ad50c825598f726f5b8e3d4"
       end
-      bin.install "libspoiledapples"
+      mkdir "sa" do
+        system "make", "install"
+      end
     end
     bin.install "spoiledapples"
     man1.install "spoiledapples.1"
