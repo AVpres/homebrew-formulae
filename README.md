@@ -2,13 +2,18 @@
 
 ## UPDATE: An FFmpeg Flavour for Archivists
 
-The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work. Therefore we have cancelled our alternate formula and we suggest to use again the standard Homebrew distribution. To switch back, please run in the Terminal the commands:
+The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work. Therefore we recommend to use again the standard Homebrew distribution. To switch back, please run in the Terminal the following commands:
 
 ```
 brew uninstall --ignore-dependencies ffmpeg
 brew untap avpres/formulae
 brew update
 brew install ffmpeg
+```
+
+and, if and only if you do use other formulae from this repository, then also:
+
+```
 brew tap avpres/formulae
 ```
 
