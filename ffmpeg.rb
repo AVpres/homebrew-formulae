@@ -1,8 +1,8 @@
 class Ffmpeg < Formula
   desc "Flavour of FFmpeg for audio-visual archivists"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.1.tar.xz"
-  sha256 "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
+  url "https://ffmpeg.org/releases/ffmpeg-4.1.1.tar.xz"
+  sha256 "373749824dfd334d84e55dff406729edfd1606575ee44dd485d97d45ea4d2d86"
   head "https://git.ffmpeg.org/ffmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
