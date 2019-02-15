@@ -1,9 +1,9 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-02-10.tar.gz"
-  version "2019-02-10"
-  sha256 "c82b8c19935480746af0e395ac2137601b306e95fdaf619eb588f9ef31e9dae0"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-02-16.tar.gz"
+  version "2019-02-16"
+  sha256 "e9bb9705176f1a0a674a1e250fb502574241a6112bd2c4854aa53aeed9247802"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Spoiledapples < Formula
       opoo "The libraries cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples_2019-02-10.diff"
-        sha256 "dfb0c30753dc76c5678095f3fb7d4a34540f80552ad50c825598f726f5b8e3d4"
+        url "https://avpres.net/patch/spoiledapples_2019-02-16.diff"
+        sha256 "0bb541e199318cd89989c0abe3b0c06114759c3ede9cc2107f12a5ae538835f6"
       end
       mkdir "sa" do
         system "make", "install"

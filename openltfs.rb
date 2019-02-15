@@ -1,9 +1,9 @@
 class Openltfs < Formula
   desc "CLI for 'libltfs' library to handle LTFS openly and neutrally"
   homepage "https://avpres.net/openLTFS/"
-  url "https://avpres.net/openLTFS/releases/2019-02-02.tar.gz"
-  version "2019-02-02"
-  sha256 "97e26aaf80ec6c1448d1e9c2e8aae511f6c4101b70367e292fdd819aed5f1578"
+  url "https://avpres.net/openLTFS/releases/2019-02-16.tar.gz"
+  version "2019-02-16"
+  sha256 "0794ca5498031ffaec6e8cf39bd1aeda30c9e6b9a836d3b1b07cb6e1abec4ade"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Openltfs < Formula
       opoo "The 'libltfs' library cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/openltfs_2019-02-02.diff"
-        sha256 "391f275738344209c3b37b91b99b74c66cba7d8fb244d0cd7e77c3bcf8c5f20e"
+        url "https://avpres.net/patch/openltfs_2019-02-16.diff"
+        sha256 "6b87feab85a43ce62d01c0b5a656357b803713d61c4d767c17dc87a59c195062"
       end
       bin.install "libltfs"
       bin.install "ltfs"

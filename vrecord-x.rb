@@ -4,7 +4,7 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-01-25.tar.gz"
   version "2019-01-25"
   sha256 "fd13fe98013e9568b17008ba9132e31f8c16b18a72149d9a4771eb0c9f6fe0d0"
-  revision 1
+  revision 2
 
   bottle :unneeded
 
@@ -28,26 +28,26 @@ class VrecordX < Formula
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-      odie "Cannot patch the original 'vrecord'. Please login."
+      opoo "Cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-02-06.diff"
-        sha256 "fdb380ebf316d715fbf225afb434ed9d77a58793a4321c6206320a38e3efa81a"
+        url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-02-16.diff"
+        sha256 "20313e4a782db2c20f8ec8c6750b6704dd99da7eebd53b6e10bed645912e419c"
       end
-      bin.install "vrecord"
-      prefix.install "Resources/qcview.lua"
-      prefix.install "Resources/vrecord_policy_ffv1.xml"
-      prefix.install "Resources/vrecord_policy_uncompressed.xml"
-      prefix.install "Resources/vrecord logo.png"
-      prefix.install "Resources/vrecord logo playback.png"
-      prefix.install "Resources/vrecord logo audio.png"
-      prefix.install "Resources/vrecord logo edit.png"
-      prefix.install "Resources/vrecord logo help.png"
-      prefix.install "Resources/vrecord logo documentation.png"
-      bin.install "vtest" if build.with? "vtest"
-      man1.install "vrecord.1"
-      man1.install "vtest.1" if build.with? "vtest"
     end
+    bin.install "vrecord"
+    prefix.install "Resources/qcview.lua"
+    prefix.install "Resources/vrecord_policy_ffv1.xml"
+    prefix.install "Resources/vrecord_policy_uncompressed.xml"
+    prefix.install "Resources/vrecord logo.png"
+    prefix.install "Resources/vrecord logo playback.png"
+    prefix.install "Resources/vrecord logo audio.png"
+    prefix.install "Resources/vrecord logo edit.png"
+    prefix.install "Resources/vrecord logo help.png"
+    prefix.install "Resources/vrecord logo documentation.png"
+    bin.install "vtest" if build.with? "vtest"
+    man1.install "vrecord.1"
+    man1.install "vtest.1" if build.with? "vtest"
   end
 
   def post_install
