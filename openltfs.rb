@@ -3,7 +3,7 @@ class Openltfs < Formula
   homepage "https://avpres.net/openLTFS/"
   url "https://avpres.net/openLTFS/releases/2019-02-16.tar.gz"
   version "2019-02-16"
-  sha256 "0794ca5498031ffaec6e8cf39bd1aeda30c9e6b9a836d3b1b07cb6e1abec4ade"
+  sha256 "8b4c0395d0e6976815656aed1f1d9db57291afcaa41d9af0cc3ea43928325491"
 
   bottle :unneeded
 
@@ -13,7 +13,7 @@ class Openltfs < Formula
     else
       patch do
         url "https://avpres.net/patch/openltfs_2019-02-16.diff"
-        sha256 "6b87feab85a43ce62d01c0b5a656357b803713d61c4d767c17dc87a59c195062"
+        sha256 "43ba57453b53c2e516b24afb3ab6c802074ccb8fd29af7ac65e2490137ca2cbe"
       end
       bin.install "libltfs"
       bin.install "ltfs"
