@@ -2,7 +2,7 @@
 
 ## IMPORTANT UPDATE: An FFmpeg Flavour for Archivists
 
-The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work, however Tesseract comes only with support for English. Therefore we recommend either to use again the standard Homebrew distribution, or to to use an alternate, parametrable FFmpeg formula, which is available at Chris Varenhorst’s [GitHub repository](https://github.com/varenc/homebrew-ffmpeg).
+The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work, however Tesseract comes only with support for English. Therefore we recommend either to use again the standard Homebrew distribution, or to to use the alternate, parametrable FFmpeg formula, which is available at Chris Varenhorst’s [GitHub repository](https://github.com/varenc/homebrew-ffmpeg).
 
 ### To switch back to Homebrew’s distribution
 
