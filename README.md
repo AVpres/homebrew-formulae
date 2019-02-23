@@ -1,8 +1,12 @@
 # Brew Formulae for Audio-Visual Preservation
 
-## UPDATE: An FFmpeg Flavour for Archivists
+## IMPORTANT UPDATE: An FFmpeg Flavour for Archivists
 
-The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work. Therefore we recommend to use again the standard Homebrew distribution. To switch back, please run in the Terminal the following commands:
+The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work, however Tesseract comes only with support for English. Therefore we recommend either to use again the standard Homebrew distribution, or to to use an alternate, parametrable FFmpeg formula, which is available at Chris Varenhorst’s [GitHub repository](https://github.com/varenc/homebrew-ffmpeg).
+
+### To switch back to Homebrew’s distribution
+
+Please run in the Terminal the following commands:
 
 ```
 brew uninstall --ignore-dependencies ffmpeg
@@ -17,7 +21,23 @@ and, if and only if you do use other formulae from this repository, then also:
 brew tap avpres/formulae
 ```
 
-Yet an again parametrable FFmpeg formula will be available soon… somewhere.
+### To switch to the parametrable distribution
+
+Please run in the Terminal the following commands:
+
+```
+brew uninstall --ignore-dependencies ffmpeg
+brew untap avpres/formulae
+brew tap varenc/ffmpeg
+brew tap-pin varenc/ffmpeg
+brew install ffmpeg --with-<option1> --with-<option2> ...
+```
+
+and, if and only if you do use other formulae from this repository, then also:
+
+```
+brew tap avpres/formulae
+```
 
 ## Maintained Formulae
 
