@@ -1,44 +1,5 @@
 # Brew Formulae for Audio-Visual Preservation
 
-## IMPORTANT UPDATE: An FFmpeg Flavour for Archivists
-
-The standard Homebrew distribution of FFmpeg includes again the options needed for some archival work, however Tesseract comes only with support for English. Therefore we recommend either to use again the standard Homebrew distribution, or to to use the alternate, parametrable FFmpeg formula, which is available at Chris Varenhorst’s [GitHub repository](https://github.com/varenc/homebrew-ffmpeg).
-
-### To switch back to Homebrew’s distribution
-
-Please run in the Terminal the following commands:
-
-```
-brew uninstall --ignore-dependencies ffmpeg
-brew untap avpres/formulae
-brew update
-brew install ffmpeg
-```
-
-and, if and only if you do use other formulae from this repository, then also:
-
-```
-brew tap avpres/formulae
-```
-
-### To switch to the parametrable distribution
-
-Please run in the Terminal the following commands:
-
-```
-brew uninstall --ignore-dependencies ffmpeg
-brew untap avpres/formulae
-brew tap varenc/ffmpeg
-brew tap-pin varenc/ffmpeg
-brew install ffmpeg --with-<option1> --with-<option2> ...
-```
-
-and, if and only if you do use other formulae from this repository, then also:
-
-```
-brew tap avpres/formulae
-```
-
 ## Maintained Formulae
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries will be installed.
@@ -47,7 +8,7 @@ During the software development, it’s necessary to be connected to our [extran
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
 - the **openMovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and the _openmovim_ Bash command-line interface to _livmovim_, allowing to encode, decode, play and analyse virtually any moving images.
 
-### Experimental Formulae
+## Experimental Formulae
 
 Please do not install the following formula unless you know exactly what you are doing:
 
@@ -55,7 +16,7 @@ Please do not install the following formula unless you know exactly what you are
 
 During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
 
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including as a Windows’ app) and on macOS.
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS.
 
 The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining modifications are:
   - HuffYUV encoding is added, because it’s 25% faster than FFV1 encoding;
@@ -70,7 +31,7 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
-These two formulae will be cancelled mid March 2019 from this GitHub repository.
+These two formulae have been deleted from this GitHub repository on 2019-03-02.
 
 ## Copyright, Licence and Disclaimer
 
