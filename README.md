@@ -37,6 +37,6 @@ These libraries have been superseded by _libmovim_, and the two associated formu
 
 Copyright © 2017–2019 by Reto Kromer
 
-These formulae are released under a [3-Clause BSD License a](https://opensource.org/licenses/BSD-3-Clause).
+These formulae are released under a [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).
 
 These formulae are provided «as is» without warranty or support of any kind.
