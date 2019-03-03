@@ -26,17 +26,17 @@ Therefore most probably our alternate formula can disappear again very soon.
 
 ## Abandoned Formulae
 
-The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–12 these libraries have been superseded by _libmovim_:
+The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–12:
 
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface to _libycocg_, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
 
-These two formulae have been deleted from this GitHub repository on 2019-03-02.
+These libraries have been superseded by _libmovim_, and the two associated formulae have been deleted from this GitHub repository on 2019–03–02.
 
 ## Copyright, Licence and Disclaimer
 
 Copyright © 2017–2019 by Reto Kromer
 
-These formulae are released under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Licence.
+These formulae are released under a [3-Clause BSD License a](https://opensource.org/licenses/BSD-3-Clause).
 
 These formulae are provided «as is» without warranty or support of any kind.
