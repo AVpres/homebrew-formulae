@@ -4,11 +4,11 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-01-25.tar.gz"
   version "2019-01-25"
   sha256 "fd13fe98013e9568b17008ba9132e31f8c16b18a72149d9a4771eb0c9f6fe0d0"
-  revision 2
+  revision 3
 
   bottle :unneeded
 
-  option "with-doc", "Install the documentation" #### TO-DO
+  option "with-doc", "Install the documentation"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
 
   depends_on "amiaopensource/amiaos/decklinksdk"
@@ -31,8 +31,8 @@ class VrecordX < Formula
       opoo "Cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-02-16.diff"
-        sha256 "20313e4a782db2c20f8ec8c6750b6704dd99da7eebd53b6e10bed645912e419c"
+        url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-03-09.diff"
+        sha256 "0c793b2d0128f800ede9e38bdd545441a4a8e1de2c89b79c6b029e5e3e6d6f94"
       end
     end
     bin.install "vrecord"
