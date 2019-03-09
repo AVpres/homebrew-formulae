@@ -18,10 +18,7 @@ During the development, it’s necessary to be connected to our [extranet](https
 
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS.
 
-The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is:
-  - [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding.
-
-Therefore most probably our alternate formula can disappear again very soon.
+The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
 
 ## Abandoned Formulae
 
