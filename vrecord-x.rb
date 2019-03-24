@@ -28,7 +28,7 @@ class VrecordX < Formula
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-      opoo "Cannot patch the original 'vrecord'. Please login."
+      opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
         url "https://avpres.net/patch/vrecord_2019-01-25_x_2019-03-09.diff"
