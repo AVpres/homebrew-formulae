@@ -3,7 +3,7 @@ class Spoiledapples < Formula
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/Spoiled_Apples/releases/2019-03-30.tar.gz"
   version "2019-03-30"
-  sha256 "ed1232bfe5ab420fb4cf29dc48f0c9da8b11e8059eddb889f7866a17fe1dc9d4"
+  sha256 "2c80e89370dbb1bf0681e58e94588f8134a8e526151ae2b3019fccccc4dc64c5"
 
   bottle :unneeded
 
@@ -13,7 +13,7 @@ class Spoiledapples < Formula
     else
       patch do
         url "https://avpres.net/patch/spoiledapples_2019-03-30.diff"
-        sha256 "f34dedec2e50b1cecd420fec07994a12ae8cf13fe3601206814bed9bfcf0ef0f"
+        sha256 "2bb9a8ac30c950ebdfb52462509dd8536636552b17e9a7dba5d1d1531bf60aec"
       end
       args = %W[
         --prefix=#{prefix}
