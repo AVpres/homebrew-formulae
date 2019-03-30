@@ -1,9 +1,9 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-03-09.tar.gz"
-  version "2019-03-09"
-  sha256 "306c1a4ed31f629d507ade079dac3dcde7bb47b8df69057ec9f136954ec440c3"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-03-30.tar.gz"
+  version "2019-03-30"
+  sha256 "25deeaea36a175b46b27735025178bd6814436dfd5c9f8f99938c574d1c79e34"
 
   bottle :unneeded
 
