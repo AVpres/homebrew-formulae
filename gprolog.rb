@@ -2,7 +2,7 @@ class Gprolog < Formula
   desc "Prolog top-Level (GNU Prolog)"
   homepage "http://www.gprolog.org/"
   url "ftp://gprolog.univ-paris1.fr/pub/gprolog/gprolog-1.4.5.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "bfdcf00e051e0628b4f9af9d6638d4fde6ad793401e58a5619d1cc6105618c7c"
 
   bottle :unneeded
 
