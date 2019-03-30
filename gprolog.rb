@@ -10,7 +10,9 @@ class Gprolog < Formula
     cd "src" do
       system "./configure"
       system "make"
-      system "make install"
+      cd "TopComp" do
+        bin.install "gprolog"
+      end
     end
   end
 
