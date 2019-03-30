@@ -9,16 +9,20 @@ class Openltfs < Formula
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-      opoo "The 'libltfs' library cannot be installed. Please login."
+      opoo "Sorry, the 'libltfs' library cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/openltfs_2019-03-16.diff"
-        sha256 "4bb76d0d00ef7b827e37d62c4ac456567e79fc341d12cea13ff3ba94e0849cf3"
+        url "https://avpres.net/patch/openltfs_2019-03-30.diff"
+        sha256 "5c5a3aae1206dbfddd7c0c68b44dccd62ccd8299864b5c34c24fb0eeadf02e64"
       end
       bin.install "libltfs"
       bin.install "ltfs"
       bin.install "mkltfs"
       bin.install "chkltfs"
+      man1.install "libltfs.1"
+      man1.install "ltfs.1"
+      man1.install "mkltfs.1"
+      man1.install "chkltfs.1"
     end
     bin.install "openltfs"
     man1.install "openltfs.1"

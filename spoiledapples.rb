@@ -12,10 +12,16 @@ class Spoiledapples < Formula
       opoo "Sorry, the libraries cannot be installed. Please login."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples_2019-03-09.diff"
-        sha256 "35c841323b8330e1e398cf0dfca92b47be637370c82287cf39dfc361194a2a23"
+        url "https://avpres.net/patch/spoiledapples_2019-03-30.diff"
+        sha256 "3c7b05714461a2c5acd26d587de02d3cdc1a54c649889328aa27b6d8576f845d"
       end
+      args = %W[
+        --prefix=#{prefix}
+        --enable-debugger
+      ]
       mkdir "sa" do
+        system "./configure", *args
+        system "make"
         system "make", "install"
       end
     end
