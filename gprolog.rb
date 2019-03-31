@@ -12,11 +12,15 @@ class Gprolog < Formula
       system "make"
       cd "TopComp" do
         bin.install "gprolog"
+        bin.install "gplc"
+        bin.install "hexgplc"
       end
     end
   end
 
   test do
     system "#{bin}/gprolog", "--help"
+    system "#{bin}/gplc", "--help"
+    system "#{bin}/hexgplc", "--help"
   end
 end
