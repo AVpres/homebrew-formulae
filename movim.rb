@@ -3,7 +3,7 @@ class Movim < Formula
   homepage "https://avpres.net/MovIm/"
   url "https://avpres.net/MovIm/releases/2019-05-04.tar.gz"
   version "2019-05-04"
-  sha256 "f1c00e6fe2152103f7bd49285242e3e84427fab660451027c225a8f424f206fc"
+  sha256 "f1f0160a497f8a417ec03f9e5fe42216677d338c192edcf6cba386d64cdd14ea"
 
   bottle :unneeded
 
