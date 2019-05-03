@@ -1,9 +1,9 @@
 class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
-  url "https://avpres.net/MovIm/releases/2019-05-04.tar.gz"
-  version "2019-05-04"
-  sha256 "f1f0160a497f8a417ec03f9e5fe42216677d338c192edcf6cba386d64cdd14ea"
+  url "https://avpres.net/MovIm/releases/2019-05-03.tar.gz"
+  version "2019-05-03"
+  sha256 "3bf74acf0ce2d915fa8cef40d6650311bbee9d4f3e2649420637479ac15ec1c8"
 
   bottle :unneeded
 
