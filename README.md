@@ -4,9 +4,9 @@
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries and their associated command-line utilities will be installed.
 
+- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images.
 - the **openLTFS** package includes the _ltfs_, _mkltfs_ and _chkltfs_ C command-line tools, and the _openltfs_ Bash command-line interface;
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
-- the **openMovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and the _openmovim_ Bash command-line interface to _livmovim_, allowing to encode, decode, play and analyse virtually any moving images.
 
 ## Experimental Formulae
 
@@ -19,6 +19,10 @@ During the development, it’s necessary to be connected to our [extranet](https
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS.
 
 The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
+
+## Renamed Formulae
+
+The **openMovIm** package has been renamed **MovIm** on 2019–05–04.
 
 ## Abandoned Formulae
 
