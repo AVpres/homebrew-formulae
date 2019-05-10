@@ -1,9 +1,9 @@
 class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
-  url "https://avpres.net/MovIm/releases/2019-05-04.tar.gz"
-  version "2019-05-04"
-  sha256 "a14733e9190ce8c9230e3f09331c9fa44f43771a141d61359f977e49a497019a"
+  url "https://avpres.net/MovIm/releases/2019-05-11.tar.gz"
+  version "2019-05-11"
+  sha256 "00fddf99159fa2cae828560b2633d2d64efb4c0771d45c2f2b109736d4a5b8a5"
 
   bottle :unneeded
 
@@ -13,8 +13,8 @@ class Movim < Formula
         opoo "Sorry, the MovIM codec cannot be installed. Please login."
       else
         patch do
-          url "https://avpres.net/patch/movim_2019-05-04.diff"
-          sha256 "2bcfd1b96711ac7772f673ef23a8d179062446f02be3a752d62685b0cb8a0a96"
+          url "https://avpres.net/patch/movim_2019-05-11.diff"
+          sha256 "1b977198eb7e57275d7db2719b4c5925dcf3efe739cdb4e3735113d805c06d05"
         end
         system "make"
         bin.install "libmovim"

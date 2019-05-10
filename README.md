@@ -2,11 +2,11 @@
 
 ## Maintained Formulae
 
-During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries and their associated command-line utilities will be installed.
+During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries and their associated utilities will be installed.
 
-- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images.
+- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images;
 - the **openLTFS** package includes the _ltfs_, _mkltfs_ and _chkltfs_ C command-line tools, and the _openltfs_ Bash command-line interface;
-- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
+- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS.
 
 ## Experimental Formulae
 
