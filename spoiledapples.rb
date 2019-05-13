@@ -3,7 +3,7 @@ class Spoiledapples < Formula
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/Spoiled_Apples/releases/2019-05-11.tar.gz"
   version "2019-05-11"
-  sha256 "feaccb225474e2bbc20aafb7fd4b864916c6a462efe1dddcbe7c29022821899c"
+  sha256 "e5653cc64db675a245d01c8bce0583d01c473322e9b116438709434fb160f4fe"
 
   bottle :unneeded
 
