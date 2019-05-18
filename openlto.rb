@@ -1,9 +1,9 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/openLTO/"
-  url "https://avpres.net/openLTO/releases/2019-04-06.tar.gz"
-  version "2019-04-06"
-  sha256 "d37161a61b114ab784c9362c2061f950aa85deeb689f5a27c43d679206df6165"
+  url "https://avpres.net/openLTO/releases/2019-05-18.tar.gz"
+  version "2019-05-18"
+  sha256 "1ea1a6b08d43c2425c51021a95ba0d5a06b6244f953958ea62061dce2d60a353"
 
   bottle :unneeded
 
@@ -11,32 +11,36 @@ class Openlto < Formula
     :because => "both install some scripts having the same name"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-      opoo "Sorry, the Terminal commands cannot be installed. Please login."
-    else
-      patch do
-        url "https://avpres.net/patch/openlto_2019-04-06.diff"
-        sha256 "8fbd4bd5bce9234244d524e294aaafed4445e79d2a55afae35278fd5436fb05b"
+    cd "src" do
+      if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
+        opoo "Sorry, the Terminal commands cannot be installed. Please login."
+      else
+        patch do
+          url "https://avpres.net/patch/openlto_2019-05-18.diff"
+          sha256 "9234f1af70bafef266fd3b30b31c27e9ec363658018a73562f0404de54e79897"
+        end
+        bin.install "copylto"
+        bin.install "ejectlto"
+        bin.install "formatlto"
+        bin.install "indexlto"
+        bin.install "listlto"
+        bin.install "loadlto"
+        bin.install "migratelto"
+        bin.install "mountlto"
+        bin.install "readlto"
+        bin.install "recoverlto"
+        bin.install "repairlto"
+        bin.install "searchlto"
+        bin.install "selectlto"
+        bin.install "unmountlto"
+        bin.install "verifylto"
+        bin.install "writelto"
       end
-      bin.install "copylto"
-      bin.install "ejectlto"
-      bin.install "formatlto"
-      bin.install "indexlto"
-      bin.install "listlto"
-      bin.install "loadlto"
-      bin.install "migratelto"
-      bin.install "mountlto"
-      bin.install "readlto"
-      bin.install "recoverlto"
-      bin.install "repairlto"
-      bin.install "searchlto"
-      bin.install "selectlto"
-      bin.install "unmountlto"
-      bin.install "verifylto"
-      bin.install "writelto"
+      bin.install "openlto"
     end
-    bin.install "openlto"
-    man1.install "openlto.1"
+    cd "doc" do
+      man1.install "openlto.1"
+    end
   end
 
   test do
