@@ -4,17 +4,20 @@
 
 During the software development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae, otherwise all but the libraries and their associated utilities will be installed.
 
-- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images;
+- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec, and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images;
 - the **openLTFS** package includes the _ltfs_, _mkltfs_ and _chkltfs_ C command-line tools, and the _openltfs_ Bash command-line interface;
-- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS.
+- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
+- the **Spoiled\_Apples** package allows the emulation of 6502, 680x0 and PowerPC−based Apple computers.
 
 ## Experimental Formulae
+
+- **gprolog** - Prolog top-Level (GNU Prolog)
 
 Please do not install the following formula unless you know exactly what you are doing:
 
 - **hla** – High Level Assembler (HLABE back end, LD linker)
 
-During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the formula, otherwise the patch will not be applied:
+During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formula, otherwise the patch will not be applied:
 
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS.
 

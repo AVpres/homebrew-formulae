@@ -1,30 +1,28 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-05-18.tar.gz"
-  version "2019-05-18"
-  sha256 "c163c4b2e94dae936088d9a92e0f15912a6b65fbd5d7cab80ac8bf33156363e7"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-05-25.tar.gz"
+  version "2019-05-25"
+  sha256 "fba93c87d3cd2b3f7606d8ca643aa293214f12ee6c59ea8c9f7f388a609c38d2"
 
   bottle :unneeded
 
   def install
     cd "src" do
       if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-        opoo "Sorry, the libraries cannot be installed. Please login."
+        opoo "Please login for a full installation."
       else
         patch do
-          url "https://avpres.net/patch/spoiledapples_2019-05-18.diff"
-          sha256 "22eabe25d1173dbef459968f7004b3b64b2da112f23a473a78145061b721425a"
+          url "https://avpres.net/patch/spoiledapples_2019-05-25.diff"
+          sha256 "4a1ee6bfe588efcaaaab82c00f28abddaa24f71d7c72e5693873a79540bbeadb"
         end
         args = %W[
           --prefix=#{prefix}
           --enable-debugger
         ]
-        mkdir "sa" do
-          system "./configure", *args
-          system "make"
-          system "make", "install"
-        end
+        system "./configure", *args
+        system "make"
+        system "make", "install"
       end
       bin.install "spoiledapples"
     end
