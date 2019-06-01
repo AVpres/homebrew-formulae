@@ -24,8 +24,8 @@ class Openltfs < Formula
     cd "doc" do
       man1.install "libltfs.1"
       man1.install "ltfs.1"
+      man1.install "ltfsck.1"
       man1.install "mkltfs.1"
-      man1.install "chkltfs.1"
       man1.install "openltfs.1"
     end
   end
