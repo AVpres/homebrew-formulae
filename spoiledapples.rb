@@ -1,20 +1,20 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-05-25.tar.gz"
-  version "2019-05-25"
-  sha256 "fba93c87d3cd2b3f7606d8ca643aa293214f12ee6c59ea8c9f7f388a609c38d2"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-06-02.tar.gz"
+  version "2019-06-02"
+  sha256 "e3ee37c75384e8737613c554c0c5abef5fa8a855cdd0cbc3d4fb50c1ead52e36"
 
   bottle :unneeded
 
   def install
     cd "src" do
       if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-        opoo "Please login for a full installation."
+        opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/spoiledapples_2019-05-25.diff"
-          sha256 "4a1ee6bfe588efcaaaab82c00f28abddaa24f71d7c72e5693873a79540bbeadb"
+          url "https://avpres.net/patch/spoiledapples_2019-06-02.diff"
+          sha256 "16dd9df28eeea7ed2192c65127a71809324f7ec691a971e237776629d816d0a9"
         end
         args = %W[
           --prefix=#{prefix}
