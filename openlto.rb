@@ -12,8 +12,8 @@ class Openlto < Formula
 
   def install
     cd "src" do
-      if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
-        opoo "Sorry, the Terminal commands cannot be installed. Please login."
+      if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+        opoo "Please login for full installation."
       else
         patch do
           url "https://avpres.net/patch/openlto_2019-05-18.diff"

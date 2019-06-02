@@ -9,7 +9,7 @@ class Spoiledapples < Formula
 
   def install
     cd "src" do
-      if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
+      if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
         opoo "Please login for full installation."
       else
         patch do

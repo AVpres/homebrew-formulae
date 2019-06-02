@@ -26,7 +26,7 @@ class VrecordX < Formula
     :because => "both install approximately the same resources"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login >/dev/null`
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
