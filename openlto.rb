@@ -1,9 +1,9 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/openLTO/"
-  url "https://avpres.net/openLTO/releases/2019-05-18.tar.gz"
-  version "2019-05-18"
-  sha256 "1ea1a6b08d43c2425c51021a95ba0d5a06b6244f953958ea62061dce2d60a353"
+  url "https://avpres.net/openLTO/releases/2019-06-15.tar.gz"
+  version "2019-06-15"
+  sha256 "146b2247376bff1b8ced814808783fddedd9bd2a43057a6c97545adbd3b298b0"
 
   bottle :unneeded
 
@@ -16,8 +16,8 @@ class Openlto < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/openlto_2019-05-18.diff"
-          sha256 "9234f1af70bafef266fd3b30b31c27e9ec363658018a73562f0404de54e79897"
+          url "https://avpres.net/patch/openlto_2019-06-15.diff"
+          sha256 "4bbb068a824d722ac756aa6a17d8ccde75825d072b50bc0848cd274564953f3c"
         end
         bin.install "copylto"
         bin.install "ejectlto"

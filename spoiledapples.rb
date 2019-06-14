@@ -1,9 +1,9 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/Spoiled_Apples/releases/2019-06-02.tar.gz"
-  version "2019-06-02"
-  sha256 "e3ee37c75384e8737613c554c0c5abef5fa8a855cdd0cbc3d4fb50c1ead52e36"
+  url "https://avpres.net/Spoiled_Apples/releases/2019-06-15.tar.gz"
+  version "2019-06-15"
+  sha256 "1c86582fa82d79425ae956cf2d8599bc93420a024b7ecc15090ab17076fe3999"
 
   bottle :unneeded
 
@@ -13,8 +13,8 @@ class Spoiledapples < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/spoiledapples_2019-06-02.diff"
-          sha256 "16dd9df28eeea7ed2192c65127a71809324f7ec691a971e237776629d816d0a9"
+          url "https://avpres.net/patch/spoiledapples_2019-06-15.diff"
+          sha256 "c4f1dac46aec322ef8c834b2f9b9a1efe8d1f6b3587f01d454554fa04f90102d"
         end
         args = %W[
           --prefix=#{prefix}
