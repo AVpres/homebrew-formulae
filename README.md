@@ -2,7 +2,7 @@
 
 ## Maintained Formulae
 
-- **gprolog** - Prolog top-Level (GNU Prolog)
+- **gprolog** - Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
