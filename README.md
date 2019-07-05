@@ -17,7 +17,9 @@ During the development, it’s necessary to be connected to our [extranet](https
 
 The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
 
-## Experimental Formula
+## Experimental Formulae
+
+- **cineform** – static CineForm codec library (`libCFHDCodec.a` to be included in other applications ;-)
 
 Please do not install the following formula unless you know exactly what you are doing:
 
