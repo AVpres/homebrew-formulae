@@ -1,5 +1,5 @@
 class Cineform < Formula
-  desc "Static CineForm codec library"
+  desc "Static library of the CineForm codec"
   homepage "https://gopro.github.io/cineform-sdk/"
   # url "https://github.com/gopro/cineform-sdk/archive/v10.0.1.tar.gz"
   # sha256 "89d170267a52cb7a0bf94d7ce18ac36d0b4d9f42d795aa7bf49e701b5259a28b"
