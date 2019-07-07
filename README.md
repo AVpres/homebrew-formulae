@@ -2,6 +2,8 @@
 
 ## Maintained Formulae
 
+- **cineform** – Alternate static and dynamic CineForm librairies: `libcineform.a` and `libcineform.dylib`
+- **cineform-gopro** – GoPro’s CineForm static library: `libCFHDCodec.a`
 - **gprolog** - Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
@@ -18,8 +20,6 @@ During the development, it’s necessary to be connected to our [extranet](https
 The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
 
 ## Experimental Formulae
-
-- **cineform** – static library of the CineForm codec `libCFHDCodec.a`
 
 Please do not install the following formula unless you know exactly what you are doing:
 
