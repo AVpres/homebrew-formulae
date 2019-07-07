@@ -3,8 +3,8 @@
 ## Maintained Formulae
 
 - **cineform** – Alternate static and dynamic CineForm librairies: `libcineform.a` and `libcineform.dylib`
-- **cineform-gopro** – GoPro’s CineForm static library: `libCFHDCodec.a`
-- **gprolog** - Prolog top-level (GNU Prolog)
+- **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
+- **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
@@ -35,6 +35,15 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–
 
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
+
+The following formula has been deleted from this GitHub repository on 2019-02-08:
+
+- **cpio** – Copy files to and from archives, with optional:
+  - **mt** – Control magnetic tape drive operation
+
+The following formula has been deleted from this GitHub repository on 2019-02-05:
+
+- **ffmpeg** – A parametrable flavour of FFmpeg for audio-visual archivists
 
 ## Copyright, Licence and Disclaimer
 

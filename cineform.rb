@@ -15,13 +15,12 @@ class Cineform < Formula
 
   def install
     cd "build" do
-      system "cmake",
-             "-DBUILD_STATIC_LIBS:BOOL=ON",
-             "-DBUILD_SHARED_LIBS:BOOL=ON",
-             ".."
+      system "cmake", "-DBUILD_STATIC_LIBS:BOOL=ON",
+                      "-DBUILD_SHARED_LIBS:BOOL=ON",
+                      ".."
       system "make"
       lib.install "libcineform.a"
-      lib.install "libcineform.dylib"
+      lib.install "libcineform.dylib" if OS.mac?
     end
   end
 end
