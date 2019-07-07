@@ -1,9 +1,9 @@
 class Cineform < Formula
-  desc "Static library of the CineForm codec"
-  homepage "https://gopro.github.io/cineform-sdk/"
-  # url "https://github.com/gopro/cineform-sdk/archive/v10.0.1.tar.gz"
-  # sha256 "89d170267a52cb7a0bf94d7ce18ac36d0b4d9f42d795aa7bf49e701b5259a28b"
-  head "https://github.com/gopro/cineform-sdk.git"
+  desc "Alternate static and dynamic CineForm librairies"
+  homepage "https://github.com/emericg/libcineform"
+  url "https://github.com/emericg/libcineform/archive/0.1.tar.gz"
+  sha256 "15122bfdc3839a7f41f62b3df74d8f7f12bb17aa0faea770ca221e395598875e"
+  head "https://github.com/emericg/libcineform.git"
 
   bottle :unneeded
 
@@ -14,15 +14,14 @@ class Cineform < Formula
   depends_on "pkg-config" => :build
 
   def install
-    system "cmake", "."
-    system "make"
-    lib.install "libCFHDCodec.a"
-    bin.install "TestCFHD"
-    bin.install "WaveletDemo"
-  end
-
-  test do
-    system "#{bin}/TestCFHD"
-    system "#{bin}/WaveletDemo"
+    cd "build" do
+      system "cmake",
+             "-DBUILD_STATIC_LIBS:BOOL=ON",
+             "-DBUILD_SHARED_LIBS:BOOL=ON",
+             ".."
+      system "make"
+      lib.install "libcineform.a"
+      lib.install "libcineform.dylib"
+    end
   end
 end
