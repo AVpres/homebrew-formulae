@@ -2,7 +2,7 @@
 
 ## Maintained Formulae
 
-- **cineform** – Alternate static and dynamic CineForm librairies: `libcineform.a` and `libcineform.dylib`
+- **cineform** – Alternate static and dynamic CineForm librairies: `libcineform.a` and `libcineform.dylib` (macOS)
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **gprolog** – Prolog top-level (GNU Prolog)
 
@@ -49,6 +49,6 @@ The following formula has been deleted from this GitHub repository on 2019-02-05
 
 Copyright © 2017–2019 by Reto Kromer
 
-These formulae are released under a [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).
+These formulae are released under a [3-Clause BSD License](LICENSE).
 
 These formulae are provided «as is» without warranty or support of any kind.
