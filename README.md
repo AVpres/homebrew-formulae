@@ -2,7 +2,7 @@
 
 ## Maintained Formulae
 
-- **cineform** – Alternate static and dynamic CineForm librairies: `libcineform.a` and `libcineform.dylib` (macOS)
+- **cineform** – Alternate static and shared CineForm librairies: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **gprolog** – Prolog top-level (GNU Prolog)
 
