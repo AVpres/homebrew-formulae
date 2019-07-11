@@ -6,12 +6,14 @@ class Quickjs < Formula
 
   bottle :unneeded
 
+  option "with-bn", "Install big number support"
+
   def install
     system "make"
     bin.install "qjs"
     bin.install "qjsc"
-    bin.install "qjsbn"
-    bin.install "qjsbnc"
+    bin.install "qjsbn" if build.with? "bn"
+    bin.install "qjsbnc" if build.with? "bn"
   end
 
   test do
