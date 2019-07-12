@@ -2,7 +2,7 @@ class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
   url "https://avpres.net/releases/movim-2019-07-13.tar.gz"
-  sha256 "f352677285328ca7e3f210e1e1295e045852988703f4cdc19516b5bf107d7cc3"
+  sha256 "8dbe59d1bfec63b6a829078488316eab5d03c6a4cc74488db80e188dbba418ab"
 
   bottle :unneeded
 
