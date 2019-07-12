@@ -1,9 +1,8 @@
 class Openltfs < Formula
   desc "Handle LTFS openly and neutrally"
-  homepage "https://avpres.net/openLTFS/"
-  url "https://avpres.net/openLTFS/releases/2019-07-06.tar.gz"
-  version "2019-07-06"
-  sha256 "63956c0688b675550b31bf9d482b6e582c45ff6d41a66daec511c64adad24c3c"
+  homepage "https://avpres.net/LTO_LTFS/LTFS/"
+  url "https://avpres.net/releases/openltfs-2019-07-13.tar.gz"
+  sha256 "ea9045fcf09f67fd68a685ef5cadfe1ba801a611876b8a2a146c1c3ec12a0c74"
 
   bottle :unneeded
 
@@ -13,10 +12,10 @@ class Openltfs < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/openltfs_2019-07-06.diff"
-          sha256 "c33fe37b4e97d659781263f95ddcb428ec0dce6dd63b361dbbc6db19509d5a40"
+          url "https://avpres.net/patch/openltfs-2019-07-13.diff"
+          sha256 "7f948db2dacf60752cf9ec375be6ff71e3781b74a504382c93b1e898f5f3b553"
         end
-        system "./configure", "--prefix=#{prefix}"
+        system "./configure"
         system "make", "install"
       end
       bin.install "openltfs"
