@@ -1,8 +1,8 @@
 class Quickjs < Formula
   desc "Javascript Engine"
   homepage "https://bellard.org/quickjs/"
-  url "https://bellard.org/quickjs/quickjs-2019-07-09.tar.xz"
-  sha256 "350c1cd9dd318ad75e15c9991121c80b85c2ef873716a8900f811554017cd564"
+  url "https://bellard.org/quickjs/quickjs-2019-07-21.tar.xz"
+  sha256 "a906bed24c57dc9501b84a5bb4514f7eac58db82b721116ec5abe868490e53cc"
 
   bottle :unneeded
 
