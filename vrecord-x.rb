@@ -1,9 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2019-05-03.tar.gz"
-  version "2019-05-03"
-  sha256 "8775b2502c33d1a0397250a78f6527194897c39865ae3855e832f1ee8a736693"
+  url "https://github.com/amiaopensource/vrecord/archive/v2019-07-22.tar.gz"
+  version "2019-07-22"
+  sha256 "534e9daff42c95e300969e840b278a91ada3db739220bf67bd989834298bd11c"
 
   bottle :unneeded
 
@@ -15,6 +15,7 @@ class VrecordX < Formula
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
   depends_on "freetype"
+  depends_on "gnuplot"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
@@ -30,8 +31,8 @@ class VrecordX < Formula
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-05-03_x_2019-05-04.diff"
-        sha256 "4183a25486a65a808878dc7d4b96bfebbd8a642ee8dee20c00a22427ece2f825"
+        url "https://avpres.net/patch/vrecord_2019-07-22_x_2019-07-27.diff"
+        sha256 "d92eafc2d5be8de038a91b011b463f49c3e70e1cf61f8374c0afcdcda96b1cb1"
       end
     end
     bin.install "vrecord"
@@ -47,14 +48,6 @@ class VrecordX < Formula
     bin.install "vtest" if build.with? "vtest"
     man1.install "vrecord.1"
     man1.install "vtest.1" if build.with? "vtest"
-  end
-
-  def post_install
-    if `brew ls -1 gnuplot 2>/dev/null | head -n1`.empty?
-      puts "Warning: gnuplot is not installed. You can install it by running:"
-      puts "  brew install gnuplot --without-lua"
-      puts "It gives extra quality control images along with your QCTools report."
-    end
   end
 
   test do
