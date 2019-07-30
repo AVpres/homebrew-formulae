@@ -1,8 +1,8 @@
 class Cineform < Formula
   desc "Alternate static and shared CineForm librairies"
   homepage "https://github.com/emericg/libcineform"
-  url "https://github.com/emericg/libcineform/archive/0.1.tar.gz"
-  sha256 "15122bfdc3839a7f41f62b3df74d8f7f12bb17aa0faea770ca221e395598875e"
+  url "https://github.com/emericg/libcineform/archive/0.2.tar.gz"
+  sha256 "7749cc6ccbd2b05ac8c942045396f06735dda5a87f5cd0166752570fd2be0cac"
   head "https://github.com/emericg/libcineform.git"
 
   bottle :unneeded
