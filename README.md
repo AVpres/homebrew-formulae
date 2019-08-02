@@ -27,17 +27,15 @@ Please do not install the following formula unless you know exactly what you are
 
 ## Renamed Formula
 
-The **openMovIm** package has been renamed **MovIm** on 2019–05–04.
-
-## Deprecated Formulae
-
-QuickJS is now available as a regular Homebrew formula. Please use it!
-
-- **quickjs** – QuickJS Javascript Engine
+The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
 
-The development of _libycocg_ and _libmsmi_ has been stopped and on 2019–01–12 and these libraries are superseded by _libmovim_. The two associated formulae have been deleted from this GitHub repository on 2019–03–02:
+QuickJS is now available as a regular Homebrew formula (`quickjs`) and we have deleted our formula on 2019-08-03:
+
+- **quickjs** – QuickJS Javascript Engine
+
+The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 and these libraries are superseded by _libmovim_. The two associated formulae have been deleted from this GitHub repository on 2019-03-02:
 
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
