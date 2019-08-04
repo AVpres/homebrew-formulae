@@ -49,6 +49,8 @@ The following formula has been deleted from this GitHub repository on 2019-02-05
 
 - **ffmpeg** – A parametrable flavour of FFmpeg for audio-visual archivists
 
+Use instead this [formula](https://github.com/varenc/homebrew-ffmpeg).
+
 ## Copyright, Licence and Disclaimer
 
 Copyright © 2017–2019 by Reto Kromer
