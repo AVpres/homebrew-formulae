@@ -45,7 +45,7 @@ The following formula has been deleted from this GitHub repository on 2019-02-08
 - **cpio** – Copy files to and from archives, with optional:
   - **mt** – Control magnetic tape drive operation
 
-The following formula has been deleted from this GitHub repository on 2019-02-05:
+The following formula has been deleted from this GitHub repository on 2019-02-05, yet **added again on 2019-08-11** (caveat: it may cause troubles to Homebrew’s `mpv`):
 
 - **ffmpeg** – A parametrable flavour of FFmpeg for audio-visual archivists
 
