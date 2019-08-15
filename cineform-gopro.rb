@@ -1,8 +1,8 @@
 class CineformGopro < Formula
   desc "GoPro's static CineForm library"
   homepage "https://gopro.github.io/cineform-sdk"
-  url "https://github.com/gopro/cineform-sdk/archive/v10.0.1.tar.gz"
-  sha256 "89d170267a52cb7a0bf94d7ce18ac36d0b4d9f42d795aa7bf49e701b5259a28b"
+  url "https://github.com/gopro/cineform-sdk/archive/v10.0.2.tar.gz"
+  sha256 "853057490db36746d77e7922b087117e2de9d05dd75742692cb12aa1d552711c"
   head "https://github.com/gopro/cineform-sdk.git"
 
   bottle :unneeded
