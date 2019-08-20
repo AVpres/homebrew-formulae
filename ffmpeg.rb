@@ -86,7 +86,7 @@ class Ffmpeg < Formula
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
       opoo "Sorry, cannot patch 'ffmpeg'. Please login."
-      ohai "Installing the standard Homebrew distribution."
+      ohai "Installing the FFmpeg with options Homebrew distribution."
     else
       patch do
         url "https://avpres.net/patch/ffmpeg-4.2_x_2019-08-11.diff"
