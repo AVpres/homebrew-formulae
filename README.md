@@ -4,6 +4,7 @@
 
 - **cineform** – Alternate static and shared CineForm librairies: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
+- **ffmpeg** – Alternate FFmpeg formula with options
 - **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
@@ -45,11 +46,13 @@ The following formula has been deleted from this GitHub repository on 2019-02-08
 - **cpio** – Copy files to and from archives, with optional:
   - **mt** – Control magnetic tape drive operation
 
+<!--
 The following formula has been deleted from this GitHub repository on 2019-02-05, yet **added again on 2019-08-11** (caveat: it may cause troubles to Homebrew’s `mpv`):
 
 - **ffmpeg** – A parametrable flavour of FFmpeg for audio-visual archivists
 
 Use instead this [formula](https://github.com/varenc/homebrew-ffmpeg).
+-->
 
 ## Copyright, Licence and Disclaimer
 

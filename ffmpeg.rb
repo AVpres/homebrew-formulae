@@ -1,8 +1,9 @@
 class Ffmpeg < Formula
-  desc "Play, record, convert, and stream audio and video"
+  desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.2.tar.xz"
   sha256 "023f10831a97ad93d798f53a3640e55cd564abfeba807ecbe8524dac4fedecd5"
+  head "https://github.com/FFmpeg/FFmpeg.git"
 
   bottle :unneeded
 
@@ -84,15 +85,7 @@ class Ffmpeg < Formula
   depends_on "zimg" => :optional
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
-      opoo "Sorry, cannot patch 'ffmpeg'. Please login."
-      ohai "Installing the FFmpeg with options Homebrew distribution."
-    else
-      patch do
-        url "https://avpres.net/patch/ffmpeg-4.2_x_2019-08-11.diff"
-        sha256 "ac974a972bebfcfd24f3dfdd565acf63993d6ecf2043bf714b4037268fa65822"
-      end
-    end
+    ohai "Installing the FFmpeg with options..."
 
     args = %W[
       --prefix=#{prefix}
@@ -116,6 +109,8 @@ class Ffmpeg < Formula
       --enable-libass
       --disable-libjack
       --disable-indev=jack
+      --disable-htmlpages
+      --extra-version=with-options
     ]
 
     if OS.mac?
@@ -123,7 +118,6 @@ class Ffmpeg < Formula
       args << "--enable-videotoolbox"
     end
 
-    args << "--disable-htmlpages"
     args << "--enable-chromaprint" if build.with? "chromaprint"
     args << "--enable-libbluray" if build.with? "libbluray"
     args << "--enable-libbs2b" if build.with? "libbs2b"
@@ -179,6 +173,16 @@ class Ffmpeg < Formula
 
     system "./configure", *args
     system "make", "install"
+
+    # Build and install additional FFmpeg tools
+    system "make", "alltools"
+    bin.install Dir["tools/*"].select { |f| File.executable? f }
+  end
+
+  def caveats; <<~EOS
+    This flavour of `ffmpeg` may conflict with `mpv`, because its last tag/release
+    is too old. Please do *NOT* report that here. Thank you!
+  EOS
   end
 
   test do
