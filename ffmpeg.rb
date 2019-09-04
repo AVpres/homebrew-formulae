@@ -85,7 +85,7 @@ class Ffmpeg < Formula
   depends_on "zimg" => :optional
 
   def install
-    ohai "Installing the FFmpeg with options..."
+    ohai "Installing FFmpeg with options..."
 
     args = %W[
       --prefix=#{prefix}
