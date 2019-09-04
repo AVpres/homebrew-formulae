@@ -3,6 +3,7 @@ class Ffmpeg < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.2.tar.xz"
   sha256 "023f10831a97ad93d798f53a3640e55cd564abfeba807ecbe8524dac4fedecd5"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   bottle :unneeded
@@ -182,6 +183,13 @@ class Ffmpeg < Formula
   def caveats; <<~EOS
     This flavour of `ffmpeg` may conflict with `mpv`, because its last tag/release
     is too old. Please do *NOT* report that here. Thank you!
+
+    You may use instead their cask:
+
+      brew uninstall mpv
+      brew cask install mpv
+
+    which comes an embedded with FFmpeg 4.0.2 and works.
   EOS
   end
 
