@@ -2,7 +2,7 @@ class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz"
-  sha256 "682a9fa3f6864d7f0dbf224f86b129e337bc60286e0d00dffcd710998d521624"
+  sha256 "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   bottle :unneeded
