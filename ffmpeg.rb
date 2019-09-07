@@ -1,9 +1,8 @@
 class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.2.tar.xz"
-  sha256 "023f10831a97ad93d798f53a3640e55cd564abfeba807ecbe8524dac4fedecd5"
-  revision 1
+  url "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz"
+  sha256 "682a9fa3f6864d7f0dbf224f86b129e337bc60286e0d00dffcd710998d521624"
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   bottle :unneeded
@@ -189,7 +188,7 @@ class Ffmpeg < Formula
       brew uninstall mpv
       brew cask install mpv
 
-    which comes an embedded with FFmpeg 4.0.2 and works.
+    which comes with an embedded FFmpeg 4.0.2 and works.
   EOS
   end
 
