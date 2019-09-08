@@ -181,9 +181,7 @@ class Ffmpeg < Formula
 
   def caveats; <<~EOS
     This flavour of `ffmpeg` may conflict with `mpv`, because its last tag/release
-    is too old. Please do *NOT* report that here. Thank you!
-
-    You may use instead their cask:
+    is too old. You may instead use the `mpv` cask:
 
       brew uninstall mpv
       brew cask install mpv

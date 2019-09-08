@@ -60,4 +60,4 @@ Copyright © 2017–2019 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE).
 
-These formulae are provided «as is» without warranty or support of any kind.
+These formulae are provided “as is” without warranty or support of any kind.
