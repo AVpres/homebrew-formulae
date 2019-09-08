@@ -9,14 +9,14 @@
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
-- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec, and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images;
-- the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfsck_, _ltfscp_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface;
-- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS;
-- the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers.
+- the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec, and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images
+- the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfsck_, _ltfscp_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
+- the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
+- the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers
 
 During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formula, otherwise the patch will not be applied:
 
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS.
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS
 
 The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
 
@@ -38,21 +38,13 @@ QuickJS is now available as a regular Homebrew formula (`quickjs`) and we have d
 
 The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 and these libraries are superseded by _libmovim_. The two associated formulae have been deleted from this GitHub repository on 2019-03-02:
 
-- the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images;
-- the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files.
+- the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images
+- the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files
 
 The following formula has been deleted from this GitHub repository on 2019-02-08:
 
 - **cpio** – Copy files to and from archives, with optional:
   - **mt** – Control magnetic tape drive operation
-
-<!--
-The following formula has been deleted from this GitHub repository on 2019-02-05, yet **added again on 2019-08-11** (caveat: it may cause troubles to Homebrew’s `mpv`):
-
-- **ffmpeg** – A parametrable flavour of FFmpeg for audio-visual archivists
-
-Use instead this [formula](https://github.com/varenc/homebrew-ffmpeg).
--->
 
 ## Copyright, Licence and Disclaimer
 
