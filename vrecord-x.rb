@@ -1,10 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2019-07-22.tar.gz"
-  version "2019-07-22"
-  sha256 "534e9daff42c95e300969e840b278a91ada3db739220bf67bd989834298bd11c"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/v2019-11-14.tar.gz"
+  version "2019-11-14"
+  sha256 "246035ce52a8cc5017bf6f9d43160a9cb5311836f319a4d5e3accaaa18984419"
 
   bottle :unneeded
 
@@ -31,8 +30,8 @@ class VrecordX < Formula
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-07-22_x_2019-09-28.diff"
-        sha256 "8087d7f4a33b019524bfff6c22af6d0ef8295d40736c4fcc13cc536695ca00d2"
+        url "https://avpres.net/patch/vrecord_2019-11-14_x_2019-11-30.diff"
+        sha256 "1f7837ccae5e63b08ceed4ed1b6f9ee38d624f07b72698bb869d4bf9a59abff6"
       end
     end
     bin.install "vrecord"
@@ -48,16 +47,6 @@ class VrecordX < Formula
     bin.install "vtest" if build.with? "vtest"
     man1.install "vrecord.1"
     man1.install "vtest.1" if build.with? "vtest"
-  end
-
-  def caveats; <<~EOS
-    `mpv` has been removed from Homebrew. You may instead use the `mpv` cask:
-
-      brew uninstall mpv
-      brew cask install mpv
-
-    which comes with an embedded FFmpeg 4.0.2 and works.
-  EOS
   end
 
   test do
