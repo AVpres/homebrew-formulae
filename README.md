@@ -16,9 +16,9 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 
 During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formula, otherwise the patch will not be applied:
 
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux (including on Windows) and on macOS
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
 
-The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again very soon.
+The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again in a near future.
 
 ## Experimental Formulae
 
@@ -48,7 +48,7 @@ The following formula has been deleted from this GitHub repository on 2019-02-08
 
 ## Copyright, Licence and Disclaimer
 
-Copyright © 2017–2019 by Reto Kromer
+Copyright © 2017–2020 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE).
 
