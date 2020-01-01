@@ -2,7 +2,7 @@ class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/releases/spoiledapples-2020-01-01.tar.gz"
-  sha256 "5c44452c10f74c96f54f17766c5cf13dcdce7d4d551a4afb5a83351ab68f87bc"
+  sha256 "779176458460f0046d5a34e5bef31eca31f3b23a78de01f40f436c5bb1b8da0a"
 
   bottle :unneeded
 
@@ -15,7 +15,7 @@ class Spoiledapples < Formula
       else
         patch do
           url "https://avpres.net/patch/spoiledapples-2020-01-01.diff"
-          sha256 "ca01cbd2221bc524f550edb9a52c4a053890ee9f559d2e64374da59660afe143"
+          sha256 "7dd5dccc1b3c2123cb63bd20ef2cb0d4dc07019b19677fab231a584e61b21c4a"
         end
 
         args << "--enable-debugger" if build.with? "debugger"
