@@ -4,6 +4,7 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-11-14.tar.gz"
   version "2019-11-14"
   sha256 "246035ce52a8cc5017bf6f9d43160a9cb5311836f319a4d5e3accaaa18984419"
+  revision 1
 
   bottle :unneeded
 
@@ -30,8 +31,8 @@ class VrecordX < Formula
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2019-11-14_x_2019-11-30.diff"
-        sha256 "1f7837ccae5e63b08ceed4ed1b6f9ee38d624f07b72698bb869d4bf9a59abff6"
+        url "https://avpres.net/patch/vrecord_2019-11-14_x_2020-01-05.diff"
+        sha256 "7d09653a8f60fd8b9090a45b948b06d3ef10d5ae79b3555e020d47ec31bfca1c"
       end
     end
     bin.install "vrecord"
