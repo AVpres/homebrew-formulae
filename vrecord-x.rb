@@ -1,9 +1,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2020-01-27.tar.gz"
-  version "2020-01-27"
-  sha256 "d1fa8a0d887cdf6a789cc41222b9f0bb6b63a16ad206eb15f10aef5077dc3aa0"
+  url "https://github.com/amiaopensource/vrecord/archive/v2020-02-07.tar.gz"
+  version "2020-02-07"
+  sha256 "f3c22618c623edb5d8adfdf375eb3afb5339f2a6794cfb1ba64fb6d5fad4647f"
 
   bottle :unneeded
 
@@ -31,8 +31,8 @@ class VrecordX < Formula
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2020-01-27_x_2020-02-01.diff"
-        sha256 "02185ab421bb696d2b52399e224c5f4227c2ae2683680b36f265ca9dcbee5794"
+        url "https://avpres.net/patch/vrecord_2020-02-07_x_2020-02-08.diff"
+        sha256 "35ee16077ff39dbcce02db1d01d3da2f513f49b5e89cdfd1ca923b1f20b35707"
       end
     end
     bin.install "vrecord"
