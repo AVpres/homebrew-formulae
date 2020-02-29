@@ -20,8 +20,9 @@ class Cineform < Formula
                       ".."
       system "make"
       lib.install "libcineform.a"
-      lib.install "libcineform.dylib" if OS.mac?
       lib.install "libcineform.so" if OS.linux?
+      lib.install "libcineform.dylib" if OS.mac?
+      lib.install "libcineform.dll" if OS.windows?
     end
   end
 end
