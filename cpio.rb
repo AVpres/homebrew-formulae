@@ -7,8 +7,7 @@ class Cpio < Formula
   bottle :unneeded
 
   def install
-    args = "--enable-mt" if build.with? "mt"
-    system "./configure", *args
+    system "./configure"
     system "make"
     system "make", "install"
     bin.install "cpio"
