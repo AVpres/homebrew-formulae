@@ -9,7 +9,6 @@ class Cpio < Formula
   def install
     system "./configure"
     system "make"
-    system "make", "install"
     bin.install "cpio"
   end
 
