@@ -7,17 +7,21 @@ class Cpio < Formula
   bottle :unneeded
 
   def install
-    system "./configure"
+    args = "--enable-mt" if OS.linux?
+    system "./configure", *args
     system "make"
     cd "src" do
       bin.install "cpio"
+      bin.insuall "mt" if OS.linux?
     end
     cd "doc" do
       man1.install "cpio.1"
+      man1.install "mt.1" if OS.linux?
     end
   end
 
   test do
     system "#{bin}/cpio", "--version"
+    system "#{bin}/mt", "--version" if OS.linux?
   end
 end
