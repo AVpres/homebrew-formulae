@@ -4,6 +4,7 @@
 
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
+- **cpio** – Copy files to and from archives
 - **ffmpeg** – Alternate FFmpeg formula with options
 - **gprolog** – Prolog top-level (GNU Prolog)
 
@@ -13,12 +14,6 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 - the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfsck_, _ltfscp_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
 - the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers
-
-During the development, it’s necessary to be connected to our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formula, otherwise the patch will not be applied:
-
-- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
-
-The official formula by AMIA Open Source is getting closer and closer to our alternate one. Currently the only remaining substantial modification is that [HuffYUV encoding](https://github.com/amiaopensource/vrecord/issues/366) is added, because it’s 25% faster than FFV1 encoding. Therefore most probably our alternate formula can disappear again in a near future.
 
 ## Experimental Formulae
 
@@ -32,6 +27,12 @@ The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
 
+The following formula has been deleted from this GitHub repository on 2019-02-29:
+
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
+
+After one year and a half, the official formula by AMIA Open Source has added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
+
 QuickJS is now available as a regular Homebrew formula (`quickjs`) and we have deleted our formula on 2019-08-03:
 
 - **quickjs** – QuickJS Javascript Engine
@@ -40,11 +41,6 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 a
 
 - the **openMSMI** package contains the _libmsmi_ C library, implementing the _MSMI_ video codec for multispectral moving images, and the _openmsmi_ Bash command-line interface to _libmsmi_, allowing to encode, decode, play and analyse multispectral moving images
 - the **openYCoCg** package contains the _libycocg_ C library, implementing the _YCoCg_ video codec, and the _openycocg_ Bash command−line interface, allowing to encode, decode, play and analyse Y′C<sub>O</sub>C<sub>G</sub> video files
-
-The following formula has been deleted from this GitHub repository on 2019-02-08:
-
-- **cpio** – Copy files to and from archives, with optional:
-  - **mt** – Control magnetic tape drive operation
 
 ## Copyright, Licence and Disclaimer
 
