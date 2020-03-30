@@ -49,12 +49,6 @@ class Ffmpeg < Formula
   depends_on "x265"
   depends_on "xz"
 
-  unless OS.mac?
-    depends_on "zlib"
-    depends_on "bzip2"
-    depends_on "linuxbrew/xorg/libxv"
-  end
-
   depends_on "chromaprint" => :optional
   depends_on "fdk-aac" => :optional
   depends_on "game-music-emu" => :optional
@@ -84,6 +78,9 @@ class Ffmpeg < Formula
   depends_on "xvid" => :optional
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
+
+  uses_from_macos "bzip2"
+  uses_from_macos "zlib"
 
   def install
     ohai "Installing FFmpeg with options..."
@@ -163,9 +160,7 @@ class Ffmpeg < Formula
       args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
     end
 
-    if build.with?("opencore-amr") || build.with?("libvmaf")
-      args << "--enable-version3"
-    end
+    args << "--enable-version3" if build.with?("opencore-amr") || build.with?("libvmaf")
 
     if build.with? "opencore-amr"
       args << "--enable-libopencore-amrnb"
