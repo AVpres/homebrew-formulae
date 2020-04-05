@@ -1,13 +1,10 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/LTO_LTFS/LTO/"
-  url "https://avpres.net/releases/openlto-2019-07-13.tar.gz"
-  sha256 "21d0f2c4f28f8618a0e3c353eb2f65df366369d1124568044fee2078eafab239"
+  url "https://avpres.net/releases/openlto-2020-04-05.tar.gz"
+  sha256 "feb2d79c2070e85574969c8671c93c57baad4351234469ee83b26884d7e99548"
 
   bottle :unneeded
-
-  conflicts_with "amiaopensource/amiaos/ltopers",
-    :because => "both install some scripts having the same name"
 
   def install
     cd "src" do
@@ -15,15 +12,17 @@ class Openlto < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/openlto-2019-07-13.diff"
-          sha256 "f195b2e32affff340e6bf76b5c5b3c211451621e9b04beeb7c0af78b1acc7123"
+          url "https://avpres.net/patch/openlto-2020-04-05.diff"
+          sha256 "617a094907290294c80dea0dc10c906688b90f01b3b4ded2c08beadba5423ac2"
         end
         bin.install "copylto"
+        bin.install "dcp2lto"
         bin.install "ejectlto"
         bin.install "formatlto"
         bin.install "indexlto"
         bin.install "listlto"
         bin.install "loadlto"
+        bin.install "dcp2lto"
         bin.install "migratelto"
         bin.install "mountlto"
         bin.install "readlto"
