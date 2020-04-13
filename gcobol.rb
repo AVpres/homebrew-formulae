@@ -6,7 +6,7 @@ class Gcobol < Formula
 
   devel do
     url "https://downloads.sourceforge.net/projects/open-cobol/gnu-cobol/3.0/gnucobol-3.0-rc1.tar.xz"
-    sha256 "bf76441ee7f8dc9aeb78291231f32273eafc4ec827f26840846a257a04bbc594"
+    sha256 "651d2d279de544981c652edcb68a3d8faee368542b923c989b5e0fe26d772aa4"
   end
 
   depends_on "berkeley-db"
