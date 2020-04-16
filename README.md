@@ -6,7 +6,7 @@
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **cpio** – Copy files to and from archives
 - **ffmpeg** – Alternate FFmpeg formula with options
-- **gcobol** - GNU COBOL (includes --devel option)
+- **gcobol** - GNU COBOL (includes `--devel` option)
 - **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
@@ -15,6 +15,7 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 - the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfsck_, _ltfscp_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
 - the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers
+- **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows – reactivated for training purposes
 
 ## Experimental Formulae
 
