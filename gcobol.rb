@@ -18,9 +18,6 @@ class Gcobol < Formula
     :because => "both install `cob-config`, `cobc` and `cobcrun` binaries"
 
   def install
-    # both environment variables are needed to be set
-    # the cobol compiler takes these variables for calling cc during its run
-    # if the paths to gmp and bdb are not provided, the run of cobc fails
     gmp = Formula["gmp"]
     bdb = Formula["berkeley-db"]
     ENV.append "CPPFLAGS", "-I#{gmp.opt_include} -I#{bdb.opt_include}"
@@ -37,11 +34,10 @@ class Gcobol < Formula
 
   test do
     (testpath/"hello.cob").write <<~EOS
-            * COBOL must be indented
       000001 IDENTIFICATION DIVISION.
       000002 PROGRAM-ID. hello.
       000003 PROCEDURE DIVISION.
-      000004 DISPLAY "Hello World!".
+      000004 DISPLAY "Hello, Mars!".
       000005 STOP RUN.
     EOS
     system "#{bin}/cobc", "-x", "hello.cob"
