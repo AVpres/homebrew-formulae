@@ -4,7 +4,7 @@
 
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
-- **cpio** – Copy files to and from archives
+- **cpio** – Copy files to and from archives (under Linux also instals: **mt** – control magnetic tape drive operation)
 - **ffmpeg** – Alternate FFmpeg formula with options
 - **gcobol** - GNU COBOL (includes `--devel` option)
 - **gprolog** – Prolog top-level (GNU Prolog)
@@ -12,9 +12,9 @@
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
 - the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec, and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images
-- the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfsck_, _ltfscp_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
+- the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfs\_check_, _ltfs\_copy_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
-- the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers
+- the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers and clones
 
 ## Experimental Formulae
 
@@ -34,7 +34,7 @@ The following formula has been deleted from this GitHub repository on 2019-02-29
 
 After one year and a half, the official formula by AMIA Open Source has added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
 
-QuickJS is now available as a regular Homebrew formula (`quickjs`) and we have deleted our formula on 2019-08-03:
+As QuickJS is available as a regular Homebrew formula (`quickjs`), we have deleted our formula on 2019-08-03:
 
 - **quickjs** – QuickJS Javascript Engine
 
