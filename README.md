@@ -5,7 +5,7 @@
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **cpio** – Copy files to and from archives (under Linux also instals: **mt** – Control magnetic tape drive operation)
-- **ffcommand-engine** – Instals FFCommand_Engine by ColorlabMD (`--HEAD` only which is the version 0.6 rather than 0.5[.]1)
+- **ffcommand-engine** – Instals FFCommand_Engine by ColorlabMD (**attention:** this formula is `--HEAD` only and installs the version 0.6 rather than 0.5[.]1)
 - **ffmpeg** – Alternate FFmpeg formula with options
 - **gcobol** - GNU COBOL (includes `--devel` option)
 - **gprolog** – Prolog top-level (GNU Prolog)
