@@ -1,8 +1,8 @@
 class Spoiledapples < Formula
   desc "Emulation of 6502, 680x0 and PowerPC-based Apple computers"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/releases/spoiledapples-2020-05-16.tar.gz"
-  sha256 "736115683cd2f7c6d71e86bb3d26aa48968e5fe60b73d33fdfe7a23688dfea0d"
+  url "https://avpres.net/releases/spoiledapples-2020-05-23.tar.gz"
+  sha256 "b6e9ce3c19f4f19e5b7d20c0e0f27ed4114471bb7f2e6f6965796152fcea675a"
 
   bottle :unneeded
 
@@ -14,8 +14,8 @@ class Spoiledapples < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/spoiledapples-2020-05-16.diff"
-          sha256 "6b47962a84860c11b512b47f24d27524848353aa1cc6e811095fb1abda8df783"
+          url "https://avpres.net/patch/spoiledapples-2020-05-23.diff"
+          sha256 "4e526e225b344d3e20ed195f0e8da030c416b3c8301dc81922d2ccf46d9e35e6"
         end
 
         args << "--enable-debugger" if build.with? "debugger"
