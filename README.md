@@ -33,7 +33,7 @@ The following formula has been deleted from this GitHub repository on 2019-02-29
 
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
 
-After one year and a half, the official formula by AMIA Open Source has added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
+After two years, the official formula by the AMIA Open Source Committee added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
 
 As QuickJS is available as a regular Homebrew formula (`quickjs`), we have deleted our formula on 2019-08-03:
 
