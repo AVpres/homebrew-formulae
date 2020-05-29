@@ -1,8 +1,8 @@
 class Openltfs < Formula
   desc "LTFS for both tape drives and DIY tape libraries"
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
-  url "https://avpres.net/releases/openltfs-2020-04-04.tar.gz"
-  sha256 "fb8b13aba09386bb7a7c27602385930a66fe7347c4cb7f1cb2a7204e5084e21b"
+  url "https://avpres.net/releases/openltfs-2020-05-30.tar.gz"
+  sha256 "899cbab61d84a2c54580e771e45685d538f2d02e379eff869a951716c6d06ce7"
 
   bottle :unneeded
 
@@ -12,8 +12,8 @@ class Openltfs < Formula
         opoo "Please login for full installation."
       else
         patch do
-          url "https://avpres.net/patch/openltfs-2020-04-04.diff"
-          sha256 "b68935fca6f29a2f165599d8d2278c8eaa0cc5b3e7f155ed56adefc66e437a6d"
+          url "https://avpres.net/patch/openltfs-2020-05-30.diff"
+          sha256 "8aa383010b38eea14fe7be830371011c3e27c346a8fb46381b7b613019c9214e"
         end
         system "./configure", "--prefix=#{prefix}"
         system "make", "install"
