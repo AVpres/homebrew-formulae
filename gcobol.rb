@@ -4,7 +4,7 @@ class Gcobol < Formula
   url "https://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.2/gnucobol-2.2.tar.xz"
   sha256 "dc18fc45c269debfe86a4bbe20a7250983cba6238ea1917e135df5926cd024a0"
 
-  devel do
+  head do
     url "https://downloads.sourceforge.net/project/open-cobol/gnucobol/3.0/gnucobol-3.0-rc1.tar.xz"
     sha256 "bf76441ee7f8dc9aeb78291231f32273eafc4ec827f26840846a257a04bbc594"
   end
