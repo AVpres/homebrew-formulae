@@ -1,5 +1,5 @@
 class FfcommandEngine < Formula
-  desc "Instals FFCommand_Engine by ColorlabMD"
+  desc "Instals the FFCommand_Engine app by Colorlab"
   homepage "https://github.com/ColorlabMD/FFCommand_Engine"
   head "https://github.com/ColorlabMD/FFCommand_Engine.git"
 
