@@ -1,11 +1,9 @@
 class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz"
-  sha256 "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
+  url "https://ffmpeg.org/releases/ffmpeg-4.3.tar.xz"
+  sha256 "1d0ad06484f44bcb97eba5e93c40bcb893890f9f64aeb43e46cd9bb4cbd6795d"
   head "https://github.com/FFmpeg/FFmpeg.git"
-
-  bottle :unneeded
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-decklink", "Enable DeckLink support"
@@ -13,19 +11,19 @@ class Ffmpeg < Formula
   option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
   option "with-libssh", "Enable SFTP protocol via libssh"
-  option "with-tesseract", "Enable the tesseract OCR engine"
   option "with-libvidstab", "Enable vid.stab support for video stabilization"
+  option "with-libvmaf", "Enable libvmaf scoring library"
+  option "with-libxml2", "Enable libxml2 library"
   option "with-opencore-amr", "Enable Opencore AMR NR/WB audio format"
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable JPEG 2000 image format"
   option "with-openssl", "Enable SSL support"
   option "with-rubberband", "Enable rubberband library"
+  option "with-srt", "Enable SRT library"
+  option "with-tesseract", "Enable the tesseract OCR engine"
   option "with-webp", "Enable using libwebp to encode WEBP images"
   option "with-zeromq", "Enable using libzeromq to receive cmds sent through a libzeromq client"
   option "with-zimg", "Enable z.lib zimg library"
-  option "with-srt", "Enable SRT library"
-  option "with-libvmaf", "Enable libvmaf scoring library"
-  option "with-libxml2", "Enable libxml2 library"
 
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
@@ -86,11 +84,6 @@ class Ffmpeg < Formula
 
   def install
     ohai "Installing FFmpeg with options..."
-
-    # Work around Xcode 11 clang bug
-    # https://bitbucket.org/multicoreware/x265/issues/514/wrong-code-generated-on-macos-1015
-    # https://trac.ffmpeg.org/ticket/8073
-    ENV.append_to_cflags "-fno-stack-check" if DevelopmentTools.clang_build_version >= 1010
 
     args = %W[
       --prefix=#{prefix}
