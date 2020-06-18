@@ -5,8 +5,6 @@ class Cineform < Formula
   sha256 "7749cc6ccbd2b05ac8c942045396f06735dda5a87f5cd0166752570fd2be0cac"
   head "https://github.com/emericg/libcineform.git"
 
-  bottle :unneeded
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cmake" => :build

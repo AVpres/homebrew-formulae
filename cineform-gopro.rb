@@ -5,8 +5,6 @@ class CineformGopro < Formula
   sha256 "f63edd32d33a97ad89fc9490932a267f3cc69ac5b116458dfd2a4d27510cf193"
   head "https://github.com/gopro/cineform-sdk.git"
 
-  bottle :unneeded
-
   option "with-TestCFHD", "Install TestCFHD utility"
   option "with-WaveletDemo", "Install WaveletDemo utility"
 

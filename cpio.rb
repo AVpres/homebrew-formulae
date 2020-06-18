@@ -5,8 +5,6 @@ class Cpio < Formula
   sha256 "e87470d9c984317f658567c03bfefb6b0c829ff17dbf6b0de48d71a4c8f3db88"
   revision 1
 
-  bottle :unneeded
-
   def install
     args = "--enable-mt" if OS.linux?
     system "./configure", *args
