@@ -3,7 +3,7 @@ class Ffmpeg < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.3.tar.xz"
   sha256 "1d0ad06484f44bcb97eba5e93c40bcb893890f9f64aeb43e46cd9bb4cbd6795d"
-  revision 2
+  revision 3
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -27,7 +27,7 @@ class Ffmpeg < Formula
   option "with-zeromq", "Enable using libzeromq to receive cmds sent through a libzeromq client"
   option "with-zimg", "Enable z.lib zimg library"
 
-  depends_on "nasm" => :build
+  depends_on "yasm" => :build
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
 
@@ -93,6 +93,7 @@ class Ffmpeg < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
+      --x86asmexe=yasm
       --enable-gpl
       --enable-libaom
       --enable-libdav1d
