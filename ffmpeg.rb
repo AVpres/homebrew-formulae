@@ -27,9 +27,9 @@ class Ffmpeg < Formula
   option "with-zeromq", "Enable using libzeromq to receive cmds sent through a libzeromq client"
   option "with-zimg", "Enable z.lib zimg library"
 
-  depends_on "yasm" => :build
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
+  depends_on "yasm" => :build
 
   depends_on "aom"
   depends_on "dav1d"
