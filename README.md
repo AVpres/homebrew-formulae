@@ -35,7 +35,7 @@ The following formula has been deleted from this GitHub repository on 2019-02-29
 
 After two years, the official formula by the AMIA Open Source Committee added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
 
-As QuickJS is available as a regular Homebrew formula (`quickjs`), we have deleted our formula on 2019-08-03:
+As QuickJS is now available as a regular Homebrew formula (`quickjs`), we have deleted our formula on 2019-08-03:
 
 - **quickjs** – QuickJS Javascript Engine
 
