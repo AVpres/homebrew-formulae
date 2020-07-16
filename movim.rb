@@ -3,6 +3,7 @@ class Movim < Formula
   homepage "https://avpres.net/MovIm/"
   url "https://avpres.net/releases/movim-2020-07-11.tar.gz"
   sha256 "57877f658184e2cef1e11d74c39ed6a443377ab0813dc0e76547e94a9eae8eac"
+  license "BSD-3-Clause"
 
   def install
     cd "src" do
