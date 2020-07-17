@@ -3,8 +3,7 @@ class Openlto < Formula
   homepage "https://avpres.net/LTO_LTFS/LTO/"
   url "https://avpres.net/releases/openlto-2020-04-05.tar.gz"
   sha256 "feb2d79c2070e85574969c8671c93c57baad4351234469ee83b26884d7e99548"
-
-  bottle :unneeded
+  license "BSD-3-Clause"
 
   def install
     cd "src" do
