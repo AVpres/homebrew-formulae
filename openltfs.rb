@@ -3,6 +3,7 @@ class Openltfs < Formula
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
   url "https://avpres.net/releases/openltfs-2020-05-31.tar.gz"
   sha256 "ee8c8a8bb80b98dbb81111f2d058fa062e85aad9566eb5642fdc8b5546ffa544"
+  license "BSD-3-Clause"
 
   def install
     cd "src" do
