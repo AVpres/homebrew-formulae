@@ -29,6 +29,6 @@ class FfcommandEngine < Formula
   end
 
   test do
-    system("open #{prefix}/FFCommand_Engine.app")
+    system("open", "#{prefix}/FFCommand_Engine.app")
   end
 end
