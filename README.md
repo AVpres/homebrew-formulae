@@ -4,7 +4,6 @@
 
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
-- **cpio** – Copy files to and from archives (under Linux also instals: **mt** – Control magnetic tape drive operation)
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab (**Attention:** this formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.5[1])
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
 - **gcobol** - GNU COBOL (includes `--HEAD` option which installs the version 3.0 RC 1)
@@ -24,6 +23,10 @@ The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 ## Deleted Formulae
 
 The following formulae have been deleted from this GitHub repository:
+
+- **cpio** – Copy files to and from archives
+
+Under Linux also instals: **mt** – Control magnetic tape drive operation.
 
 - **hla** – High Level Assembler (HLABE back end, LD linker)
 
