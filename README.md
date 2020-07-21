@@ -17,19 +17,15 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
 - the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers and clones
 
-## Experimental Formulae
-
-Please do not install the following formula unless you know exactly what you are doing:
-
-- **hla** – High Level Assembler (HLABE back end, LD linker)
-
 ## Renamed Formula
 
 The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
 
-The following formula has been deleted from this GitHub repository on 2019-02-29:
+The following formulae have been deleted from this GitHub repository:
+
+- **hla** – High Level Assembler (HLABE back end, LD linker)
 
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
 
