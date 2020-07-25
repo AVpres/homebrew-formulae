@@ -2,6 +2,7 @@
 
 ## Maintained Formulae
 
+- **bash-avpres** - Bash scripts for audiovisual preservation
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab (**Attention:** this formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.5[1])
