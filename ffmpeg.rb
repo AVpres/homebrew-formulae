@@ -92,6 +92,7 @@ class Ffmpeg < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
+      --enable-demuxer=dash
       --enable-gpl
       --enable-libaom
       --enable-libdav1d
