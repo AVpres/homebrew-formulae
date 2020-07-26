@@ -4,7 +4,6 @@ class BashAvpres < Formula
   url "https://avpres.net/releases/bash-avpres-2020-07-27.tar.gz"
   sha256 "842a0037445f77f8abe4694a96460196c60a1b1de3a87175ef9020da95cb757e"
   license "BSD-3-Clause"
-  revision 1
 
   def install
     cd "src" do
