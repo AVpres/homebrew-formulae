@@ -4,6 +4,7 @@ class BashAvpres < Formula
   url "https://avpres.net/releases/bash-avpres-2020-07-26.tar.gz"
   sha256 "6310888ffbb82d1152099858ed87a34c8fbcd8d47d204c50c8bf97e4a35cbfdc"
   license "BSD-3-Clause"
+  revision 1
 
   def install
     cd "src" do
@@ -12,6 +13,7 @@ class BashAvpres < Formula
       bin.install "ffmpeg_head"
       bin.install "make_bagit"
       bin.install "make_cs_manifest"
+      bin.install "make_framemd5"
       bin.install "make_h264"
       bin.install "make_prores"
       bin.install "nano_config"
