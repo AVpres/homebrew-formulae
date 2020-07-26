@@ -16,6 +16,7 @@ class BashAvpres < Formula
       bin.install "make_h264"
       bin.install "make_prores"
       bin.install "nano_config"
+      bin.install "verify_bagit"
     end
     cd "man" do
       man1.install "make_bagit.1"
