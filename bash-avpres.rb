@@ -4,6 +4,7 @@ class BashAvpres < Formula
   url "https://avpres.net/releases/bash-avpres-2020-07-28.tar.gz"
   sha256 "b049a14c853e845b3c27e66e5c67b81565a8564bec8d5977ba168544b6144b36"
   license "BSD-3-Clause"
+  revision 1
 
   def install
     cd "src" do
@@ -22,6 +23,7 @@ class BashAvpres < Formula
       man1.install "make_bagit.1"
       man1.install "make_h264.1"
       man1.install "make_prores.1"
+      man1.install "verify_bagit.1"
     end
   end
 
@@ -29,5 +31,6 @@ class BashAvpres < Formula
     system "#{bin}/make_bagit", "-h"
     system "#{bin}/make_h264", "-h"
     system "#{bin}/make_prores", "-h"
+    system "#{bin}/verify_bagit", "-h"
   end
 end
