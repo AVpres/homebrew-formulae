@@ -1,4 +1,4 @@
-# Brew Formulae for Audio-Visual Preservation
+# Brew Formulae for Audiovisual Preservation
 
 ## Maintained Formulae
 
