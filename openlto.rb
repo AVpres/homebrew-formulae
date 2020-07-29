@@ -6,40 +6,16 @@ class Openlto < Formula
   license "BSD-3-Clause"
 
   def install
-    cd "src" do
-      if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
-        opoo "Please login for full installation."
-      else
-        patch do
-          url "https://avpres.net/patch/openlto-2020-04-05.diff"
-          sha256 "617a094907290294c80dea0dc10c906688b90f01b3b4ded2c08beadba5423ac2"
-        end
-        bin.install "copylto"
-        bin.install "dcp2lto"
-        bin.install "ejectlto"
-        bin.install "formatlto"
-        bin.install "indexlto"
-        bin.install "listlto"
-        bin.install "loadlto"
-        bin.install "dcp2lto"
-        bin.install "migratelto"
-        bin.install "mountlto"
-        bin.install "readlto"
-        bin.install "recoverlto"
-        bin.install "repairlto"
-        bin.install "searchlto"
-        bin.install "selectlto"
-        bin.install "unmountlto"
-        bin.install "verifylto"
-        bin.install "writelto"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+      opoo "Please login for full installation."
+    else
+      patch do
+        url "https://avpres.net/patch/openlto-2020-04-05.diff"
+        sha256 "617a094907290294c80dea0dc10c906688b90f01b3b4ded2c08beadba5423ac2"
       end
-      bin.install "openlto"
     end
-    cd "man" do
-      man1.install "dcp2lto.1"
-      man1.install "lto2dcp.1"
-      man1.install "openlto.1"
-    end
+    bin.install Dir["src/*"]
+    man1.install Dir["man/*"]
   end
 
   test do

@@ -11,29 +11,25 @@ class Spoiledapples < Formula
   option "with-z80", "Enable Z80 assembly language support"
 
   def install
-    cd "src" do
-      if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
-        opoo "Please login for full installation."
-      else
-        patch do
-          url "https://avpres.net/patch/spoiledapples-2020-07-19.diff"
-          sha256 "ecf71fbdd9cce23c64981c4c05d8861144a84235f516bc354e312bd4578aa746"
-        end
-
-        args << "--enable-6502" if build.with? "6502"
-        args << "--enable-680x0" if build.with? "680x0"
-        args << "--enable-ppc" if build.with? "ppc"
-        args << "--enable-z80" if build.with? "z80"
-
-        system "./configure", *args
-        system "make"
-        system "make", "install"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+      opoo "Please login for full installation."
+    else
+      patch do
+        url "https://avpres.net/patch/spoiledapples-2020-07-19.diff"
+        sha256 "ecf71fbdd9cce23c64981c4c05d8861144a84235f516bc354e312bd4578aa746"
       end
-      bin.install "spoiledapples"
+
+      args << "--enable-6502" if build.with? "6502"
+      args << "--enable-680x0" if build.with? "680x0"
+      args << "--enable-ppc" if build.with? "ppc"
+      args << "--enable-z80" if build.with? "z80"
+
+      system "./configure", *args
+      system "make"
+      system "make", "install"
     end
-    cd "man" do
-      man1.install "spoiledapples.1"
-    end
+    bin.install Dir["src/*"]
+    man1.install Dir["man/*"]
   end
 
   test do

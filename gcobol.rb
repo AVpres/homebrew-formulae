@@ -13,9 +13,9 @@ class Gcobol < Formula
   depends_on "gmp"
 
   conflicts_with "gnu-cobol",
-    :because => "both install `cob-config`, `cobc` and `cobcrun` binaries"
+    because: "both install `cob-config`, `cobc` and `cobcrun` binaries"
   conflicts_with "open-cobol",
-    :because => "both install `cob-config`, `cobc` and `cobcrun` binaries"
+    because: "both install `cob-config`, `cobc` and `cobcrun` binaries"
 
   def install
     gmp = Formula["gmp"]

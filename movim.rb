@@ -6,27 +6,18 @@ class Movim < Formula
   license "BSD-3-Clause"
 
   def install
-    cd "src" do
-      if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
-        opoo "Please login for full installation."
-      else
-        patch do
-          url "https://avpres.net/patch/movim-2020-07-11.diff"
-          sha256 "93e3484594e2fb161d99677bde3175ac2ad28e01c1c3e51c8d6be9de94f7e85b"
-        end
-        system "./configure", "--prefix=#{prefix}"
-        system "make", "install"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+      opoo "Please login for full installation."
+    else
+      patch do
+        url "https://avpres.net/patch/movim-2020-07-11.diff"
+        sha256 "93e3484594e2fb161d99677bde3175ac2ad28e01c1c3e51c8d6be9de94f7e85b"
       end
-      bin.install "openmovim"
+      system "./configure", "--prefix=#{prefix}"
+      system "make", "install"
     end
-    cd "man" do
-      man1.install "libmovim.1"
-      man1.install "movim.1"
-      man1.install "movimdec.1"
-      man1.install "movimenc.1"
-      man1.install "movimplay.1"
-      man1.install "openmovim.1"
-    end
+    bin.install Dir["src/*"]
+    man1.install Dir["man/*"]
   end
 
   test do
