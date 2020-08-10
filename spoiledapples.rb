@@ -1,5 +1,5 @@
 class Spoiledapples < Formula
-  desc "Emulation of 6502, 680x0 & PowerPC-based Apple computers & clones"
+  desc "Emulate 6502, 680x0 and PowerPC-based Apple computers and clones"
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/releases/spoiledapples-2020-07-19.tar.gz"
   sha256 "a3ba7da0ab011fcaf64cbcf2da3a0ee0b1542190f487b7f1a88ffc93468a4a42"
