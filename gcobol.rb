@@ -5,8 +5,8 @@ class Gcobol < Formula
   sha256 "dc18fc45c269debfe86a4bbe20a7250983cba6238ea1917e135df5926cd024a0"
 
   head do
-    url "https://downloads.sourceforge.net/project/open-cobol/gnucobol/3.0/gnucobol-3.0-rc1.tar.xz"
-    sha256 "bf76441ee7f8dc9aeb78291231f32273eafc4ec827f26840846a257a04bbc594"
+    url "https://kumisystems.dl.sourceforge.net/project/gnucobol/gnucobol/3.1/gnucobol-3.1-rc1.tar.xz"
+    sha256 "c2e41c2ba520681a67c570d7246d25c31f7f55c8a145aaec3f6273a500a93a76"
   end
 
   depends_on "berkeley-db"
