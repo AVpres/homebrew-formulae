@@ -15,8 +15,8 @@ class Spoiledapples < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples-2020-07-19.diff"
-        sha256 "ecf71fbdd9cce23c64981c4c05d8861144a84235f516bc354e312bd4578aa746"
+        url "https://avpres.net/patch/spoiledapples-2020-08-30.diff"
+        sha256 "a0b4e7efa6bb837d1885dbd8836b4613cdda269c7909d5b03972be06739be48c"
       end
 
       args << "--enable-6502" if build.with? "6502"
