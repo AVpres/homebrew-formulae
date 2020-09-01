@@ -1,8 +1,8 @@
 class Spoiledapples < Formula
   desc "Emulate 6502, 680x0 and PowerPC-based Apple computers and clones"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/releases/spoiledapples-2020-08-15.tar.gz"
-  sha256 "25e642ca30fa24258b717987004f15d3c0ee128112c1a197e567f9d72cf78a67"
+  url "https://avpres.net/releases/spoiledapples-2020-09-01.tar.gz"
+  sha256 "eb23443cca52bf6a5268a6e042bbb48ad23480175ebb5cf88cd5c85d74515157"
   license "BSD-3-Clause"
 
   option "with-6502", "Enable 6502 assembly language support"
@@ -15,8 +15,8 @@ class Spoiledapples < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples-2020-08-30.diff"
-        sha256 "a0b4e7efa6bb837d1885dbd8836b4613cdda269c7909d5b03972be06739be48c"
+        url "https://avpres.net/patch/spoiledapples-2020-09-01.diff"
+        sha256 "376bd45fe39f3510ed6f6ce332dc336c894ce8dcdfb1429603814c9d63117c7e"
       end
 
       args << "--enable-6502" if build.with? "6502"
