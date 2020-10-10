@@ -2,12 +2,12 @@
 
 ## Maintained Formulae
 
-- **bash-avpres** - Bash scripts for audiovisual preservation
+- **bash-avpres** – Bash scripts for audiovisual preservation
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab (**Attention:** this formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.5[1])
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
-- **gcobol** - GNU COBOL (includes `--HEAD` option which installs the version 3.1 RC 1)
+- **gcobol** – GNU COBOL (includes `--HEAD` option which installs the version 3.1 RC 1)
 - **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
