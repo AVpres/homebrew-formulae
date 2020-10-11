@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz"
   sha256 "ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -50,8 +50,6 @@ class Ffmpeg < Formula
   depends_on "x265"
   depends_on "xz"
 
-  depends_on "linuxbrew/xorg/libxv" unless OS.mac?
-
   depends_on "fdk-aac" => :optional
   depends_on "game-music-emu" => :optional
   depends_on "libbluray" => :optional
@@ -84,6 +82,13 @@ class Ffmpeg < Formula
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
+
+  # https://trac.ffmpeg.org/ticket/8760
+  # Remove in next release
+  patch do
+    url "https://github.com/FFmpeg/FFmpeg/commit/7c59e1b0f285cd7c7b35fcd71f49c5fd52cf9315.patch?full_index=1"
+    sha256 "1cbe1b68d70eadd49080a6e512a35f3e230de26b6e1b1c859d9119906417737f"
+  end
 
   def install
     ohai "Installing FFmpeg with options..."
