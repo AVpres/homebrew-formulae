@@ -14,7 +14,7 @@ class Spoiledapples < Formula
         sha256 "38f75c3ee64913aa86e9704f392518b1784921220c52719d5c2758367eeb8813"
       end
 
-      system "./configure", *args
+      system "./configure"
       system "make"
       system "make", "install"
     end
