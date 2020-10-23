@@ -1,12 +1,12 @@
 class BashAvpres < Formula
   desc "Bash scripts for audiovisual preservation"
   homepage "https://avpres.net/Bash_AVpres/"
-  url "https://avpres.net/releases/bash-avpres-2020-10-17.tar.gz"
-  sha256 "27d7f1a9586fdc545d5b939c2045f4ecd58d51c93671bfaae7a6ccefdfa02fa0"
+  url "https://avpres.net/releases/bash-avpres-2020-10-24.tar.gz"
+  sha256 "63c0601680d6eb08786e6e00186c502f87e842ff085c51a1d691e023b8346643"
   license "BSD-3-Clause"
 
   def install
-    bin.install Dir["src/*"]
+    bin.install Dir["bin/*"]
     man1.install Dir["man/*"]
   end
 
