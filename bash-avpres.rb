@@ -1,8 +1,8 @@
 class BashAvpres < Formula
   desc "Bash scripts for audiovisual preservation"
   homepage "https://avpres.net/Bash_AVpres/"
-  url "https://avpres.net/releases/bash-avpres-2020-11-07.tar.gz"
-  sha256 "20fa66d715b0bb3cab5c3615cff0b6a4480f08e10d30d045c694033d562d8116"
+  url "https://avpres.net/releases/bash-avpres-2020-11-14.tar.gz"
+  sha256 "93bfc127ab4afc1f69e10777aa9847f59f559560ffe5aa876fbc0d8251046518"
   license "BSD-3-Clause"
 
   def install
