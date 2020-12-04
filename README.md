@@ -46,7 +46,7 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 a
 
 ## Copyright, Licence and Disclaimer
 
-Copyright © 2017–2020 by Reto Kromer
+Copyright © 2017–2021 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE).
 
