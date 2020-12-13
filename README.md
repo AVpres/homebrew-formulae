@@ -7,7 +7,7 @@
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab<br>Attention: This formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
-- **gcobol** – GNU COBOL (includes `--HEAD` option which installs the version 3.1 RC 1)
+- **gcobol** – GNU COBOL
 - **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:

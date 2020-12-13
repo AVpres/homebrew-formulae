@@ -1,13 +1,9 @@
 class Gcobol < Formula
   desc "Implements much of the COBOL 85 and COBOL 2002 standards"
-  homepage "https://sourceforge.net/projects/open-cobol/"
-  url "https://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.2/gnucobol-2.2.tar.xz"
-  sha256 "dc18fc45c269debfe86a4bbe20a7250983cba6238ea1917e135df5926cd024a0"
-
-  head do
-    url "https://kumisystems.dl.sourceforge.net/project/gnucobol/gnucobol/3.1/gnucobol-3.1-rc1.tar.xz"
-    sha256 "c2e41c2ba520681a67c570d7246d25c31f7f55c8a145aaec3f6273a500a93a76"
-  end
+  homepage "https://sourceforge.net/projects/gnucobol/"
+  url "https://downloads.sourceforge.net/project/gnucobol/gnucobol/3.1/gnucobol-3.1.1.tar.xz"
+  sha256 "c1b1d7dead3b141ed2f30102934e94b48d01845c79fccf19110f34016970f423"
+  license "GPL-3.0-or-later"
 
   depends_on "berkeley-db"
   depends_on "gmp"
