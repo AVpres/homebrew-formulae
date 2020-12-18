@@ -7,7 +7,6 @@
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab<br>Attention: This formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
-- **gcobol** – GNU COBOL
 - **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
@@ -34,6 +33,10 @@ Under Linux also instals: **mt** – Control magnetic tape drive operation.
 - **vrecord-x** is a [_vrecord_](https://github.com/amiaopensource/vrecord) flavour running on Linux, macOS and Windows
 
 After two years, the official formula by the AMIA Open Source Committee added Linux support, as well as HuffYUV and ProRes 422 HQ encodings. Therefore this alternate one was no longer needed.
+
+As the regular Homebrew formula (`gnu-cobol`) is now again up to date, we have deleted our formula on 2020-12-19:
+
+- **gcobol** – GNU COBOL (includes `--HEAD` option which installs the version 3.1 RC 1)
 
 As QuickJS is now available as a regular Homebrew formula (`quickjs`), we have deleted our formula on 2019-08-03:
 
