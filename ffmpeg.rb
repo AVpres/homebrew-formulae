@@ -2,7 +2,7 @@ class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   license "GPL-2.0-or-later"
-  revision 4
+  revision 5
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   stable do
@@ -93,6 +93,10 @@ class Ffmpeg < Formula
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "libxv"
+  end
+
   def install
     ohai "Installing FFmpeg with options..."
 
@@ -124,7 +128,7 @@ class Ffmpeg < Formula
       --extra-version=with-options
     ]
 
-    if OS.mac?
+    on_macos do
       args << "--enable-opencl"
       args << "--enable-videotoolbox"
     end
