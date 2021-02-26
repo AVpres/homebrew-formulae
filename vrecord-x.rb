@@ -28,12 +28,13 @@ class VrecordX < Formula
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2021-01-25_x_2021-01-26.diff"
-        sha256 "fab6a3f1163b38482fcf73319dbe42308ba77445f41bbd7ddfecf42487547418"
+        url "https://avpres.net/patch/vrecord_2021-01-25_x_2021-02-26.diff"
+        sha256 "eae06dc12857b30d714dfe6a2512db9f7422e3310e954aa68247d74520a6d245"
       end
     end
 
     bin.install "vrecord"
+    bin.install "vtest" if build.with? "vtest"
     prefix.install "Resources/dvrecord.png"
     prefix.install "Resources/qcview.lua"
     prefix.install "Resources/vrecord_functions"
@@ -45,7 +46,6 @@ class VrecordX < Formula
     prefix.install "Resources/vrecord_logo_edit.png"
     prefix.install "Resources/vrecord_logo_help.png"
     prefix.install "Resources/vrecord_logo_documentation.png"
-    bin.install "vtest" if build.with? "vtest"
     man1.install "vrecord.1"
     man1.install "vtest.1" if build.with? "vtest"
   end
