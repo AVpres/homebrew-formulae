@@ -13,7 +13,6 @@ class FfcommandEngine < Formula
       system "LDFLAGS=-L/usr/local/opt/qt/lib"
       system "CPPFLAGS=-I/usr/local/opt/qt/include"
       system "PKG_CONFIG_PATH=/usr/local/opt/qt/lib/pkgconfig"
-
       system "qmake", "FFCommand_Engine.pro"
       system "qmake"
       system "make"
@@ -23,7 +22,7 @@ class FfcommandEngine < Formula
 
   def caveats
     <<~EOS
-      After installation, you need to pass to the Terminal:
+      After installation, you need to run in the Terminal:
       cp -R #{prefix}/FFCommand_Engine.app /Applications
     EOS
   end
