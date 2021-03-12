@@ -2,17 +2,18 @@ class FfcommandEngine < Formula
   desc "Instals the FFCommand_Engine app by Colorlab"
   homepage "https://github.com/ColorlabMD/FFCommand_Engine"
   head "https://github.com/ColorlabMD/FFCommand_Engine.git"
+  revision 1
 
   depends_on "pkg-config" => :build
-  depends_on "qt" => :build
+  depends_on "qt5" => :build
   depends_on "qwt" => :build
 
   def install
     cd "FFCommand_Engine" do
-      system "PATH=/usr/local/opt/qt/bin:$PATH"
-      system "LDFLAGS=-L/usr/local/opt/qt/lib"
-      system "CPPFLAGS=-I/usr/local/opt/qt/include"
-      system "PKG_CONFIG_PATH=/usr/local/opt/qt/lib/pkgconfig"
+      system "PATH=/usr/local/opt/qt5/bin:$PATH"
+      system "LDFLAGS=-L/usr/local/opt/qt5/lib"
+      system "CPPFLAGS=-I/usr/local/opt/qt5/include"
+      system "PKG_CONFIG_PATH=/usr/local/opt/qt5/lib/pkgconfig"
       system "qmake", "FFCommand_Engine.pro"
       system "qmake"
       system "make"
