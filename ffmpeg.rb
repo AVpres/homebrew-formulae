@@ -4,6 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.3.2.tar.xz"
   sha256 "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -21,6 +22,7 @@ class Ffmpeg < Formula
   option "with-openjpeg", "Enable JPEG 2000 image format"
   option "with-openssl", "Enable SSL support"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
+  option "with-rtmpdump", "Enable RTMP dumping support"
   option "with-rubberband", "Enable rubberband library"
   option "with-srt", "Enable SRT library"
   option "with-tesseract", "Enable the tesseract OCR engine"
@@ -42,7 +44,6 @@ class Ffmpeg < Formula
   depends_on "libvorbis"
   depends_on "libvpx"
   depends_on "opus"
-  depends_on "rtmpdump"
   depends_on "sdl2"
   depends_on "snappy"
   depends_on "theora"
