@@ -1,8 +1,8 @@
 class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
-  url "https://avpres.net/releases/movim-2021-03-13.tar.gz"
-  sha256 "d68eb4e9b36e21ea3414591d10899926fc3724d0386ba8fa57f24c29b4b019bf"
+  url "https://avpres.net/releases/movim-2021-05-08.tar.gz"
+  sha256 "ac3308800371b07c40f8af1040df22f6c30bacde1f894caee4d7b2394da60923"
   license "BSD-3-Clause"
 
   def install
@@ -10,8 +10,8 @@ class Movim < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/movim-2021-03-13.diff"
-        sha256 "af6fc844c7c24bb0bf6b998cb89eb0530329c485a34d681d8f65617076d53331"
+        url "https://avpres.net/patch/movim-2021-05-08.diff"
+        sha256 "4144bf76d900d6a9bb87210e760fa473f48c4407588ea79aecfdf44ae7b6d481"
       end
       system "./configure"
       system "make"
