@@ -10,8 +10,8 @@ class Movim < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/movim-2021-05-08.diff"
-        sha256 "4144bf76d900d6a9bb87210e760fa473f48c4407588ea79aecfdf44ae7b6d481"
+        url "https://avpres.net/patch/movim-2021-07-03.diff"
+        sha256 "95d5ec7339fe3364f78ef21a9be53307d1daa704083f435a31b24762185d691d"
       end
       system "./configure"
       system "make"
