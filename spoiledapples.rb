@@ -1,8 +1,8 @@
 class Spoiledapples < Formula
   desc "Emulate 6502, 680x0 and PowerPC-based Apple computers and clones"
   homepage "https://avpres.net/Spoiled_Apples/"
-  url "https://avpres.net/releases/spoiledapples-2021-05-08.tar.gz"
-  sha256 "fdf532bee2856921f328305d694cf15cb533854af8bdba80ece6feaa1650d047"
+  url "https://avpres.net/releases/spoiledapples-2021-07-03.tar.gz"
+  sha256 "7d5b3ea64eff3d6eaa84f8539e44a3ef0801ca73a1a978cb29d9205a33a1523e"
   license "BSD-3-Clause"
 
   def install
@@ -10,8 +10,8 @@ class Spoiledapples < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/spoiledapples-2021-05-08.diff"
-        sha256 "c412903ba163840c2efc8fea088a46f508219bda0eb293e5b3255d8cf0266189"
+        url "https://avpres.net/patch/spoiledapples-2021-07-03.diff"
+        sha256 "eb5133ed5abe06debc0a50e41f91cde2b7e38224a475628f8412b0b8caa80439"
       end
       system "./configure"
       system "make"
