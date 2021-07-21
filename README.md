@@ -7,7 +7,6 @@
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab<br>Attention: This formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
-- **gprolog** – Prolog top-level (GNU Prolog)
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
@@ -22,6 +21,10 @@ The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
 
+As there is now a regular Homebrew formula (`gnu-prolog`), we have deleted our one on 2021-07-21:
+
+- **gprolog** – Prolog top-level (GNU Prolog)
+ 
 The following formulae have been deleted from this GitHub repository:
 
 - **cpio** – Copy files to and from archives
