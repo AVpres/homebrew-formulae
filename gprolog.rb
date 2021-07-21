@@ -1,8 +1,8 @@
 class Gprolog < Formula
   desc "Prolog top-level (GNU Prolog)"
   homepage "http://www.gprolog.org/"
-  url "ftp://ftp.gnu.org/gnu/gprolog/gprolog-1.4.5.tar.gz"
-  sha256 "bfdcf00e051e0628b4f9af9d6638d4fde6ad793401e58a5619d1cc6105618c7c"
+  url "ftp://ftp.gnu.org/gnu/gprolog/gprolog-1.5.0.tar.gz"
+  sha256 "670642b43c0faa27ebd68961efb17ebe707688f91b6809566ddd606139512c01"
 
   def install
     cd "src" do
