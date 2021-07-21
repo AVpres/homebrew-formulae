@@ -21,7 +21,7 @@ The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
 
-As there is now a regular Homebrew formula (`gnu-prolog`), we have deleted our one on 2021-07-21:
+As Prolog is now a available as regular Homebrew formula (`gnu-prolog`), we have deleted our formula on 2021-07-21:
 
 - **gprolog** – Prolog top-level (GNU Prolog)
  
