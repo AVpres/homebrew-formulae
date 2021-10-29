@@ -1,11 +1,11 @@
 class FfcommandEngine < Formula
   desc "Instals the FFCommand_Engine app by Colorlab"
   homepage "https://github.com/ColorlabMD/FFCommand_Engine"
+  revision 2
   head "https://github.com/ColorlabMD/FFCommand_Engine.git"
-  revision 1
 
   depends_on "pkg-config" => :build
-  depends_on "qt5" => :build
+  depends_on "qt@5" => :build
   depends_on "qwt" => :build
 
   def install
