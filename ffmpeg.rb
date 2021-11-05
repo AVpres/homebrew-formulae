@@ -4,6 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz"
   sha256 "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -11,6 +12,7 @@ class Ffmpeg < Formula
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
   option "with-game-music-emu", "Enable Game Music Emu (GME) support"
   option "with-jack", "Enable Jack support"
+  option "with-librist", "Enable Internet Stream Transport (RIST) support"
   option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
   option "with-libssh", "Enable SFTP protocol via libssh"
@@ -59,6 +61,7 @@ class Ffmpeg < Formula
   depends_on "libcaca" => :optional
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
+  depends_on "librist" => :optional
   depends_on "librsvg" => :optional
   depends_on "libsoxr" => :optional
   depends_on "libssh" => :optional
@@ -68,7 +71,7 @@ class Ffmpeg < Formula
   depends_on "opencore-amr" => :optional
   depends_on "openh264" => :optional
   depends_on "openjpeg" => :optional
-  depends_on "openssl@1.1" => :optional
+  depends_on "openssl" => :optional
   depends_on "rav1e" => :optional
   depends_on "rtmpdump" => :optional
   depends_on "rubberband" => :optional
@@ -117,74 +120,74 @@ class Ffmpeg < Formula
       --extra-version=with-options
     ]
 
-    on_macos do
+    if OS.mac?
       args << "--enable-opencl"
       args << "--enable-videotoolbox"
     end
 
     args << "--enable-chromaprint" if build.with? "chromaprint"
-    args << "--enable-libbluray" if build.with? "libbluray"
-    args << "--enable-libbs2b" if build.with? "libbs2b"
-    args << "--enable-libcaca" if build.with? "libcaca"
-    args << "--enable-libfdk-aac" if build.with? "fdk-aac"
-    args << "--enable-libgme" if build.with? "game-music-emu"
-    args << "--enable-libgsm" if build.with? "libgsm"
-    args << "--enable-libmodplug" if build.with? "libmodplug"
-    args << "--enable-libopenh264" if build.with? "openh264"
-    args << "--enable-libopenjpeg" if build.with? "openjpeg"
-    args << "--enable-librav1e" if build.with? "rav1e"
-    args << "--enable-librsvg" if build.with? "librsvg"
-    args << "--enable-librtmp" if build.with? "rtmpdump"
-    args << "--enable-librubberband" if build.with? "rubberband"
-    args << "--enable-libsoxr" if build.with? "libsoxr"
-    args << "--enable-libspeex" if build.with? "speex"
-    args << "--enable-libsrt" if build.with? "srt"
-    args << "--enable-libssh" if build.with? "libssh"
-    args << "--enable-libtesseract" if build.with? "tesseract"
-    args << "--enable-libtwolame" if build.with? "two-lame"
-    args << "--enable-libvidstab" if build.with? "libvidstab"
-    args << "--enable-libvmaf" if build.with? "libvmaf"
-    args << "--enable-libwebp" if build.with? "webp"
-    args << "--enable-libxml2" if build.with? "libxml2"
-    args << "--enable-libxvid" if build.with? "xvid"
-    args << "--enable-libzimg" if build.with? "zimg"
-    args << "--enable-libzmq" if build.with? "zeromq"
-    args << "--enable-openssl" if build.with? "openssl"
-
-    # These librares are GPL-incompatible, and require ffmpeg be built with
-    # the "--enable-nonfree" flag, which produces unredistributable libraries
-    args << "--enable-nonfree" if build.with?("decklink") || build.with?("fdk-aac") || build.with?("openssl")
-
     if build.with? "decklink"
+      args << "--enable-nonfree"
       args << "--enable-decklink"
       args << "--extra-cflags=-I#{HOMEBREW_PREFIX}/include"
       args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
     end
-    
+    if build.with? "fdk-aac"
+      args << "--enable-nonfree"
+      args << "--enable-libfdk-aac"
+    end
+    args << "--enable-libgme" if build.with? "game-music-emu"
     if build.with? "jack"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
       args << "--enable-libjack"
       args << "--enable-indev=jack"
     end
-
-    args << "--enable-version3" if build.with?("opencore-amr") || build.with?("libvmaf")
-
+    args << "--enable-libbluray" if build.with? "libbluray"
+    args << "--enable-libbs2b" if build.with? "libbs2b"
+    args << "--enable-libcaca" if build.with? "libcaca"
+    args << "--enable-libgsm" if build.with? "libgsm"
+    args << "--enable-libmodplug" if build.with? "libmodplug"
+    args << "--enable-libsoxr" if build.with? "libsoxr"
+    args << "--enable-libssh" if build.with? "libssh"
+    args << "--enable-librist" if build.with? "librist"
+    args << "--enable-librsvg" if build.with? "librsvg"
+    args << "--enable-libvidstab" if build.with? "libvidstab"
+    if build.with? "libvmaf"
+      args << "--enable-version3"
+      args << "--enable-libvmaf"
+    end
     if build.with? "opencore-amr"
+      args << "--enable-version3"
       args << "--enable-libopencore-amrnb"
       args << "--enable-libopencore-amrwb"
     end
+    args << "--enable-libopenh264" if build.with? "openh264"
+    args << "--enable-libopenjpeg" if build.with? "openjpeg"
+    args << "--enable-librav1e" if build.with? "rav1e"
+    args << "--enable-librtmp" if build.with? "rtmpdump"
+    args << "--enable-librubberband" if build.with? "rubberband"
+    args << "--enable-libspeex" if build.with? "speex"
+    args << "--enable-libsrt" if build.with? "srt"
+    args << "--enable-libtesseract" if build.with? "tesseract"
+    args << "--enable-libtwolame" if build.with? "two-lame"
+    if build.with? "openssl"
+      args << "--enable-nonfree"
+      args << "--enable-openssl"
+    end
+    args << "--enable-libwebp" if build.with? "webp"
+    args << "--enable-libxml2" if build.with? "libxml2"
+    args << "--enable-libxvid" if build.with? "xvid"
+    args << "--enable-libzimg" if build.with? "zimg"
+    args << "--enable-libzmq" if build.with? "zeromq"
 
     system "./configure", *args
     system "make", "install"
-
-    # Build and install additional FFmpeg tools
     system "make", "alltools"
     bin.install Dir["tools/*"].select { |f| File.executable? f }
     mv bin/"python", pkgshare/"python", force: true
   end
 
   test do
-    # Create an example mp4 file
     mp4out = testpath/"video.mp4"
     system bin/"ffmpeg", "-filter_complex", "testsrc=rate=1:duration=1", mp4out
     assert_predicate mp4out, :exist?
