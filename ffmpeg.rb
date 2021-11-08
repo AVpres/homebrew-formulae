@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz"
   sha256 "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -44,6 +44,7 @@ class Ffmpeg < Formula
   depends_on "lame"
   depends_on "libass"
   depends_on "libvorbis"
+  depends_on "libvmaf"
   depends_on "libvpx"
   depends_on "opus"
   depends_on "sdl2"
@@ -108,6 +109,7 @@ class Ffmpeg < Formula
       --enable-libopus
       --enable-libsnappy
       --enable-libtheora
+      --enable-libvmaf
       --enable-libvorbis
       --enable-libvpx
       --enable-libx264
