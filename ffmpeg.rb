@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz"
   sha256 "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
   license "GPL-2.0-or-later"
-  revision 4
+  revision 5
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -44,7 +44,6 @@ class Ffmpeg < Formula
   depends_on "lame"
   depends_on "libass"
   depends_on "libvorbis"
-  depends_on "libvmaf"
   depends_on "libvpx"
   depends_on "opus"
   depends_on "sdl2"
@@ -109,7 +108,6 @@ class Ffmpeg < Formula
       --enable-libopus
       --enable-libsnappy
       --enable-libtheora
-      --enable-libvmaf
       --enable-libvorbis
       --enable-libvpx
       --enable-libx264
@@ -157,6 +155,10 @@ class Ffmpeg < Formula
     if build.with? "libvmaf"
       args << "--enable-version3"
       args << "--enable-libvmaf"
+      %w[doc/filters.texi libavfilter/vf_libvmaf.c].each do |f|
+        inreplace f, "/usr/local/share/model", HOMEBREW_PREFIX/"share/libvmaf/model"
+        inreplace f, "vmaf_v0.6.1.pkl", "vmaf_v0.6.1.json"
+      end
     end
     if build.with? "opencore-amr"
       args << "--enable-version3"
@@ -181,13 +183,6 @@ class Ffmpeg < Formula
     args << "--enable-libxvid" if build.with? "xvid"
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
-
-    # Replace hardcoded default VMAF model path
-    %w[doc/filters.texi libavfilter/vf_libvmaf.c].each do |f|
-      inreplace f, "/usr/local/share/model", HOMEBREW_PREFIX/"share/libvmaf/model"
-      # Since libvmaf v2.0.0, `.pkl` model files have been deprecated in favor of `.json` model files.
-      inreplace f, "vmaf_v0.6.1.pkl", "vmaf_v0.6.1.json"
-    end
 
     system "./configure", *args
     system "make", "install"
