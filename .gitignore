@@ -1,3 +1,16 @@
+# compiled object files
 *.o
+
+# compiled static libraries
+*.a
+
+# compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# test folder
 test/
+
+# macOS trash
 .DS_Store
