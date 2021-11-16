@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz"
   sha256 "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
   license "GPL-2.0-or-later"
-  revision 5
+  revision 6
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -12,11 +12,13 @@ class Ffmpeg < Formula
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
   option "with-game-music-emu", "Enable Game Music Emu (GME) support"
   option "with-jack", "Enable Jack support"
+  option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
+  option "with-libopenmpt", "Enable module/tracker files as inputs via libopenmpt"
   option "with-librist", "Enable Reliable Internet Stream Transport (RIST) support"
   option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
   option "with-libssh", "Enable SFTP protocol via libssh"
-  option "with-libvidstab", "Enable vid.stab support for video stabilization"
+  option "with-libvidstab", "Enable vid.stab support for video stabilisation"
   option "with-libvmaf", "Enable libvmaf scoring library"
   option "with-libxml2", "Enable libxml2 library"
   option "with-opencore-amr", "Enable Opencore AMR NR/WB audio format"
@@ -61,6 +63,7 @@ class Ffmpeg < Formula
   depends_on "libcaca" => :optional
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
+  depends_on "libopenmpt" => :optional
   depends_on "librist" => :optional
   depends_on "librsvg" => :optional
   depends_on "libsoxr" => :optional
@@ -147,6 +150,7 @@ class Ffmpeg < Formula
     args << "--enable-libcaca" if build.with? "libcaca"
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
+    args << "--enable-libopenmpt" if build.with? "libopenmpt"
     args << "--enable-libsoxr" if build.with? "libsoxr"
     args << "--enable-libssh" if build.with? "libssh"
     args << "--enable-librist" if build.with? "librist"
