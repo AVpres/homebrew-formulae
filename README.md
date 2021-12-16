@@ -5,7 +5,7 @@
 - **bash-avpres** – Bash scripts for audiovisual preservation
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
-- **ffcommand-engine** – Instals the FFCommand_Engine app by Colorlab<br>Attention: This formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
+- **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>Attention: This formula is `--HEAD` only and installs the not-yet-released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
@@ -52,7 +52,7 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 a
 
 ## Copyright, Licence and Disclaimer
 
-Copyright © 2017–2021 by Reto Kromer
+Copyright © 2017–2022 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE).
 
