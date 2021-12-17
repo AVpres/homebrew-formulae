@@ -2,7 +2,7 @@ class Spoiledapples < Formula
   desc "Emulate 6502, 680x0 and PowerPC-based Apple computers and clones"
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/releases/spoiledapples-2021-12-18.tar.gz"
-  sha256 "8ac14f50fd585f9270607396cc3f0c95fd2655c2b7b6d590ec4b592db4c5dc6b"
+  sha256 "a134b7082140940405426c0a826fb3033b69d38e86063d312fa1f9a9c646a0d5"
   license "BSD-3-Clause"
 
   def install
