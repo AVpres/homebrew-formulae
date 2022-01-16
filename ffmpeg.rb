@@ -1,10 +1,9 @@
 class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz"
-  sha256 "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
+  url "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz"
+  sha256 "51e919f7d205062c0fd4fae6243a84850391115104ccf1efc451733bc0ac7298"
   license "GPL-2.0-or-later"
-  revision 6
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -31,7 +30,7 @@ class Ffmpeg < Formula
   option "with-srt", "Enable SRT library"
   option "with-tesseract", "Enable the tesseract OCR engine"
   option "with-webp", "Enable using libwebp to encode WEBP images"
-  option "with-zeromq", "Enable using libzeromq to receive cmds sent through a libzeromq client"
+  option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable z.lib zimg library"
 
   depends_on "nasm" => :build
