@@ -4,11 +4,13 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz"
   sha256 "51e919f7d205062c0fd4fae6243a84850391115104ccf1efc451733bc0ac7298"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-decklink", "Enable DeckLink support"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
+  option "with-frei0r", "Build with frei0r filters support"
   option "with-game-music-emu", "Enable Game Music Emu (GME) support"
   option "with-jack", "Enable Jack support"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
@@ -41,7 +43,6 @@ class Ffmpeg < Formula
   depends_on "dav1d"
   depends_on "fontconfig"
   depends_on "freetype"
-  depends_on "frei0r"
   depends_on "lame"
   depends_on "libass"
   depends_on "libvorbis"
@@ -55,6 +56,7 @@ class Ffmpeg < Formula
   depends_on "xz"
 
   depends_on "fdk-aac" => :optional
+  depends_on "frei0r" => :optional
   depends_on "game-music-emu" => :optional
   depends_on "jack" => :optional
   depends_on "libbluray" => :optional
@@ -116,7 +118,6 @@ class Ffmpeg < Formula
       --enable-libx265
       --enable-libfontconfig
       --enable-libfreetype
-      --enable-frei0r
       --enable-libass
       --disable-htmlpages
       --extra-version=with-options
@@ -125,6 +126,7 @@ class Ffmpeg < Formula
     if OS.mac?
       args << "--enable-opencl"
       args << "--enable-videotoolbox"
+      args << "--enable-neon" if Hardware::CPU.arm?
     end
 
     args << "--enable-chromaprint" if build.with? "chromaprint"
@@ -147,6 +149,7 @@ class Ffmpeg < Formula
     args << "--enable-libbluray" if build.with? "libbluray"
     args << "--enable-libbs2b" if build.with? "libbs2b"
     args << "--enable-libcaca" if build.with? "libcaca"
+    args << "--enable-frei0r" if build.with? "frei0r"
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
     args << "--enable-libopenmpt" if build.with? "libopenmpt"
