@@ -12,7 +12,7 @@ class LibewfOld < Formula
   uses_from_macos "zlib"
 
   def install
-    system "./configure"
+    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
 
