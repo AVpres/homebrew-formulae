@@ -12,12 +12,7 @@ class LibewfOld < Formula
   uses_from_macos "zlib"
 
   def install
-    args = %W[
-      --prefix=#{prefix}
-      --with-libfuse=yes
-    ]
-
-    system "./configure", *args
+    system "./configure"
     system "make", "install"
   end
 
