@@ -1,8 +1,8 @@
 class CineformGopro < Formula
   desc "GoPro's static CineForm library"
   homepage "https://gopro.github.io/cineform-sdk"
-  url "https://github.com/gopro/cineform-sdk/archive/v10.0.2a.tar.gz"
-  sha256 "f63edd32d33a97ad89fc9490932a267f3cc69ac5b116458dfd2a4d27510cf193"
+  url "https://github.com/gopro/cineform-sdk/archive/v10.1.0.tar.gz"
+  sha256 "7ce1cf322ef7d9d9cb2de66677b3fa2c5cc07e08f654e1c1381fca41f2a6a788"
   head "https://github.com/gopro/cineform-sdk.git"
 
   option "with-TestCFHD", "Install TestCFHD utility"
