@@ -2,7 +2,8 @@ class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
   url "https://avpres.net/releases/movim-2022-05-14.tar.gz"
-  sha256 "83947f2682dd95191c08f3b21a010e9638f2ae22059fbb9946e73a8c1fb047dc"
+  sha256 "86f31d52480a87ec226d76d00d2bf617e2378f0a0a01c1cfe07d60bbe6ef967b"
+  revision 1
   license "BSD-3-Clause"
 
   def install

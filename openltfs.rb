@@ -2,7 +2,8 @@ class Openltfs < Formula
   desc "LTFS for both tape drives and DIY tape libraries"
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
   url "https://avpres.net/releases/openltfs-2022-05-14.tar.gz"
-  sha256 "31ffb3ef055b770b0d1779b203ffeef7b48caa37d4d5dbe225043c913d46e71d"
+  sha256 "513a2f24c0fb238554c580ea40744d4a0082e52ce44f15b40ae7420948f2b9f4"
+  revision 1
   license "BSD-3-Clause"
 
   def install
