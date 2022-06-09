@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
   sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -34,6 +34,7 @@ class Ffmpeg < Formula
   option "with-webp", "Enable using libwebp to encode WEBP images"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable z.lib zimg library"
+  option "with-libzvbi", "Enable decoding of DVB teletext pages and DVB teletext subtitles"
 
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
@@ -191,6 +192,7 @@ class Ffmpeg < Formula
     args << "--enable-libxvid" if build.with? "xvid"
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
+    args << "--enable-libzvbi" if build.with? "libzvbi"
 
     system "./configure", *args
     system "make", "install"
