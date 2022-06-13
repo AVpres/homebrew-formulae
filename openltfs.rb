@@ -3,8 +3,8 @@ class Openltfs < Formula
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
   url "https://avpres.net/releases/openltfs-2022-05-14.tar.gz"
   sha256 "513a2f24c0fb238554c580ea40744d4a0082e52ce44f15b40ae7420948f2b9f4"
-  revision 1
   license "BSD-3-Clause"
+  revision 1
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"

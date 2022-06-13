@@ -3,8 +3,8 @@ class Spoiledapples < Formula
   homepage "https://avpres.net/Spoiled_Apples/"
   url "https://avpres.net/releases/spoiledapples-2022-05-14.tar.gz"
   sha256 "9695e14c680ff9a32be59b367645d4a77b215d4b46d6fb57ea313f09f805a7fe"
-  revision 1
   license "BSD-3-Clause"
+  revision 1
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"

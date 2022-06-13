@@ -3,8 +3,8 @@ class Movim < Formula
   homepage "https://avpres.net/MovIm/"
   url "https://avpres.net/releases/movim-2022-05-14.tar.gz"
   sha256 "86f31d52480a87ec226d76d00d2bf617e2378f0a0a01c1cfe07d60bbe6ef967b"
-  revision 1
   license "BSD-3-Clause"
+  revision 1
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
