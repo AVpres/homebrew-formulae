@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
   sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -38,7 +38,6 @@ class Ffmpeg < Formula
 
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
-  depends_on "texinfo" => :build
 
   depends_on "aom"
   depends_on "dav1d"
@@ -94,7 +93,7 @@ class Ffmpeg < Formula
 
   on_linux do
     depends_on "libxv"
-    depends_on "gcc" if build.with? "rubberband"
+    depends_on "gcc" => :optional
   end
 
   def install
