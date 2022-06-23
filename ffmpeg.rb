@@ -4,8 +4,8 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
   sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
   license "GPL-2.0-or-later"
-  revision 2
-  head "https://github.com/FFmpeg/FFmpeg.git"
+  revision 3
+  head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-decklink", "Enable DeckLink support"
@@ -94,6 +94,7 @@ class Ffmpeg < Formula
 
   on_linux do
     depends_on "libxv"
+    depends_on "gcc" if build.with? "rubberband"
   end
 
   def install
@@ -192,7 +193,10 @@ class Ffmpeg < Formula
     args << "--enable-libxvid" if build.with? "xvid"
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
-    args << "--enable-libzvbi" if build.with? "libzvbi"
+    if build.with? "zvbi"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["zvbi"].opt_lib/"pkgconfig"
+      args << "--enable-libzvbi"
+    end
 
     system "./configure", *args
     system "make", "install"
