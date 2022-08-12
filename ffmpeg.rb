@@ -4,6 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.1.tar.xz"
   sha256 "55eb6aab5ee235550fa54a33eaf8bf1b4ec66c01453182b12f6a993d75698b03"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -29,6 +30,7 @@ class Ffmpeg < Formula
   option "with-rtmpdump", "Enable RTMP dumping support"
   option "with-rubberband", "Enable rubberband library"
   option "with-srt", "Enable SRT library"
+  option "with-svt-av1", "Enable AV1 encoding via libsvtav1"
   option "with-tesseract", "Enable the tesseract OCR engine"
   option "with-webp", "Enable using libwebp to encode WEBP images"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
@@ -80,6 +82,7 @@ class Ffmpeg < Formula
   depends_on "rubberband" => :optional
   depends_on "speex" => :optional
   depends_on "srt" => :optional
+  depends_on "svt-av1" => :optional
   depends_on "tesseract" => :optional
   depends_on "two-lame" => :optional
   depends_on "webp" => :optional
@@ -177,6 +180,7 @@ class Ffmpeg < Formula
     args << "--enable-librubberband" if build.with? "rubberband"
     args << "--enable-libspeex" if build.with? "speex"
     args << "--enable-libsrt" if build.with? "srt"
+    args << "--enable-libsvtav1" if build.with? "svt-av1"
     args << "--enable-libtesseract" if build.with? "tesseract"
     args << "--enable-libtwolame" if build.with? "two-lame"
     if build.with? "openssl"
