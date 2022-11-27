@@ -36,7 +36,6 @@ class Ffmpeg < Formula
   option "with-zimg", "Enable z.lib zimg library"
   option "with-libzvbi", "Enable decoding of DVB teletext pages and DVB teletext subtitles"
 
-  depends_on "nasm" => :build
   depends_on "pkg-config" => :build
 
   depends_on "aom"
@@ -97,6 +96,12 @@ class Ffmpeg < Formula
     depends_on "libxv"
     depends_on "gcc" => :optional
   end
+
+  on_intel do
+    depends_on "nasm" => :build
+  end
+
+  fails_with gcc: "5"
 
   def install
     ohai "Installing FFmpeg with options..."
