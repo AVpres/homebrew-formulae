@@ -20,7 +20,7 @@ class VrecordX < Formula
   depends_on "mkvtoolnix"
   depends_on "mpv"
   depends_on "qcli"
-  depends_on "sdl"
+  depends_on "sdl12-compat"
   depends_on "xmlstarlet"
 
   conflicts_with "amiaopensource/amiaos/vrecord", because: "both install the same resources"
