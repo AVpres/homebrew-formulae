@@ -1,8 +1,8 @@
 class Openltfs < Formula
   desc "LTFS for both tape drives and DIY tape libraries"
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
-  url "https://avpres.net/releases/openltfs-2022-08-13.tar.gz"
-  sha256 "861a28f0c23f7a6b4faaacedc4063a528c88bee26cbced52e1fc0fd751842e16"
+  url "https://avpres.net/releases/openltfs-2022-12-03.tar.gz"
+  sha256 "41bd7c8323acc0864a359abd04f94bead184a80458ed18b778c9121443d78d53"
   license "BSD-3-Clause"
 
   def install
@@ -10,8 +10,8 @@ class Openltfs < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/openltfs-2022-08-13.diff"
-        sha256 "147282da8df9d0ffa561b0e9d4f0c97e0006cc0ca9ccb452e0d4b1ad2c13f6ee"
+        url "https://avpres.net/patch/openltfs-2022-12-03.diff"
+        sha256 "186d40849ace010c60921f649659e0cee25c16f551b7152c56f577a078abdbd6"
       end
       system "./configure", "--prefix=#{prefix}"
       system "make"
