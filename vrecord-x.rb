@@ -4,7 +4,7 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2022-02-28.tar.gz"
   version "2022-02-28"
   sha256 "064175a4f0cf8d445ef6b60741ecca41a6de93a403a105d116f9461e0341a9f1"
-  revision 1
+  revision 2
 
   option "with-doc", "Install the documentation"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
@@ -45,8 +45,8 @@ class VrecordX < Formula
       man1.install "vtest.1" if build.with? "vtest"
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2022-02-28_x_2022-07-16.diff"
-        sha256 "0253b44117fc929db65c8a53846da118740d5aaf2570bfc144d1c1a7787ca80a"
+        url "https://avpres.net/patch/vrecord_2022-02-28_x_2022-12-03.diff"
+        sha256 "205223290b07f63343ca92bd5f867f875b3816adc7f25ba44d61a4996f2592cc"
       end
       args << "--with-doc" if build.with? "doc"
       args << "--with-vtest" if build.with? "vtest"
