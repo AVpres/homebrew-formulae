@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz"
   sha256 "619e706d662c8420859832ddc259cd4d4096a48a2ce1eefd052db9e440eef3dc"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -13,6 +13,7 @@ class Ffmpeg < Formula
   option "with-frei0r", "Build with frei0r filters support"
   option "with-game-music-emu", "Enable Game Music Emu (GME) support"
   option "with-jack", "Enable Jack support"
+  option "with-libaribb24", "Enable decoding ARIB/ISDB captions"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
   option "with-libopenmpt", "Enable module/tracker files as inputs via libopenmpt"
   option "with-librist", "Enable Reliable Internet Stream Transport (RIST) support"
@@ -55,6 +56,7 @@ class Ffmpeg < Formula
   depends_on "x265"
   depends_on "xz"
 
+  depends_on "aribb24" => :optional
   depends_on "fdk-aac" => :optional
   depends_on "frei0r" => :optional
   depends_on "game-music-emu" => :optional
@@ -157,6 +159,7 @@ class Ffmpeg < Formula
       args << "--enable-libjack"
       args << "--enable-indev=jack"
     end
+    args << "--enable-libaribb24" if build.with? "libaribb24"
     args << "--enable-libbluray" if build.with? "libbluray"
     args << "--enable-libbs2b" if build.with? "libbs2b"
     args << "--enable-libcaca" if build.with? "libcaca"
