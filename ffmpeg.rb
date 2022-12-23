@@ -31,7 +31,7 @@ class Ffmpeg < Formula
   option "with-rtmpdump", "Enable RTMP dumping support"
   option "with-rubberband", "Enable rubberband library"
   option "with-srt", "Enable SRT library"
-  option "with-svt-av1", "Enable AV1 encoding via libsvtav1"
+  option "with-svt-av1", "Enable Scalable Video Technology for AV1"
   option "with-tesseract", "Enable the tesseract OCR engine"
   option "with-webp", "Enable using libwebp to encode WEBP images"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
