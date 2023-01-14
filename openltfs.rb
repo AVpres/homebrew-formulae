@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# LTFS for both tape drives and DIY tape libraries
 class Openltfs < Formula
   desc "LTFS for both tape drives and DIY tape libraries"
   homepage "https://avpres.net/LTO_LTFS/LTFS/"

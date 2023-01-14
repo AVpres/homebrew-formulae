@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# alternate static and shared CineForm librairies
 class Cineform < Formula
   desc "Alternate static and shared CineForm librairies"
   homepage "https://github.com/emericg/libcineform"

@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# GoPro's static CineForm library
 class CineformGopro < Formula
   desc "GoPro's static CineForm library"
   homepage "https://gopro.github.io/cineform-sdk"

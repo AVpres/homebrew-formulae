@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# vrecord flavour running on Linux, macOS and Windows
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"

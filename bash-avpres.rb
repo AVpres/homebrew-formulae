@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# Bash scripts for audiovisual preservation
 class BashAvpres < Formula
   desc "Bash scripts for audiovisual preservation"
   homepage "https://avpres.net/Bash_AVpres/"

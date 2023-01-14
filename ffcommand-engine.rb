@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# instals the FFCommand_Engine app by Colorlab
 class FfcommandEngine < Formula
   desc "Instals the FFCommand_Engine app by Colorlab"
   homepage "https://github.com/ColorlabMD/FFCommand_Engine"

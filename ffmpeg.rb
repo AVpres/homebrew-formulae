@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# alternate FFmpeg formula with options
 class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"

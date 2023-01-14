@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# Bash scripts to manage LTO cartridges with LTFS
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/LTO_LTFS/LTO/"

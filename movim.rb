@@ -1,3 +1,7 @@
+# typed: false
+# frozen_string_literal: true
+
+# encode, decode, play and analyse moving images
 class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
