@@ -9,7 +9,7 @@ class VrecordX < Formula
   version "2023-03-01"
   sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
 
-  option "with-doc", "Install the documentation"
+  option "with-doc", "Install the documentation locally"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
 
   depends_on "pandoc" => :build
