@@ -7,6 +7,7 @@ class VrecordX < Formula
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-03-01.tar.gz"
   version "2023-03-01"
+  revision 1
   sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
 
   option "with-doc", "Install the documentation locally"
@@ -16,10 +17,10 @@ class VrecordX < Formula
 
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
-  depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "bash"
   depends_on "cowsay"
   depends_on "gnuplot"
+  depends_on "gtkdialog"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
@@ -49,8 +50,8 @@ class VrecordX < Formula
       man1.install "vtest.1" if build.with? "vtest"
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2023-03-01_x_2023-03-04.diff"
-        sha256 "c39778a4ea7d554b54a4a641d94eaee1cdeeb60808c82714136791f633738df0"
+        url "https://avpres.net/patch/vrecord_2023-03-01_x_2023-04-21.diff"
+        sha256 "7ec9c3d833115545cc5057dec21b2b69e11cbed22b9b6fc5ace61f3885d65a59"
       end
       args << "--with-doc" if build.with? "doc"
       args << "--with-vtest" if build.with? "vtest"
