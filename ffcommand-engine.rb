@@ -1,11 +1,13 @@
-# typed: false
+# typed: true
 # frozen_string_literal: true
 
 # instals the FFCommand_Engine app by Colorlab
 class FfcommandEngine < Formula
   desc "Instals the FFCommand_Engine app by Colorlab"
   homepage "https://github.com/ColorlabMD/FFCommand_Engine"
-  revision 3
+  url "https://github.com/ColorlabMD/FFCommand_Engine/releases/tag/V0.5"
+  sha256 "471b1bc2e910a01402e93cbf311a62e81e081ebbd73ebb369a2f9b78310e1d22"
+  revision 4
   head "https://github.com/ColorlabMD/FFCommand_Engine.git"
 
   depends_on "pkg-config" => :build

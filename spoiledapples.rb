@@ -1,4 +1,4 @@
-# typed: false
+# typed: true
 # frozen_string_literal: true
 
 # emulate 6502, 680x0 and PowerPC-based Apple computers and clones

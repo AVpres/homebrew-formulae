@@ -1,4 +1,4 @@
-# typed: false
+# typed: true
 # frozen_string_literal: true
 
 # alternate static and shared CineForm librairies
@@ -27,5 +27,9 @@ class Cineform < Formula
       lib.install "libcineform.dylib" if OS.mac?
       # lib.install "libcineform.dll" if OS.windows?
     end
+  end
+
+  test do
+    system "echo"
   end
 end
