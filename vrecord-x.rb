@@ -8,7 +8,7 @@ class VrecordX < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-03-01.tar.gz"
   version "2023-03-01"
   sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
-  revision 2
+  revision 3
 
   option "with-doc", "Install the documentation locally"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
@@ -21,11 +21,11 @@ class VrecordX < Formula
   depends_on "bash"
   depends_on "cowsay"
   depends_on "gnuplot"
+  depends_on "mediaarea/mediaarea/dvrescue"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
   depends_on "qcli"
-  depends_on "sdl12-compat"
   depends_on "xmlstarlet"
 
   conflicts_with "amiaopensource/amiaos/vrecord", because: "both install the same resources"
@@ -33,6 +33,7 @@ class VrecordX < Formula
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
+      prefix.install "Resources/audio_mode.gif"
       prefix.install "Resources/dvrecord.png"
       prefix.install "Resources/qcview.lua"
       prefix.install "Resources/vrecord_functions"
@@ -50,8 +51,8 @@ class VrecordX < Formula
       man1.install "vtest.1" if build.with? "vtest"
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2023-03-01_x_2023-04-21.diff"
-        sha256 "7ec9c3d833115545cc5057dec21b2b69e11cbed22b9b6fc5ace61f3885d65a59"
+        url "https://avpres.net/patch/vrecord_2023-03-01_x_2023-05-01.diff"
+        sha256 "84f8711aa913a75e07a56459cc4a53e8af32691b37352a36c03f346cc4bcef91"
       end
       args << "--with-doc" if build.with? "doc"
       args << "--with-vtest" if build.with? "vtest"
