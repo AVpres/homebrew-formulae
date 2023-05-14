@@ -6,7 +6,6 @@ class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-03-01.tar.gz"
-  version "2023-03-01"
   sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
   revision 3
 
