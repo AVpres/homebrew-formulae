@@ -160,7 +160,7 @@ class Ffmpeg < Formula
       args << "--enable-nonfree"
       args << "--enable-libfdk-aac"
     end
-    args << "--enable-libflite" if built.with? "libflite"
+    args << "--enable-libflite" if build.with? "libflite"
     args << "--enable-libgme" if build.with? "game-music-emu"
     if build.with? "jack"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
