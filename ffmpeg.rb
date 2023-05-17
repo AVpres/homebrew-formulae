@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
   sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
@@ -18,6 +18,7 @@ class Ffmpeg < Formula
   option "with-game-music-emu", "Enable Game Music Emu (GME) support"
   option "with-jack", "Enable Jack support"
   option "with-libaribb24", "Enable decoding ARIB/ISDB captions"
+  option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
   option "with-libopenmpt", "Enable module/tracker files as inputs via libopenmpt"
   option "with-libplacebo", "Enable GPU-accelerated image/video processing primitives"
@@ -159,6 +160,7 @@ class Ffmpeg < Formula
       args << "--enable-nonfree"
       args << "--enable-libfdk-aac"
     end
+    args << "--enable-libflite" if built.with? "libflite"
     args << "--enable-libgme" if build.with? "game-music-emu"
     if build.with? "jack"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
