@@ -5,9 +5,9 @@
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-03-01.tar.gz"
-  sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
-  revision 3
+  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-08-07.tar.gz"
+  sha256 "2572ea969a42de32499dc74c663878f73c2de34e2d3022c409008f057321d032"
+
 
   option "with-doc", "Install the documentation locally"
   option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
@@ -50,8 +50,8 @@ class VrecordX < Formula
       man1.install "vtest.1" if build.with? "vtest"
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2023-03-01_x_2023-05-01.diff"
-        sha256 "84f8711aa913a75e07a56459cc4a53e8af32691b37352a36c03f346cc4bcef91"
+        url "https://avpres.net/patch/vrecord_2023-08-07_x_2023-08-13.diff"
+        sha256 "1d99994edbe14a7cb49ac9c2accce143b5db918295bd12e51335121228f164d1"
       end
       args << "--with-doc" if build.with? "doc"
       args << "--with-vtest" if build.with? "vtest"
