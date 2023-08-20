@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
   sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -111,7 +111,6 @@ class Ffmpeg < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "libxv"
-    depends_on "gcc" => :optional
   end
 
   on_intel do
@@ -119,6 +118,13 @@ class Ffmpeg < Formula
   end
 
   fails_with gcc: "5"
+
+  # Fix for binutils, remove with next release
+  # https://www.linuxquestions.org/questions/slackware-14/regression-on-current-with-ffmpeg-4175727691/
+  patch do
+    url "https://git.videolan.org/?p=ffmpeg.git;a=patch;h=effadce6c756247ea8bae32dc13bb3e6f464f0eb"
+    sha256 "a50d7da9870a3fd801ad3a4d13d5c9b260acb094cf8bfa4afd95a54741173a7f"
+  end
 
   def install
     ohai "Installing FFmpeg with options..."
