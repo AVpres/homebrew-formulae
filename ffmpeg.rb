@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
   sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -118,6 +118,13 @@ class Ffmpeg < Formula
   end
 
   fails_with gcc: "5"
+
+  # Fix for QtWebEngine, do not remove
+  # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270209
+  patch do
+    url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/main/add-av_stream_get_first_dts-for-chromium.patch"
+    sha256 "57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77"
+  end
 
   # Fix for binutils, remove with next release
   # https://www.linuxquestions.org/questions/slackware-14/regression-on-current-with-ffmpeg-4175727691/
