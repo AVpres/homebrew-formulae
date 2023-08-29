@@ -6,7 +6,7 @@ class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   license "GPL-2.0-or-later"
-  revision 5
+  revision 6
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   stable do
@@ -30,6 +30,7 @@ class Ffmpeg < Formula
   option "with-frei0r", "Enable frei0r filters, mixers and generators"
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
   option "with-jack", "Enable Jack"
+  option "with-jpeg-xl", "Enable JPEG XL image format"
   option "with-libcaca", "Enable libcaca"
   option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libgsm", "Enable lossy speech compression"
@@ -84,6 +85,7 @@ class Ffmpeg < Formula
   depends_on "frei0r" => :optional
   depends_on "game-music-emu" => :optional
   depends_on "jack" => :optional
+  depends_on "jpeg-xl" => :optional
   depends_on "libbluray" => :optional
   depends_on "libbs2b" => :optional
   depends_on "libcaca" => :optional
@@ -132,7 +134,7 @@ class Ffmpeg < Formula
   # Fix for QtWebEngine, do not remove
   # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270209
   patch do
-    url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/5670ccd86d3b816f49ebc18cab878125eca2f81f/add-av_stream_get_first_dts-for-chromium.patch"    
+    url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/5670ccd86d3b816f49ebc18cab878125eca2f81f/add-av_stream_get_first_dts-for-chromium.patch"
     sha256 "57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77"
   end
 
@@ -190,6 +192,7 @@ class Ffmpeg < Formula
       args << "--enable-libjack"
       args << "--enable-indev=jack"
     end
+    args << "--enable-libjxl" if build.with? "jpeg-xl"
     args << "--enable-libaribb24" if build.with? "aribb24"
     args << "--enable-libbluray" if build.with? "bluray"
     args << "--enable-libbs2b" if build.with? "bs2b"
