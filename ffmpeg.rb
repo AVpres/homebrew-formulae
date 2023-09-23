@@ -6,7 +6,7 @@ class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   license "GPL-2.0-or-later"
-  revision 6
+  revision 7
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   stable do
