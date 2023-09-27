@@ -6,7 +6,7 @@ class Ffmpeg < Formula
   desc "Alternate FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   license "GPL-2.0-or-later"
-  revision 7
+  revision 8
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   stable do
@@ -121,6 +121,8 @@ class Ffmpeg < Formula
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
+  uses_from_macos "libxml2" => :optional
+
   on_linux do
     depends_on "alsa-lib"
     depends_on "libxv"
@@ -142,9 +144,13 @@ class Ffmpeg < Formula
   def install
     ohai "Installing FFmpeg with options..."
 
+    # Apple's new linker leads to duplicate symbol
+    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
+
     args = %W[
       --prefix=#{prefix}
       --enable-shared
+      --enable-pthreads
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
