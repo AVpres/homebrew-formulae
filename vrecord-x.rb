@@ -7,6 +7,7 @@ class VrecordX < Formula
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-08-07.tar.gz"
   sha256 "2572ea969a42de32499dc74c663878f73c2de34e2d3022c409008f057321d032"
+  revision 1
 
 
   option "with-doc", "Install the documentation locally"
@@ -15,7 +16,6 @@ class VrecordX < Formula
   depends_on "pandoc" => :build
 
   depends_on "amiaopensource/amiaos/decklinksdk"
-  depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "bash"
   depends_on "cowsay"
@@ -32,26 +32,10 @@ class VrecordX < Formula
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
-      prefix.install "Resources/audio_mode.gif"
-      prefix.install "Resources/dvrecord.png"
-      prefix.install "Resources/qcview.lua"
-      prefix.install "Resources/vrecord_functions"
-      prefix.install "Resources/vrecord_policy_ffv1.xml"
-      prefix.install "Resources/vrecord_policy_uncompressed.xml"
-      prefix.install "Resources/vrecord_logo.png"
-      prefix.install "Resources/vrecord_logo_playback.png"
-      prefix.install "Resources/vrecord_logo_audio.png"
-      prefix.install "Resources/vrecord_logo_edit.png"
-      prefix.install "Resources/vrecord_logo_help.png"
-      prefix.install "Resources/vrecord_logo_documentation.png"
-      bin.install "vrecord"
-      bin.install "vtest" if build.with? "vtest"
-      man1.install "vrecord.1"
-      man1.install "vtest.1" if build.with? "vtest"
     else
       patch do
-        url "https://avpres.net/patch/vrecord_2023-08-07_x_2023-08-13.diff"
-        sha256 "1d99994edbe14a7cb49ac9c2accce143b5db918295bd12e51335121228f164d1"
+        url "https://avpres.net/patch/vrecord_2023-08-07_x_2023-10-04.diff"
+        sha256 "48786a69a2addb032df2383bc228e664efea0681146c19bc9ae9a8272faf33d6"
       end
       args << "--with-doc" if build.with? "doc"
       args << "--with-vtest" if build.with? "vtest"
