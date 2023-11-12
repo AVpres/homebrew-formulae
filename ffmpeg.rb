@@ -8,6 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.1.tar.xz"
   sha256 "488c76e57dd9b3bee901f71d5c95eaf1db4a5a31fe46a28654e837144207c270"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -20,6 +21,7 @@ class Ffmpeg < Formula
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
+  option "with-libaribcaption", "Enable ARIB STD-B24 based broadcast captions"
   option "with-libcaca", "Enable libcaca"
   option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libgsm", "Enable lossy speech compression"
@@ -76,6 +78,7 @@ class Ffmpeg < Formula
   depends_on "game-music-emu" => :optional
   depends_on "jack" => :optional
   depends_on "jpeg-xl" => :optional
+  depends_on "libaribcaption" => :optional
   depends_on "libbluray" => :optional
   depends_on "libbs2b" => :optional
   depends_on "libcaca" => :optional
@@ -190,6 +193,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libjxl" if build.with? "jpeg-xl"
     args << "--enable-libaribb24" if build.with? "aribb24"
+    args << "--enable-libaribcaption" if build.with? "libaribcaption"
     args << "--enable-libbluray" if build.with? "bluray"
     args << "--enable-libbs2b" if build.with? "bs2b"
     args << "--enable-libcaca" if build.with? "libcaca"
