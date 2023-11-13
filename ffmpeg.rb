@@ -8,10 +8,11 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.1.tar.xz"
   sha256 "488c76e57dd9b3bee901f71d5c95eaf1db4a5a31fe46a28654e837144207c270"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
+  option "with-aribcaption", "Enable ARIB STD-B24 based broadcast captions"
   option "with-bluray", "Enable Blu-Ray Discs playback"
   option "with-bs2b", "Enable Bauer stereophonic-to-binaural DSP"
   option "with-chromaprint", "Enable Chromaprint audio fingerprinting library"
@@ -21,7 +22,6 @@ class Ffmpeg < Formula
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
-  option "with-libaribcaption", "Enable ARIB STD-B24 based broadcast captions"
   option "with-libcaca", "Enable libcaca"
   option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libgsm", "Enable lossy speech compression"
@@ -40,6 +40,7 @@ class Ffmpeg < Formula
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
   option "with-openssl", "Enable SSL"
+  option "with-openvino", "Enable OpenVINO"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
   option "with-rtmpdump", "Enable RTMP dumping"
   option "with-rubberband", "Enable Rubber Band library"
@@ -85,6 +86,7 @@ class Ffmpeg < Formula
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
   depends_on "libopenmpt" => :optional
+  depends_on "libopenvino" => :optional
   depends_on "libplacebo" => :optional
   depends_on "librist" => :optional
   depends_on "librsvg" => :optional
@@ -193,7 +195,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libjxl" if build.with? "jpeg-xl"
     args << "--enable-libaribb24" if build.with? "aribb24"
-    args << "--enable-libaribcaption" if build.with? "libaribcaption"
+    args << "--enable-libaribcaption" if build.with? "aribcaption"
     args << "--enable-libbluray" if build.with? "bluray"
     args << "--enable-libbs2b" if build.with? "bs2b"
     args << "--enable-libcaca" if build.with? "libcaca"
@@ -201,6 +203,7 @@ class Ffmpeg < Formula
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
     args << "--enable-libopenmpt" if build.with? "libopenmpt"
+    args << "--enable-libopenvino" if build.with? "openvino"
     args << "--enable-libsoxr" if build.with? "libsoxr"
     args << "--enable-libssh" if build.with? "libssh"
     args << "--enable-librist" if build.with? "librist"
