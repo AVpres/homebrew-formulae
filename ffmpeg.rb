@@ -86,7 +86,7 @@ class Ffmpeg < Formula
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
   depends_on "libopenmpt" => :optional
-  depends_on "libopenvino" => :optional
+  depends_on "openvino" => :optional
   depends_on "libplacebo" => :optional
   depends_on "librist" => :optional
   depends_on "librsvg" => :optional
@@ -203,7 +203,6 @@ class Ffmpeg < Formula
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
     args << "--enable-libopenmpt" if build.with? "libopenmpt"
-    args << "--enable-libopenvino" if build.with? "openvino"
     args << "--enable-libsoxr" if build.with? "libsoxr"
     args << "--enable-libssh" if build.with? "libssh"
     args << "--enable-librist" if build.with? "librist"
@@ -236,6 +235,7 @@ class Ffmpeg < Formula
       args << "--enable-nonfree"
       args << "--enable-openssl"
     end
+    args << "--enable-openvino" if build.with? "openvino"
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
     args << "--enable-libxvid" if build.with? "xvid"
