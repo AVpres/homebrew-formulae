@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.1.tar.xz"
   sha256 "488c76e57dd9b3bee901f71d5c95eaf1db4a5a31fe46a28654e837144207c270"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -20,6 +20,7 @@ class Ffmpeg < Formula
   option "with-fdk-aac", "Enable Fraunhofer FDK AAC library"
   option "with-frei0r", "Enable frei0r filters, mixers and generators"
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
+  option "with-harfbuzz", "Enable OpenType text shaping engine"
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
   option "with-libcaca", "Enable libcaca"
@@ -77,6 +78,7 @@ class Ffmpeg < Formula
   depends_on "fdk-aac" => :optional
   depends_on "frei0r" => :optional
   depends_on "game-music-emu" => :optional
+  depends_on "harfbuzz" => :optional
   depends_on "jack" => :optional
   depends_on "jpeg-xl" => :optional
   depends_on "libaribcaption" => :optional
@@ -164,7 +166,7 @@ class Ffmpeg < Formula
       --enable-libfreetype
       --enable-libass
       --disable-htmlpages
-      --extra-version=with-options
+      --extra-version=AVpres
     ]
 
     if OS.mac?
@@ -188,6 +190,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libflite" if build.with? "libflite"
     args << "--enable-libgme" if build.with? "game-music-emu"
+    args << "--enable-libharfbuzz" if build.with? "harfbuzz"
     if build.with? "jack"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
       args << "--enable-libjack"

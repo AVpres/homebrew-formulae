@@ -27,7 +27,7 @@ class VrecordX < Formula
   depends_on "qcli"
   depends_on "xmlstarlet"
 
-  conflicts_with "amiaopensource/amiaos/vrecord", because: "both install the same resources"
+  conflicts_with "amiaopensource/amiaos/vrecord", because: "installs conflicting executables"
 
   def install
     if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
