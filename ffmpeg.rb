@@ -8,6 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.xz"
   sha256 "8684f4b00f94b85461884c3719382f1261f0d9eb3d59640a1f4ac0873616f968"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -222,6 +223,7 @@ class Ffmpeg < Formula
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
     if build.with? "libplacebo"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["libplacebo"].opt_lib/"pkgconfig"
       args << "--enable-libplacebo"
       args << "--enable-vulkan"
     end
