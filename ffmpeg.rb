@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.xz"
   sha256 "8684f4b00f94b85461884c3719382f1261f0d9eb3d59640a1f4ac0873616f968"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -41,7 +41,7 @@ class Ffmpeg < Formula
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
   option "with-openssl", "Enable SSL"
-  option "with-openvino", "Enable OpenVINO"
+  option "with-openvino", "Enable OpenVINO as a DNN module backend"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
   option "with-rtmpdump", "Enable RTMP dumping"
   option "with-rubberband", "Enable Rubber Band library"
@@ -222,6 +222,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
+    args << "--enable-libopenvino" if build.with? "openvino"
     if build.with? "libplacebo"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["libplacebo"].opt_lib/"pkgconfig"
       args << "--enable-libplacebo"
@@ -239,7 +240,6 @@ class Ffmpeg < Formula
       args << "--enable-nonfree"
       args << "--enable-openssl"
     end
-    args << "--enable-openvino" if build.with? "openvino"
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
     args << "--enable-libxvid" if build.with? "xvid"
