@@ -8,6 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-7.0.tar.gz"
   sha256 "943a2a28044947c17a905c39075494b0da46ec0795224c2c61eff986518321eb"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -139,9 +140,6 @@ class Ffmpeg < Formula
   def install
     ohai "Installing FFmpeg with options..."
 
-    # Apple's new linker leads to duplicate symbol
-    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
-
     args = %W[
       --prefix=#{prefix}
       --enable-shared
@@ -252,8 +250,8 @@ class Ffmpeg < Formula
     system "./configure", *args
     system "make", "install"
     system "make", "alltools"
-    bin.install Dir["tools/*"].select { |f| File.executable? f }
-    mv bin/"python", pkgshare/"python", force: true
+    bin.install (buildpath/"tools").children.select { |f| f.file? && f.executable? }
+    pkgshare.install buildpath/"tools/python"
   end
 
   test do
