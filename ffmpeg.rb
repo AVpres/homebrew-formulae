@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-7.0.1.tar.xz"
   sha256 "bce9eeb0f17ef8982390b1f37711a61b4290dc8c2a0c1a37b5857e85bfb0e4ff"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -23,6 +23,7 @@ class Ffmpeg < Formula
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
   option "with-libcaca", "Enable libcaca"
+  option "with-libdvd", "Enable DVD-Video demuxer, powered by libdvdnav and libdvdread"
   option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libgsm", "Enable lossy speech compression"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
@@ -56,24 +57,24 @@ class Ffmpeg < Formula
 
   depends_on "pkg-config" => :build
 
-  depends_on "aom"
-  depends_on "dav1d"
-  depends_on "fontconfig"
-  depends_on "freetype"
-  depends_on "harfbuzz"
-  depends_on "lame"
-  depends_on "libass"
-  depends_on "libvorbis"
-  depends_on "libvpx"
-  depends_on "libx11"
-  depends_on "libxcb"
-  depends_on "opus"
-  depends_on "sdl2"
-  depends_on "snappy"
-  depends_on "theora"
-  depends_on "x264"
-  depends_on "x265"
-  depends_on "xz"
+  depends_on "aom" => :recommended
+  depends_on "dav1d" => :recommended
+  depends_on "fontconfig" => :recommended
+  depends_on "freetype" => :recommended
+  depends_on "harfbuzz" => :recommended
+  depends_on "lame" => :recommended
+  depends_on "libass" => :recommended
+  depends_on "libvorbis" => :recommended
+  depends_on "libvpx" => :recommended
+  depends_on "libx11" => :recommended
+  depends_on "libxcb" => :recommended
+  depends_on "opus" => :recommended
+  depends_on "sdl2" => :recommended
+  depends_on "snappy" => :recommended
+  depends_on "theora" => :recommended
+  depends_on "x264" => :recommended
+  depends_on "x265" => :recommended
+  depends_on "xz" => :recommended
 
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
@@ -86,6 +87,8 @@ class Ffmpeg < Formula
   depends_on "libbluray" => :optional
   depends_on "libbs2b" => :optional
   depends_on "libcaca" => :optional
+  depends_on "libdvdnav" => :optional
+  depends_on "libdvdread" => :optional
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
   depends_on "libopenmpt" => :optional
@@ -207,6 +210,10 @@ class Ffmpeg < Formula
     args << "--enable-libbluray" if build.with? "bluray"
     args << "--enable-libbs2b" if build.with? "bs2b"
     args << "--enable-libcaca" if build.with? "libcaca"
+    if build.with? "libdvd"
+      args << "--enable-libdvdnav"
+      args << "--enable-libdvdread"
+    end
     args << "--enable-frei0r" if build.with? "frei0r"
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
