@@ -8,6 +8,8 @@
 - **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
 
+We will likely be removing both CineForm formulae soon, as the resources no longer appear to be maintained.
+
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login) before running the following formulae:
 
 - the **MovIm** package contains the _libmovim_ C library, implementing the _MovIm_ video codec, and its associated _movimenc_, _movimdec_ and _movimplay_ utilities, as well as the _openmovim_ Bash command-line interface to encode, decode, play and analyse virtually any moving images
