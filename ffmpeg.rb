@@ -7,6 +7,7 @@ class Ffmpeg < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz"
   sha256 "40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6"
+  revision 1
   license "GPL-2.0-or-later"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
@@ -40,7 +41,7 @@ class Ffmpeg < Formula
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
   option "with-openssl", "Enable SSL"
-  option "with-openvino", "Enable OpenVINO as a DNN module backend"
+  option "with-openvino", "Enable OpenVINO for Deep Neural Network based filters"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
   option "with-rtmpdump", "Enable RTMP dumping"
   option "with-rubberband", "Enable Rubber Band library"
@@ -48,6 +49,7 @@ class Ffmpeg < Formula
   option "with-srt", "Enable Secure Reliable Transport (SRT)"
   option "with-svt-av1", "Enable Scalable Video Technology for AV1"
   option "with-two-lame", "Enable TwoLAME, an optimised MPEG Audio Layer 2 (MP2) encoder"
+  option "with-tensorflow", "Enable TensorFlow as a module backend for DNN-based filters"
   option "with-tesseract", "Enable the Tesseract OCR engine"
   option "with-webp", "Enable libwebp to encode and decode images in WebP format"
   option "with-xvid", "Enable Xvid"
@@ -96,6 +98,7 @@ class Ffmpeg < Formula
   depends_on "librsvg" => :optional
   depends_on "libsoxr" => :optional
   depends_on "libssh" => :optional
+  depends_on "libtensorflow" => :optional
   depends_on "libvidstab" => :optional
   depends_on "libvmaf" => :optional
   depends_on "libxml2" => :optional
@@ -246,6 +249,7 @@ class Ffmpeg < Formula
     args << "--enable-libspeex" if build.with? "speex"
     args << "--enable-libsrt" if build.with? "srt"
     args << "--enable-libsvtav1" if build.with? "svt-av1"
+    args << "--enable-libtensorflow" if build.with? "tensorflow"
     args << "--enable-libtesseract" if build.with? "tesseract"
     args << "--enable-libtwolame" if build.with? "two-lame"
     if build.with? "openssl"
