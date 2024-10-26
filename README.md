@@ -3,12 +3,8 @@
 ## Maintained Formulae
 
 - **bash-avpres** – Bash scripts for audiovisual preservation
-- **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
-- **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 - **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
 - **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
-
-We will likely be removing both CineForm formulae soon, as the resources no longer appear to be maintained.
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login) before running the following formulae:
 
@@ -22,6 +18,12 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 
 ## Deleted Formulae
+
+We have removed both CineForm formulae on 2024-10-26, as the resources no longer appear to be maintained.
+
+- **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
+
+- **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 
 As Prolog is now a available as regular Homebrew formula (`gnu-prolog`), we have deleted our formula on 2021-07-21:
 
