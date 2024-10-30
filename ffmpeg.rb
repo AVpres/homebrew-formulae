@@ -41,7 +41,7 @@ class Ffmpeg < Formula
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
   option "with-openssl", "Enable SSL"
-  option "with-openvino", "Enable OpenVINO for Deep Neural Network based filters"
+  option "with-openvino", "Enable OpenVINO for Deep Neural Network (DNN) based filters"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
   option "with-rtmpdump", "Enable RTMP dumping"
   option "with-rubberband", "Enable Rubber Band library"
