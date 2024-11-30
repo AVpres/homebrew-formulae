@@ -56,7 +56,7 @@ class Ffmpeg < Formula
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable zimg for scaling, colorspace conversion and dithering"
 
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
 
   depends_on "aom" => :recommended
   depends_on "dav1d" => :recommended
