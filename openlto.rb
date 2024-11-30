@@ -5,8 +5,8 @@
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/LTO_LTFS/LTO/"
-  url "https://avpres.net/releases/openlto-2024-05-18.tar.gz"
-  sha256 "78f01fbc8faa3c3a605b7f67cb196c4b3c837c4d073f4d3a04d33c0e04bfcaac"
+  url "https://avpres.net/releases/openlto-2024-11-30.tar.gz"
+  sha256 "d9ce6e7f501330bc8f875bf3e53b932dafe532b63f06b0bc38074c9c8e0a20b3"
   license "BSD-3-Clause"
 
   def install
@@ -14,8 +14,8 @@ class Openlto < Formula
       opoo "Please login for full installation."
     else
       patch do
-        url "https://avpres.net/patch/openlto-2024-05-18.diff"
-        sha256 "270d0b4e11d10e1ef06b2cacf8c91101557ad12332d035983fac5aac84df4ad6"
+        url "https://avpres.net/patch/openlto-2024-11-30.diff"
+        sha256 "2da07615bfc48b1203468ca326a05a1d5d33f1fcaa75905ed448bd3af526e4b7"
       end
       system "./configure"
       system "make"
