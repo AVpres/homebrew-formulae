@@ -22,7 +22,6 @@ The **openMovIm** package has been renamed **MovIm** on 2019-05-04.
 We have removed both CineForm formulae on 2024-10-26, as the resources no longer appear to be maintained.
 
 - **cineform** – Alternate static and shared CineForm libraries: `libcineform.a`, as well as `libcineform.so` under Linux or `libcineform.dylib` under macOS
-
 - **cineform-gopro** – GoPro’s static CineForm library: `libCFHDCodec.a`
 
 As Prolog is now a available as regular Homebrew formula (`gnu-prolog`), we have deleted our formula on 2021-07-21:
@@ -56,6 +55,6 @@ The development of _libycocg_ and _libmsmi_ has been stopped and on 2019-01-12 a
 
 ## Copyright, Licence and Disclaimer
 
-Copyright © 2017–2024 by Reto Kromer
+Copyright © 2017–2025 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE) and are provided “as is” without warranty or support of any kind.
