@@ -37,7 +37,7 @@ class Ffmpeg < Formula
   option "with-libvmaf", "Enable libvmaf scoring library"
   option "with-libxml2", "Enable libxml2 library for parsing XML documents"
   option "with-libzvbi", "Enable decoding of DVB teletext pages and DVB teletext subtitles"
-  option "with-openal", "Enable OpenAL (Open Audio Library) for macOS targets"
+  option "with-openal-soft", "Enable OpenAL (Open Audio Library) for macOS targets"
   option "with-opencore-amr", "Enable Opencore AMR NR/WB audio format"
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
@@ -186,7 +186,7 @@ class Ffmpeg < Formula
     args << "--enable-neon" if Hardware::CPU.arm?
 
     if OS.mac?
-      args << "--enable-openal" if build.with? "openal"
+      args << "--enable-openal" if build.with? "openal-soft"
       args << "--enable-opencl"
       args << "--enable-audiotoolbox"
       args << "--enable-videotoolbox"
