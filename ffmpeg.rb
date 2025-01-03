@@ -8,7 +8,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz"
   sha256 "40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6"
   license "GPL-2.0-or-later"
-  revision 6
+  revision 7
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -151,6 +151,14 @@ class Ffmpeg < Formula
   patch do
     url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/5670ccd86d3b816f49ebc18cab878125eca2f81f/add-av_stream_get_first_dts-for-chromium.patch"
     sha256 "57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77"
+  end
+
+  # Fix for x264 segfault
+  # https://github.com/Homebrew/homebrew-core/pull/202680/commits/4997de5addc10c74daf5a492dbea4df63af9b8ad
+  # https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/179
+  patch do
+    url "https://github.com/FFmpeg/FFmpeg/commit/099f88b8641dfc299f3896d17d9addc5b9ae7799.patch?full_index=1"
+    sha256 "43677660210523f0eb6db93c4ac9c7943c959116951a5859e6f14568b4392a59"
   end
 
   def install
