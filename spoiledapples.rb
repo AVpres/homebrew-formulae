@@ -26,6 +26,6 @@ class Spoiledapples < Formula
   end
 
   test do
-    system "#{bin}/spoiledapples", "-h"
+    system bin/"spoiledapples", "-h"
   end
 end

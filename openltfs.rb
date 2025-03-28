@@ -26,6 +26,6 @@ class Openltfs < Formula
   end
 
   test do
-    system "#{bin}/openltfs", "-t"
+    system bin/"openltfs", "-t"
   end
 end

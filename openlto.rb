@@ -25,6 +25,6 @@ class Openlto < Formula
   end
 
   test do
-    system "#{bin}/openlto", "-h"
+    system bin/"openlto", "-h"
   end
 end
