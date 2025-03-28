@@ -29,4 +29,3 @@ class Spoiledapples < Formula
     system bin/"spoiledapples", "-h"
   end
 end
-
