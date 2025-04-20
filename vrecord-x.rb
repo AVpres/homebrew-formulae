@@ -1,7 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
-# vrecord flavour running on Linux, macOS and Windows
 class VrecordX < Formula
   desc "Vrecord flavour running on Linux, macOS and Windows"
   homepage "https://github.com/amiaopensource/vrecord"
@@ -43,7 +39,7 @@ class VrecordX < Formula
   end
 
   test do
-    system "#{bin}/vrecord", "-h"
-    system "#{bin}/vtest", "-h" if build.with? "vtest"
+    system bin/"vrecord", "-h"
+    system bin/"vtest", "-h" if build.with? "vtest"
   end
 end
