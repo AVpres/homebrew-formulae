@@ -1,7 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
-# encode, decode, play and analyse moving images
 class Movim < Formula
   desc "Encode, decode, play and analyse moving images"
   homepage "https://avpres.net/MovIm/"
@@ -10,7 +6,7 @@ class Movim < Formula
   license "BSD-3-Clause"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login.pl\n"
       opoo "Please login for full installation."
     else
       patch do
@@ -26,6 +22,6 @@ class Movim < Formula
   end
 
   test do
-    system "#{bin}/openmovim", "-h"
+    system bin/"openmovim", "-h"
   end
 end

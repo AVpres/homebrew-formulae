@@ -1,7 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
-# LTFS for both tape drives and DIY tape libraries
 class Openltfs < Formula
   desc "LTFS for both tape drives and DIY tape libraries"
   homepage "https://avpres.net/LTO_LTFS/LTFS/"
@@ -10,7 +6,7 @@ class Openltfs < Formula
   license "BSD-3-Clause"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login.pl\n"
       opoo "Please login for full installation."
     else
       patch do

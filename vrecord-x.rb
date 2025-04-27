@@ -24,7 +24,7 @@ class VrecordX < Formula
   conflicts_with "amiaopensource/amiaos/vrecord", because: "installs conflicting executables"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login.pl\n"
       opoo "Sorry, cannot patch the original 'vrecord'. Please login."
     else
       patch do

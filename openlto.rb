@@ -1,7 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
-# Bash scripts to manage LTO cartridges with LTFS
 class Openlto < Formula
   desc "Bash scripts to manage LTO cartridges with LTFS"
   homepage "https://avpres.net/LTO_LTFS/LTO/"
@@ -10,7 +6,7 @@ class Openlto < Formula
   license "BSD-3-Clause"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login\n"
+    if `curl -s https://avpres.net/patch/ | grep -o login` == "login.pl\n"
       opoo "Please login for full installation."
     else
       patch do
