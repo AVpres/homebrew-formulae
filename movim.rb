@@ -6,7 +6,7 @@ class Movim < Formula
   license "BSD-3-Clause"
 
   def install
-    if `curl -s https://avpres.net/patch/ | grep -o login` == "login.pl\n"
+    if `curl -s https://avpres.net/patch/ | grep -o login.pl` == "login.pl\n"
       opoo "Please login for full installation."
     else
       patch do
