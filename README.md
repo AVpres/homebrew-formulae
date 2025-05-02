@@ -13,7 +13,7 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 
 ## Deleted Formulae
 
-We have decided to abandon the development of these two formulae and plan to release one last version, which possibility will be 2025-05-23:
+We have decided to abandon the development of these two formulae and plan to release one last version, which possibility will be 2025-05-02 for _openLTFS_ and 2025-03-28 for _openLTO_:
 
 - the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfs\_check_, _ltfs\_copy_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
