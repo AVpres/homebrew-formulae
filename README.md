@@ -13,10 +13,12 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 
 ## Deleted Formulae
 
-- **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>
-Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows). Unfortunately, this software is no longer maintained upstream.
+We have removes the formula for FFCommand\_Engine, because this software is no longer maintained upstream.
 
-We have decided to abandon the development of these two formulae and plan to release one last version, which possibility will be 2025-05-02 for _openLTFS_ and 2025-03-28 for _openLTO_:
+- **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>
+Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
+
+We have removed the two formulae for _openLTFS_ and _openLTO_, because abandoned the development of those pieces of software:
 
 - the **openLTFS** package includes the _libltfs_ C library and its associated _ltfs_, _ltfs\_check_, _ltfs\_copy_ and _mkltfs_ utilities, as well as the _openltfs_ Bash command-line interface
 - the **openLTO** package is a collection of Bash scripts to manage LTO cartridges with LTFS
