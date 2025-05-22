@@ -3,8 +3,8 @@
 ## Maintained Formulae
 
 - **bash-avpres** – Bash scripts for audiovisual preservation
-- **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows).
-- **ffmpeg** – Alternate FFmpeg formula with options:<br>`brew options avpres/formulae/ffmpeg`
+- **ffmpeg** – Alternate FFmpeg formula with options:<br>
+`brew options avpres/formulae/ffmpeg`
 
 Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/login.pl) before running the following formulae:
 
@@ -12,6 +12,9 @@ Full installation requires to log into our [extranet](https://reto.ch/cgi-bin/lo
 - the **Spoiled\_Apples** package emulates 6502, 680x0 and PowerPC−based Apple computers and clones
 
 ## Deleted Formulae
+
+- **ffcommand-engine** – Instals the FFCommand\_Engine app by Colorlab<br>
+Attention: Use the `--HEAD` flag to install the not officially released version 0.6 rather than the current version 0.51 for macOS (and 0.5 for Windows). Unfortunately, this software is no longer maintained upstream.
 
 We have decided to abandon the development of these two formulae and plan to release one last version, which possibility will be 2025-05-02 for _openLTFS_ and 2025-03-28 for _openLTO_:
 
