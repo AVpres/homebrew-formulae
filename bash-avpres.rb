@@ -1,8 +1,8 @@
 class BashAvpres < Formula
   desc "Bash scripts for audio-visual preservation"
   homepage "https://avpres.net/Bash_AVpres/"
-  url "https://avpres.net/releases/bash-avpres-2025-05-22.tar.gz"
-  sha256 "044c1596ce6ea4f62042e53606b5fbd3fb373e385b510a136dcacfeb21df8c41"
+  url "https://avpres.net/releases/bash-avpres-2025-06-29.tar.gz"
+  sha256 "73e36197d426fb8c026fcacc4e2ea18f3e01e4dd3de25dab1608b8a51701f4ea"
   license "BSD-3-Clause"
 
   depends_on "bash"
