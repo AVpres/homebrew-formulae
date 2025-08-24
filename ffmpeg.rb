@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-8.0.tar.xz"
   sha256 "b2751fccb6cc4c77708113cd78b561059b6fa904b24162fa0be2d60273d27b8e"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -49,7 +49,7 @@ class Ffmpeg < Formula
   option "with-tensorflow", "Enable TensorFlow as a module backend for DNN-based filters"
   option "with-tesseract", "Enable the Tesseract OCR engine"
   option "with-webp", "Enable libwebp to encode and decode images in WebP format"
-  option "with-whisper", "Enable OpenAI's Whisper speech recognition model"
+  option "with-whisper-cpp", "Enable OpenAI's Whisper speech recognition model"
   option "with-xvid", "Enable Xvid"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable zimg for scaling, colorspace conversion and dithering"
@@ -260,7 +260,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
-    if build.with? "whisper"
+    if build.with? "whisper-cpp"
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["whisper-cpp"].opt_lib/"pkgconfig"
       args << "--enable-whisper"
     end
