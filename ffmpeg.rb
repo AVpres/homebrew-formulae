@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-8.0.tar.xz"
   sha256 "b2751fccb6cc4c77708113cd78b561059b6fa904b24162fa0be2d60273d27b8e"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -34,6 +34,7 @@ class Ffmpeg < Formula
   option "with-libxml2", "Enable libxml2 library for parsing XML documents"
   option "with-libzvbi", "Enable decoding of DVB teletext pages and DVB teletext subtitles"
   option "with-openal-soft", "Enable OpenAL (Open Audio Library) for macOS targets"
+  option "with-openapv", "Enable OpenAPV (Open Advanced Professional Video Codec)"
   option "with-opencore-amr", "Enable Opencore AMR NR/WB audio format"
   option "with-openh264", "Enable OpenH264 library"
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
@@ -101,6 +102,7 @@ class Ffmpeg < Formula
   depends_on "libvmaf" => :optional
   depends_on "libxml2" => :optional
   depends_on "openal-soft" => :optional
+  depends_on "openapv" => :optional
   depends_on "opencore-amr" => :optional
   depends_on "openh264" => :optional
   depends_on "openjpeg" => :optional
@@ -237,6 +239,7 @@ class Ffmpeg < Formula
       args << "--enable-libopencore-amrnb"
       args << "--enable-libopencore-amrwb"
     end
+    args << "--enable-liboapv" if build.with? "openapv"
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
     args << "--enable-libopenvino" if build.with? "openvino"
