@@ -1,10 +1,9 @@
 class BashAvpres < Formula
   desc "Bash scripts for audio-visual preservation"
   homepage "https://avpres.net/Bash_AVpres/"
-  url "https://avpres.net/releases/bash-avpres-2025-11-10.tar.gz"
-  sha256 "0553ee6a5dd7df923b4857174adef6de5d1b35a4fd4385412a20f40f71118c87"
+  url "https://avpres.net/releases/bash-avpres-2025-11-24.tar.gz"
+  sha256 "d78f340fdf0b2bf0213de022732b4a0991622eef934140e9259028e6ac201070"
   license "BSD-3-Clause"
-  revision 1
 
   depends_on "bash"
   depends_on "coreutils"
@@ -15,7 +14,11 @@ class BashAvpres < Formula
     man1.install Dir["man/*"]
   end
 
-  test do
+  def post_install
     system bin/"bash_avpres"
+  end
+
+  test do
+    assert_path_exists bin/"bash_avpres"
   end
 end
