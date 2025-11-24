@@ -105,7 +105,7 @@ class Ffmpeg < Formula
   depends_on "opencore-amr" => :optional
   depends_on "openh264" => :optional
   depends_on "openjpeg" => :optional
-  depends_on "openssl" => :optional
+  depends_on "openssl@3" => :optional
   depends_on "openvino" => :optional
   depends_on "rav1e" => :optional
   depends_on "rtmpdump" => :optional
@@ -256,7 +256,7 @@ class Ffmpeg < Formula
     args << "--enable-libtensorflow" if build.with? "tensorflow"
     args << "--enable-libtesseract" if build.with? "tesseract"
     args << "--enable-libtwolame" if build.with? "two-lame"
-    if build.with? "openssl"
+    if build.with? "openssl@3"
       args << "--enable-nonfree"
       args << "--enable-openssl"
     end
