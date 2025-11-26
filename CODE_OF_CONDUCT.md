@@ -1,3 +1,3 @@
 # Code of Conduct
 
-One person’s freedom ends, where another person’s freedom begins.
+One person’s freedom ends where another person’s freedom begins.
