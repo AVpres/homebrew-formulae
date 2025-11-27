@@ -11,7 +11,7 @@
 `brew options avpres/formulae/ffmpeg`<br>
 `brew install avpres/formulae/ffmpeg <options>`
 
-## Copyright, Licence and Disclaimer
+## Copyright, License and Disclaimer
 
 Copyright © 2017–2026 by Reto Kromer
 
