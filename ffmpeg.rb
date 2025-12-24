@@ -131,12 +131,12 @@ class Ffmpeg < Formula
   end
 
   on_linux do
-    depends_on "libx11" => :recommended
-    depends_on "libxcb" => :recommended
     depends_on "alsa-lib"
     depends_on "libdrm"
     depends_on "libxext"
     depends_on "libxv"
+    depends_on "libx11" => :recommended
+    depends_on "libxcb" => :recommended
   end
 
   on_intel do
