@@ -97,7 +97,6 @@ class Ffmpeg < Formula
   depends_on "libtensorflow" => :optional
   depends_on "libvidstab" => :optional
   depends_on "libvmaf" => :optional
-  depends_on "libxml2" => :optional
   depends_on "openal-soft" => :optional
   depends_on "openapv" => :optional
   depends_on "opencore-amr" => :optional
@@ -121,7 +120,6 @@ class Ffmpeg < Formula
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
-
   uses_from_macos "libxml2" => :optional
 
   on_macos do
