@@ -65,8 +65,6 @@ class Ffmpeg < Formula
   depends_on "libass" => :recommended
   depends_on "libvorbis" => :recommended
   depends_on "libvpx" => :recommended
-  depends_on "libx11" => :recommended
-  depends_on "libxcb" => :recommended
   depends_on "opus" => :recommended
   depends_on "sdl2" => :recommended
   depends_on "snappy" => :recommended
@@ -133,6 +131,8 @@ class Ffmpeg < Formula
   end
 
   on_linux do
+    depends_on "libx11" => :recommended
+    depends_on "libxcb" => :recommended
     depends_on "alsa-lib"
     depends_on "libdrm"
     depends_on "libxext"
@@ -188,6 +188,7 @@ class Ffmpeg < Formula
       args << "--enable-openal" if build.with? "openal-soft"
       args << "--enable-opencl"
       args << "--enable-audiotoolbox"
+      args << "--enable-avfoundation"
       args << "--enable-videotoolbox"
     end
 
