@@ -10,7 +10,7 @@ class Test < Formula
   depends_on "xxhash"
 
   def install
-    run "./majordomo.sh"
+    "./majordomo.sh"
     bin.install Dir["bin/*"]
     man1.install Dir["man/*"]
   end
