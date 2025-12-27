@@ -13,7 +13,7 @@ class Test < Formula
     system "./configure"
     bin.install Dir["bin/*"]
     man1.install Dir["man/*"]
-    system "make", "cleanup"
+    system "make", "clean"
   end
 
   test do
