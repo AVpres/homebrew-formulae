@@ -44,7 +44,6 @@ class Ffmpeg < Formula
   option "with-rubberband", "Enable Rubber Band library"
   option "with-speex", "Enable an audio codec designed for speech"
   option "with-srt", "Enable Secure Reliable Transport (SRT)"
-  option "with-svt-av1", "Enable Scalable Video Technology for AV1"
   option "with-two-lame", "Enable TwoLAME, an optimised MPEG Audio Layer 2 (MP2) encoder"
   option "with-tensorflow", "Enable TensorFlow as a module backend for DNN-based filters"
   option "with-tesseract", "Enable the Tesseract OCR engine"
@@ -68,10 +67,10 @@ class Ffmpeg < Formula
   depends_on "opus" => :recommended
   depends_on "sdl2" => :recommended
   depends_on "snappy" => :recommended
+  depends_on "svt-av1" => :recommended
   depends_on "theora" => :recommended
   depends_on "x264" => :recommended
   depends_on "x265" => :recommended
-  depends_on "xz" => :recommended
 
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
@@ -109,7 +108,6 @@ class Ffmpeg < Formula
   depends_on "rubberband" => :optional
   depends_on "speex" => :optional
   depends_on "srt" => :optional
-  depends_on "svt-av1" => :optional
   depends_on "tesseract" => :optional
   depends_on "two-lame" => :optional
   depends_on "webp" => :optional
@@ -133,6 +131,7 @@ class Ffmpeg < Formula
     depends_on "libdrm"
     depends_on "libxext"
     depends_on "libxv"
+    depends_on "xz"
     depends_on "libx11" => :recommended
     depends_on "libxcb" => :recommended
   end
@@ -247,7 +246,6 @@ class Ffmpeg < Formula
     args << "--enable-librubberband" if build.with? "rubberband"
     args << "--enable-libspeex" if build.with? "speex"
     args << "--enable-libsrt" if build.with? "srt"
-    args << "--enable-libsvtav1" if build.with? "svt-av1"
     args << "--enable-libtensorflow" if build.with? "tensorflow"
     args << "--enable-libtesseract" if build.with? "tesseract"
     args << "--enable-libtwolame" if build.with? "two-lame"
