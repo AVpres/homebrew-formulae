@@ -7,9 +7,12 @@
 - **bash-avpres** – Bash scripts for audiovisual preservation<br>
 `brew install avpres/formulae/bash-avpres`
 
-- **ffmpeg** – Alternate FFmpeg formula with options:<br>
+- **ffmpeg** – Alternative FFmpeg formula with options:<br>
 `brew options avpres/formulae/ffmpeg`<br>
 `brew install avpres/formulae/ffmpeg <options>`
+
+- **mpv** – Media player based on MPlayer and mplayer2
+`brew install avpres/formulae/mpv`
 
 ## Copyright, License and Disclaimer
 

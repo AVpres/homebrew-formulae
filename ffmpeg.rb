@@ -1,5 +1,5 @@
 class Ffmpeg < Formula
-  desc "Alternate FFmpeg formula with options"
+  desc "Alternative FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-8.0.1.tar.xz"
   sha256 "05ee0b03119b45c0bdb4df654b96802e909e0a752f72e4fe3794f487229e5a41"
