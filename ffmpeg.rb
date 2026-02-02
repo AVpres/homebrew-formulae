@@ -241,7 +241,12 @@ class Ffmpeg < Formula
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
     args << "--enable-libopenvino" if build.with? "openvino"
-    args << "--enable-libplacebo" if build.with? "libplacebo"
+    if build.with? "libplacebo"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["libplacebo"].opt_lib/"pkgconfig"
+      args << "--enable-libplacebo"
+      args << "--enable-vulkan"
+    end
+    #args << "--enable-libplacebo" if build.with? "libplacebo"
     args << "--enable-librav1e" if build.with? "rav1e"
     args << "--enable-librtmp" if build.with? "rtmpdump"
     args << "--enable-librubberband" if build.with? "rubberband"
