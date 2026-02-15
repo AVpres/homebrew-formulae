@@ -2,8 +2,6 @@
 
 `brew tap avpres/formulae`
 
-## Maintained Formulae
-
 - **bash-avpres** – Bash scripts for audiovisual preservation<br>
 `brew install avpres/formulae/bash-avpres`
 
