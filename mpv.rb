@@ -1,5 +1,5 @@
 class Mpv < Formula
-  desc "Media player based on the alternative FFmpeg by avpres.net"
+  desc "Media player based on our alternative FFmpeg formula"
   homepage "https://mpv.io"
   url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
   sha256 "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
