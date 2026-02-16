@@ -9,7 +9,7 @@
 `brew options avpres/formulae/ffmpeg`<br>
 `brew install <options> avpres/formulae/ffmpeg`
 
-- **mpv** – Media player based on MPlayer and mplayer2<br>
+- **mpv** – Media player based on the alternative FFmpeg by avpres.net<br>
 `brew install avpres/formulae/mpv`<br>
 If you need specific options, install FFmpeg with those options before installing mpv.
 
