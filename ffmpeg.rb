@@ -258,7 +258,7 @@ class Ffmpeg < Formula
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
     if build.with? "whisper-cpp"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["whisper-cpp"].opt_lib/"pkgconfig"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["whisper-cpp"].opt_libexec/"lib/pkgconfig"
       args << "--enable-whisper"
     end
     args << "--enable-libxvid" if build.with? "xvid"
