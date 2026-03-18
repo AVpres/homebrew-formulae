@@ -16,6 +16,7 @@ class Ffmpeg < Formula
   option "with-fdk-aac", "Enable Fraunhofer FDK AAC library"
   option "with-frei0r", "Enable frei0r filters, mixers and generators"
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
+  option "with-gglm", "Enable tensor library for machine learning"
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
   option "with-libcaca", "Enable libcaca"
@@ -75,8 +76,9 @@ class Ffmpeg < Formula
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
   depends_on "fdk-aac" => :optional
-  depends_on "frei0r" => :optional
+  depends_on "frei0r" => :optional :no_linkage
   depends_on "game-music-emu" => :optional
+  depends_on "ggml" => :optional
   depends_on "jack" => :optional
   depends_on "jpeg-xl" => :optional
   depends_on "libaribcaption" => :optional
@@ -257,10 +259,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
-    if build.with? "whisper-cpp"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["whisper-cpp"].opt_libexec/"lib/pkgconfig"
-      args << "--enable-whisper"
-    end
+    args << "--enable-whisper" if build.with? "whisper-cpp"
     args << "--enable-libxvid" if build.with? "xvid"
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
