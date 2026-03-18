@@ -76,7 +76,7 @@ class Ffmpeg < Formula
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
   depends_on "fdk-aac" => :optional
-  depends_on "frei0r" => :optional :no_linkage
+  depends_on "frei0r" => :optional, :no_linkage
   depends_on "game-music-emu" => :optional
   depends_on "ggml" => :optional
   depends_on "jack" => :optional
