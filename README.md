@@ -11,7 +11,7 @@
 
 - **mpv** – Media player based on our alternative FFmpeg formula<br>
 `brew install avpres/formulae/mpv`<br>
-If you need specific options, install FFmpeg with those options before installing mpv.
+If you need specific options, install FFmpeg with those options before installing mpv. After the initial installation, you can upgrade the formulae independently.
 
 ## Copyright, License and Disclaimer
 
