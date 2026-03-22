@@ -27,8 +27,6 @@ class Mpv < Formula
   depends_on "yt-dlp"
   depends_on "zimg"
 
-  uses_from_macos "zlib"
-
   on_macos do
     depends_on "molten-vk"
   end
