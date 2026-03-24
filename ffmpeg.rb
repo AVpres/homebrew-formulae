@@ -16,7 +16,7 @@ class Ffmpeg < Formula
   option "with-fdk-aac", "Enable Fraunhofer FDK AAC library"
   option "with-frei0r", "Enable frei0r filters, mixers and generators"
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
-  option "with-ggml", "Enable tensor library for machine learning"
+  option "with-ggml", "Enable Tensor library for machine learning"
   option "with-jack", "Enable Jack"
   option "with-jpeg-xl", "Enable JPEG XL image format"
   option "with-libcaca", "Enable libcaca"
@@ -195,6 +195,8 @@ class Ffmpeg < Formula
       mv "VERSION", "VERSION.txt"
     end
     if build.with? "dvd"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["libdvdread"].opt_lib/"pkgconfig"
+      #ENV["LDFLAGS"] = "-L#{Formula["libdvdread"].opt_lib} -ldvdread"
       args << "--enable-libdvdnav"
       args << "--enable-libdvdread"
     end
