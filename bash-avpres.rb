@@ -10,7 +10,6 @@ class BashAvpres < Formula
   depends_on "xxhash"
 
   def install
-    system "majordomo.pl"
     bin.install Dir["bin/*"]
     man1.install Dir["man/*"]
   end
