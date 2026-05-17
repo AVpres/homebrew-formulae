@@ -17,7 +17,8 @@ class BashAvpres < Formula
   def caveats
     on_linux do
       <<~EOS
-        If you wish to use the CRC32 algorithm, you may need to install a CRC32 tool:
+        If you wish to use the CRC32 algorithm, you may need to install a CRC32 tool,
+        because some Linux distributions do not include it:
           sudo apt install libarchive-zip-perl
       EOS
     end
