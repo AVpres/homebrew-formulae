@@ -85,7 +85,7 @@ class Mpv < Formula
       inreplace lib/"pkgconfig/mpv.pc",
                 /^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
                 "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3"
-      end
+    end
 
     bash_completion.install "etc/mpv.bash-completion" => "mpv"
     zsh_completion.install "etc/_mpv.zsh" => "_mpv"
