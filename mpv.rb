@@ -51,17 +51,6 @@ class Mpv < Formula
   end
 
   def install
-    # LANG is unset by default on macOS and causes issues when calling getlocale
-    # or getdefaultlocale in docutils. Force the default c/posix locale since
-    # that's good enough for building the manpage.
-    ENV["LC_ALL"] = "C"
-
-    # force meson find ninja from homebrew
-    ENV["NINJA"] = which("ninja")
-
-    # libarchive is keg-only
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["libarchive"].opt_lib/"pkgconfig" if OS.mac?
-
     args = %W[
       -Dbuild-date=false
       -Dhtml-build=enabled
@@ -93,11 +82,10 @@ class Mpv < Formula
       # keg-only so it needs to look for the pkgconfig file in libarchive's opt
       # path.
       libarchive = Formula["libarchive"].opt_prefix
-      inreplace lib/"pkgconfig/mpv.pc" do |s|
-        s.gsub!(/^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
-                "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3")
+      inreplace lib/"pkgconfig/mpv.pc",
+                /^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
+                "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3"
       end
-    end
 
     bash_completion.install "etc/mpv.bash-completion" => "mpv"
     zsh_completion.install "etc/_mpv.zsh" => "_mpv"
