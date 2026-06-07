@@ -10,7 +10,7 @@ class BashAvpres < Formula
   depends_on "xxhash"
 
   def install
-    system "./majordomo.sh"
+    system "bash-avpres/majordomo.sh"
     bin.install Dir["bin/*"]
     man1.install Dir["man/*"]
   end
