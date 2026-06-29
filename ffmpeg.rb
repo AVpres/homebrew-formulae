@@ -4,6 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz"
   sha256 "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -40,6 +41,7 @@ class Ffmpeg < Formula
   option "with-openjpeg", "Enable OpenJPEG, the reference implementation of JPEG 2000"
   option "with-openssl", "Enable SSL"
   option "with-openvino", "Enable OpenVINO for Deep Neural Network (DNN) based filters"
+  option "with-qrencode", "Enable QR Code generation"
   option "with-rav1e", "Enable AV1 encoding via librav1e"
   option "with-rtmpdump", "Enable RTMP dumping"
   option "with-rubberband", "Enable Rubber Band library"
@@ -105,6 +107,7 @@ class Ffmpeg < Formula
   depends_on "openjpeg" => :optional
   depends_on "openssl@3" => :optional
   depends_on "openvino" => :optional
+  depends_on "qrencode" => :optional
   depends_on "rav1e" => :optional
   depends_on "rtmpdump" => :optional
   depends_on "rubberband" => :optional
@@ -240,6 +243,7 @@ class Ffmpeg < Formula
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
     args << "--enable-libopenvino" if build.with? "openvino"
     args << "--enable-libplacebo" if build.with? "libplacebo"
+    args << "--enable-libqrencode" if build.with? "qrencode"
     args << "--enable-librav1e" if build.with? "rav1e"
     args << "--enable-librtmp" if build.with? "rtmpdump"
     args << "--enable-librubberband" if build.with? "rubberband"
