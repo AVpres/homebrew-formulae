@@ -4,7 +4,7 @@ class Ffmpeg < Formula
   url "https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz"
   sha256 "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
@@ -198,7 +198,7 @@ class Ffmpeg < Formula
       mv "VERSION", "VERSION.txt"
     end
     if build.with? "dvd"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["libdvdread"].opt_lib/"pkgconfig"
+      ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("libdvdread")/"pkgconfig"
       # ENV["LDFLAGS"] = "-L#{Formula["libdvdread"].opt_lib} -ldvdread"
       args << "--enable-libdvdnav"
       args << "--enable-libdvdread"
@@ -210,7 +210,7 @@ class Ffmpeg < Formula
     args << "--enable-libflite" if build.with? "libflite"
     args << "--enable-libgme" if build.with? "game-music-emu"
     if build.with? "jack"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
+      ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("jack")/"pkgconfig"
       args << "--enable-libjack"
       args << "--enable-indev=jack"
     end
@@ -263,7 +263,7 @@ class Ffmpeg < Formula
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
     if build.with? "zvbi"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["zvbi"].opt_lib/"pkgconfig"
+      ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("zvbi")/"pkgconfig"
       args << "--enable-libzvbi"
     end
 
