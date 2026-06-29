@@ -4,7 +4,7 @@ class Mpv < Formula
   url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
   sha256 "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 1
+  revision 2
 
   depends_on "docutils" => :build
   depends_on "meson" => :build
@@ -86,7 +86,7 @@ class Mpv < Formula
       # `pkg-config --libs mpv` includes libarchive, but that package is
       # keg-only so it needs to look for the pkgconfig file in libarchive's opt
       # path.
-      libarchive = Formula["libarchive"].opt_prefix
+      libarchive = formula_opt_prefix("libarchive")
       inreplace lib/"pkgconfig/mpv.pc",
                 /^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
                 "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3"
