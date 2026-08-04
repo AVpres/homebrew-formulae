@@ -55,6 +55,8 @@ class Ffmpeg < Formula
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable zimg for scaling, colorspace conversion and dithering"
 
+  depends_on "xz"
+
   depends_on "pkgconf" => :build
 
   depends_on "aom" => :recommended
@@ -73,7 +75,6 @@ class Ffmpeg < Formula
   depends_on "theora" => :recommended
   depends_on "x264" => :recommended
   depends_on "x265" => :recommended
-  depends_on "xz"
 
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
