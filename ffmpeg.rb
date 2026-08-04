@@ -73,6 +73,7 @@ class Ffmpeg < Formula
   depends_on "theora" => :recommended
   depends_on "x264" => :recommended
   depends_on "x265" => :recommended
+  depends_on "xz"
 
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
@@ -142,7 +143,6 @@ class Ffmpeg < Formula
     depends_on "libdrm"
     depends_on "libxext"
     depends_on "libxv"
-    depends_on "xz"
     depends_on "libx11" => :recommended
     depends_on "libxcb" => :recommended
   end
