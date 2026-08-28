@@ -15,7 +15,7 @@ class BashAvpres < Formula
   end
 
   def caveats
-    on_linux do
+    if OS.linux?
       <<~EOS
         If you wish to use the CRC32 algorithm, you may need to install a CRC32 tool,
         because some Linux distributions do not include it:
