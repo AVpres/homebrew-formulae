@@ -1,10 +1,11 @@
 # Brew Formulae for Audiovisual Preservation
 
-Before installing the first formula, run:
+Before installing the first formula, run the two commands:
 ```
 brew tap avpres/formulae
 brew trust avpres/formulae
 ```
+Then install the formulae you wish:
 
 - **bash-avpres** – Bash scripts for audiovisual preservation<br>
 `brew install bash-avpres`
