@@ -1,7 +1,13 @@
 # Brew Formulae for Audiovisual Preservation
 
+Before installing the first formula, run:
+```
+brew tap avpres/formulae
+brew trust avpres/formulae
+```
+
 - **bash-avpres** – Bash scripts for audiovisual preservation<br>
-`brew install avpres/formulae/bash-avpres`
+`brew install bash-avpres`
 
 - **ffmpeg** – Alternative FFmpeg formula with options<br>
 `brew options avpres/formulae/ffmpeg`<br>
