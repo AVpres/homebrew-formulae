@@ -1,5 +1,7 @@
 # Brew Formulae for Audiovisual Preservation
 
+## Installation
+
 Before installing the first formula, run the two commands:
 ```
 brew tap avpres/formulae
