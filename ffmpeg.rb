@@ -13,7 +13,6 @@ class Ffmpeg < Formula
   option "with-chromaprint", "Enable Chromaprint audio fingerprinting library"
   option "with-decklink", "Enable DeckLink support"
   option "with-dvd", "Enable DVD-Video demuxer, powered by libdvdnav and libdvdread"
-  option "with-fdk-aac", "Enable Fraunhofer FDK AAC library"
   option "with-frei0r", "Enable frei0r filters, mixers and generators"
   option "with-game-music-emu", "Enable Game Music Emu (GME)"
   option "with-ggml", "Enable Tensor library for machine learning"
@@ -78,7 +77,6 @@ class Ffmpeg < Formula
 
   depends_on "aribb24" => :optional
   depends_on "chromaprint" => :optional
-  depends_on "fdk-aac" => :optional
   depends_on "frei0r" => [:optional, :no_linkage]
   depends_on "game-music-emu" => :optional
   depends_on "ggml" => :optional
@@ -209,10 +207,6 @@ class Ffmpeg < Formula
       ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("libdvdcss")/"pkgconfig"
       args << "--enable-libdvdnav"
       args << "--enable-libdvdread"
-    end
-    if build.with? "fdk-aac"
-      args << "--enable-nonfree"
-      args << "--enable-libfdk-aac"
     end
     args << "--enable-libflite" if build.with? "libflite"
     args << "--enable-libgme" if build.with? "game-music-emu"
