@@ -49,7 +49,7 @@ class Ffmpeg < Formula
   option "with-tensorflow", "Enable TensorFlow as a module backend for DNN-based filters"
   option "with-tesseract", "Enable the Tesseract OCR engine"
   option "with-webp", "Enable libwebp to encode and decode images in WebP format"
-  option "with-whisper-cpp", "Enable OpenAI's Whisper speech recognition model"
+  option "with-whisper.cpp", "Enable OpenAI's Whisper speech recognition model"
   option "with-xvid", "Enable Xvid"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable zimg for scaling, colorspace conversion and dithering"
@@ -113,7 +113,7 @@ class Ffmpeg < Formula
   depends_on "tesseract" => :optional
   depends_on "two-lame" => :optional
   depends_on "webp" => :optional
-  depends_on "whisper-cpp" => :optional
+  depends_on "whisper.cpp" => :optional
   depends_on "xvid" => :optional
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
@@ -259,7 +259,7 @@ class Ffmpeg < Formula
     end
     args << "--enable-libwebp" if build.with? "webp"
     args << "--enable-libxml2" if build.with? "libxml2"
-    args << "--enable-whisper" if build.with? "whisper-cpp"
+    args << "--enable-whisper" if build.with? "whisper.cpp"
     args << "--enable-libxvid" if build.with? "xvid"
     args << "--enable-libzimg" if build.with? "zimg"
     args << "--enable-libzmq" if build.with? "zeromq"
