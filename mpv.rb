@@ -4,7 +4,7 @@ class Mpv < Formula
   url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
   sha256 "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 3
+  revision 4
 
   depends_on "docutils" => :build
   depends_on "meson" => :build
@@ -43,6 +43,7 @@ class Mpv < Formula
     depends_on "libxscrnsaver"
     depends_on "libxv"
     depends_on "mesa"
+    depends_on "pipewire"
     depends_on "pulseaudio"
     depends_on "wayland"
     depends_on "wayland-protocols" => :no_linkage # needed by mpv.pc
