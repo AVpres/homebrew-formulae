@@ -152,6 +152,9 @@ class Ffmpeg < Formula
 
   fails_with gcc: "5"
 
+  # Fix build with openapv >= 1.0
+  patch :DATA
+
   def install
     ohai "Installing FFmpeg with options..."
 
@@ -287,3 +290,22 @@ class Ffmpeg < Formula
     assert_match(/Duration: 00:00:05\.00,.*Video: hevc/m, shell_output("#{bin}/ffprobe -hide_banner #{mkvout} 2>&1"))
   end
 end
+
+__END__
+--- a/libavcodec/liboapvenc.c
++++ b/libavcodec/liboapvenc.c
+@@ -509,7 +509,14 @@
+     }
+ 
+     /* create metadata handler */
++#if OAPV_VER_APISET >= 1
++    {
++        oapvm_cdesc_t mcdesc = { 0 };
++        apv->mid = oapvm_create(&mcdesc, &ret);
++    }
++#else
+     apv->mid = oapvm_create(&ret);
++#endif
+     if (apv->mid == NULL || OAPV_FAILED(ret)) {
+         av_log(avctx, AV_LOG_ERROR, "cannot create OAPV metadata handler\n");
+         return AVERROR_EXTERNAL;
