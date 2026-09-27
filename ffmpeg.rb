@@ -1,10 +1,16 @@
 class Ffmpeg < Formula
   desc "Alternative FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz"
-  sha256 "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
   license "GPL-2.0-or-later"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
+
+  stable do
+    url "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz"
+    sha256 "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
+
+    # Fix build with openapv >= 1.0
+    patch :DATA
+  end
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
   option "with-aribcaption", "Enable ARIB STD-B24 based broadcast captions"
@@ -151,9 +157,6 @@ class Ffmpeg < Formula
   end
 
   fails_with gcc: "5"
-
-  # Fix build with openapv >= 1.0
-  patch :DATA
 
   def install
     ohai "Installing FFmpeg with options..."
