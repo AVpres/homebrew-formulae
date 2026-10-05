@@ -13,8 +13,10 @@ Then install the formulae you wish:
 `brew install bash-avpres`
 
 - **ffmpeg** – Alternative FFmpeg formula with options<br>
-`brew options avpres/formulae/ffmpeg`<br>
-`brew install <options> avpres/formulae/ffmpeg`
+To install:<br>
+`brew install <options> avpres/formulae/ffmpeg`<br>
+To check which options are available:<br>
+`brew options avpres/formulae/ffmpeg`
 
 - **mpv** – Media player based on our alternative FFmpeg formula<br>
 `brew install avpres/formulae/mpv`<br>
