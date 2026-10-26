@@ -16,6 +16,7 @@ class Ffmpeg < Formula
   option "with-aribcaption", "Enable ARIB STD-B24 based broadcast captions"
   option "with-bluray", "Enable Blu-Ray Discs playback"
   option "with-bs2b", "Enable Bauer stereophonic-to-binaural DSP"
+  option "with-cairo", "Enable Cairo library for the drawvg filter"
   option "with-chromaprint", "Enable Chromaprint audio fingerprinting library"
   option "with-decklink", "Enable DeckLink support"
   option "with-dvd", "Enable DVD-Video demuxer, powered by libdvdnav and libdvdread"
@@ -82,6 +83,7 @@ class Ffmpeg < Formula
   depends_on "x265" => :recommended
 
   depends_on "aribb24" => :optional
+  depends_on "cairo" => :optional
   depends_on "chromaprint" => :optional
   depends_on "frei0r" => [:optional, :no_linkage]
   depends_on "game-music-emu" => :optional
@@ -199,6 +201,7 @@ class Ffmpeg < Formula
       args << "--enable-videotoolbox"
     end
 
+    args << "--enable-cairo" if build.with? "cairo"
     args << "--enable-chromaprint" if build.with? "chromaprint"
     if build.with? "decklink"
       args << "--enable-nonfree"
