@@ -1,16 +1,10 @@
 class Ffmpeg < Formula
   desc "Alternative FFmpeg formula with options"
   homepage "https://ffmpeg.org/"
+  url "https://ffmpeg.org/releases/ffmpeg-9.1.tar.xz"
+  sha256 "1a4d394ae63d190a526cd052eb4415c156b5c5e2df37efab41a7de0b8fde2433"
   license "GPL-2.0-or-later"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
-
-  stable do
-    url "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz"
-    sha256 "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
-
-    # Fix build with openapv >= 1.0
-    patch :DATA
-  end
 
   option "with-aribb24", "Enable ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS"
   option "with-aribcaption", "Enable ARIB STD-B24 based broadcast captions"
@@ -296,22 +290,3 @@ class Ffmpeg < Formula
     assert_match(/Duration: 00:00:05\.00,.*Video: hevc/m, shell_output("#{bin}/ffprobe -hide_banner #{mkvout} 2>&1"))
   end
 end
-
-__END__
---- a/libavcodec/liboapvenc.c
-+++ b/libavcodec/liboapvenc.c
-@@ -509,7 +509,14 @@
-     }
- 
-     /* create metadata handler */
-+#if OAPV_VER_APISET >= 1
-+    {
-+        oapvm_cdesc_t mcdesc = { 0 };
-+        apv->mid = oapvm_create(&mcdesc, &ret);
-+    }
-+#else
-     apv->mid = oapvm_create(&ret);
-+#endif
-     if (apv->mid == NULL || OAPV_FAILED(ret)) {
-         av_log(avctx, AV_LOG_ERROR, "cannot create OAPV metadata handler\n");
-         return AVERROR_EXTERNAL;
