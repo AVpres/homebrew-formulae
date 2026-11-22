@@ -4,7 +4,6 @@ class Mpv < Formula
   url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.42.0.tar.gz"
   sha256 "bcfebbfa2b65a6d88dc97ea18117831072373e38b5785a2afb874ed4df5070dd"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 4
 
   depends_on "docutils" => :build
   depends_on "meson" => :build
