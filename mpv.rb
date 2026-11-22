@@ -1,8 +1,8 @@
 class Mpv < Formula
   desc "Media player based on our alternative FFmpeg formula"
   homepage "https://mpv.io"
-  url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
+  url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.42.0.tar.gz"
+  sha256 "bcfebbfa2b65a6d88dc97ea18117831072373e38b5785a2afb874ed4df5070dd"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
   revision 4
 
@@ -50,18 +50,6 @@ class Mpv < Formula
     depends_on "zlib-ng-compat"
   end
 
-  # Backport support for Vapoursynth 74+
-  patch do
-    url "https://github.com/mpv-player/mpv/commit/75b2ccfeb1ce4ed5a40ac9860fa74f3d1265e13f.patch?full_index=1"
-    sha256 "3906b98b02071a0d5747a400406494ca69cef7afd8d3eee4a99fdbe40dc90c1f"
-  end
-
-  # Backport fix for use-after-free crash on audio device change (macOS 26/27)
-  patch do
-    url "https://github.com/mpv-player/mpv/commit/c5d391adba7bd024954d0df1e0405f5749f4d4ca.patch?full_index=1"
-    sha256 "769b218df220738cc1cf9f81cf696c16518c5dfe56a5ef028e33b22536e0e924"
-  end
-
   def install
     args = %W[
       --sysconfdir=#{etc}
@@ -87,23 +75,10 @@ class Mpv < Formula
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
     bash_completion.install share/"bash-completion/completions/mpv"
-
-    if OS.mac?
-      # `pkg-config --libs mpv` includes libarchive, but that package is
-      # keg-only so it needs to look for the pkgconfig file in libarchive's opt
-      # path.
-      libarchive = formula_opt_prefix("libarchive")
-      inreplace lib/"pkgconfig/mpv.pc",
-                /^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
-                "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3"
-    end
   end
 
   test do
     system bin/"mpv", "--ao=null", "--vo=null", test_fixtures("test.wav")
     assert_match "vapoursynth", shell_output("#{bin}/mpv --vf=help")
-
-    # Make sure `pkgconf` can parse `mpv.pc` after the `inreplace`.
-    system "pkgconf", "--print-errors", "mpv"
   end
 end
