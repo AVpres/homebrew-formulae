@@ -23,6 +23,7 @@ class Ffmpeg < Formula
   option "with-libflite", "Enable text to speech synthesis support via Flite"
   option "with-libgsm", "Enable lossy speech compression"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
+  option "with-libmysofa", "Enable SOFA HRTF files for the sofalizer filter"
   option "with-libopenmpt", "Enable module/tracker files as inputs via libopenmpt"
   option "with-libplacebo", "Enable GPU-accelerated image/video processing primitives"
   option "with-librist", "Enable Reliable Internet Stream Transport (RIST)"
@@ -46,11 +47,16 @@ class Ffmpeg < Formula
   option "with-rubberband", "Enable Rubber Band library"
   option "with-speex", "Enable an audio codec designed for speech"
   option "with-srt", "Enable Secure Reliable Transport (SRT)"
+  option "with-svt-jpegxs", "Enable JPEG XS encoding and decoding via SVT-JPEG-XS"
   option "with-two-lame", "Enable TwoLAME, an optimised MPEG Audio Layer 2 (MP2) encoder"
   option "with-tensorflow", "Enable TensorFlow as a module backend for DNN-based filters"
   option "with-tesseract", "Enable the Tesseract OCR engine"
+  option "with-uavs3d", "Enable AVS3 decoding via uavs3d"
+  option "with-vvenc", "Enable H.266/VVC encoding via VVenC"
   option "with-webp", "Enable libwebp to encode and decode images in WebP format"
   option "with-whisper.cpp", "Enable OpenAI's Whisper speech recognition model"
+  option "with-xevd", "Enable MPEG-5 EVC decoding via XEVD"
+  option "with-xeve", "Enable MPEG-5 EVC encoding via XEVE"
   option "with-xvid", "Enable Xvid"
   option "with-zeromq", "Enable libzeromq to receive commands sent through a libzeromq client"
   option "with-zimg", "Enable zimg for scaling, colorspace conversion and dithering"
@@ -90,6 +96,7 @@ class Ffmpeg < Formula
   depends_on "libcaca" => :optional
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
+  depends_on "libmysofa" => :optional
   depends_on "libopenmpt" => :optional
   depends_on "libplacebo" => :optional
   depends_on "librist" => :optional
@@ -112,10 +119,15 @@ class Ffmpeg < Formula
   depends_on "rubberband" => :optional
   depends_on "speex" => :optional
   depends_on "srt" => :optional
+  depends_on "svt-jpegxs" => :optional
   depends_on "tesseract" => :optional
   depends_on "two-lame" => :optional
+  depends_on "uavs3d" => :optional
+  depends_on "vvenc" => :optional
   depends_on "webp" => :optional
   depends_on "whisper.cpp" => :optional
+  depends_on "xevd" => :optional
+  depends_on "xeve" => :optional
   depends_on "xvid" => :optional
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
@@ -227,6 +239,7 @@ class Ffmpeg < Formula
     args << "--enable-frei0r" if build.with? "frei0r"
     args << "--enable-libgsm" if build.with? "libgsm"
     args << "--enable-libmodplug" if build.with? "libmodplug"
+    args << "--enable-libmysofa" if build.with? "libmysofa"
     args << "--enable-libopenmpt" if build.with? "libopenmpt"
     args << "--enable-libsoxr" if build.with? "libsoxr"
     args << "--enable-libssh" if build.with? "libssh"
@@ -253,6 +266,7 @@ class Ffmpeg < Formula
     args << "--enable-librubberband" if build.with? "rubberband"
     args << "--enable-libspeex" if build.with? "speex"
     args << "--enable-libsrt" if build.with? "srt"
+    args << "--enable-libsvtjpegxs" if build.with? "svt-jpegxs"
     args << "--enable-libtensorflow" if build.with? "tensorflow"
     args << "--enable-libtesseract" if build.with? "tesseract"
     args << "--enable-libtwolame" if build.with? "two-lame"
@@ -260,7 +274,11 @@ class Ffmpeg < Formula
       args << "--enable-nonfree"
       args << "--enable-openssl"
     end
+    args << "--enable-libuavs3d" if build.with? "uavs3d"
+    args << "--enable-libvvenc" if build.with? "vvenc"
     args << "--enable-libwebp" if build.with? "webp"
+    args << "--enable-libxevd" if build.with? "xevd"
+    args << "--enable-libxeve" if build.with? "xeve"
     args << "--enable-libxml2" if build.with? "libxml2"
     args << "--enable-whisper" if build.with? "whisper.cpp"
     args << "--enable-libxvid" if build.with? "xvid"
