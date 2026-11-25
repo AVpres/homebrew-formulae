@@ -203,8 +203,8 @@ class Ffmpeg < Formula
       args << "--enable-openal" if build.with? "openal-soft"
       args << "--enable-opencl"
       args << "--enable-audiotoolbox"
-      args << "--enable-avfoundation"
       args << "--enable-videotoolbox"
+      args << "--extra-ldflags=-Wl,-rpath,#{HOMEBREW_PREFIX}/lib"
     end
 
     args << "--enable-cairo" if build.with? "cairo"
