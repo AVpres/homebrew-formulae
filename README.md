@@ -14,9 +14,10 @@ Then install the formulae you wish:
 
 - **ffmpeg** – Alternative FFmpeg formula with options<br>
 To install:<br>
-`brew install <options> avpres/formulae/ffmpeg`<br>
+`brew install <OPTIONS> avpres/formulae/ffmpeg`<br>
 To check which options are available:<br>
-`brew options avpres/formulae/ffmpeg`
+`brew options avpres/formulae/ffmpeg`<br>
+Note that you can both enable and disable options.
 
 - **mpv** – Media player based on our alternative FFmpeg formula<br>
 `brew install avpres/formulae/mpv`<br>
@@ -24,6 +25,6 @@ If you need specific options, install `ffmpeg` with those options before install
 
 ## Copyright, License and Disclaimer
 
-Copyright © 2017–2026 by Reto Kromer
+Copyright © 2017–2027 by Reto Kromer
 
 These formulae are released under a [3-Clause BSD License](LICENSE) and are provided “as is” without warranty or support of any kind.
