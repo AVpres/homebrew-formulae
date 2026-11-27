@@ -1,7 +1,7 @@
 class BashAvpres < Formula
   desc "Bash scripts for audiovisual preservation"
-  homepage "https://avpres.net/Bash_AVpres/"
-  url "https://avpres.net/releases/bash-avpres-2026-05-18.tar.gz"
+  homepage "https://reto.ch/Bash_AVpres/"
+  url "https://reto.ch/releases/bash-avpres-2026-05-18.tar.gz"
   sha256 "7fcba6b6a06d6f18b41f819ae4ce6950bf23247ac79ee283cb1a5e31660ef066"
   license "BSD-3-Clause"
 
